@@ -1,0 +1,50 @@
+250260001;Programlama;5
+250260001;Calculus I;0
+250260001;Physics I;4
+250260001;Algoritmalar;8
+250260001;Bilgisayar Bilimleri Temelleri;1
+250260002;Statik;3
+250260002;Dinamik;0
+250260002;Calculus I;7
+250260002;Physics I;2
+250260002;Termodinamik;9
+250260003;Devre Analizi;1
+250260003;Lojik Tasarım;2
+250260003;Calculus I;0
+250260003;Physics I;1
+250260003;Elektromanyetik Alanlar;0
+250260004;Programlama;2
+250260004;Calculus I;1
+250260004;Physics I;3
+250260004;Algoritmalar;0
+250260004;Bilgisayar Bilimleri Temelleri;2
+250260005;Programlama;5
+250260005;Calculus I;6
+250260005;Physics I;1
+250260005;Algoritmalar;2
+250260005;Bilgisayar Bilimleri Temelleri;12
+250260006;Devre Analizi;0
+250260006;Lojik Tasarım;1
+250260006;Calculus I;2
+250260006;Physics I;0
+250260006;Elektromanyetik Alanlar;1
+250260007;Statik;2
+250260007;Dinamik;4
+250260007;Calculus I;1
+250260007;Physics I;3
+250260007;Termodinamik;0
+250260008;Programlama;1
+250260008;Calculus I;3
+250260008;Physics I;2
+250260008;Algoritmalar;0
+250260008;Bilgisayar Bilimleri Temelleri;4
+250260093;Programlama;3
+250260093;Calculus I;2
+250260093;Physics I;1
+250260093;Algoritmalar;4
+250260093;Bilgisayar Bilimleri Temelleri;2
+250260021;Devre Analizi;6
+250260021;Lojik Tasarım;7
+250260021;Calculus I;5
+250260021;Physics I;4
+250260021;Elektromanyetik Alanlar;6

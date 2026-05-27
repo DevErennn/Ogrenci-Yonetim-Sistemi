@@ -1,0 +1,50 @@
+250260001;Programlama;75;85
+250260001;Calculus I;50;65
+250260001;Physics I;70;75
+250260001;Algoritmalar;60;80
+250260001;Bilgisayar Bilimleri Temelleri;70;85
+250260002;Statik;40;55
+250260002;Dinamik;80;85
+250260002;Calculus I;65;70
+250260002;Physics I;55;60
+250260002;Termodinamik;45;50
+250260003;Devre Analizi;95;100
+250260003;Lojik Tasarım;70;80
+250260003;Calculus I;40;50
+250260003;Physics I;60;55
+250260003;Elektromanyetik Alanlar;50;60
+250260004;Programlama;85;90
+250260004;Calculus I;75;80
+250260004;Physics I;80;85
+250260004;Algoritmalar;90;95
+250260004;Bilgisayar Bilimleri Temelleri;85;90
+250260005;Programlama;90;95
+250260005;Calculus I;85;90
+250260005;Physics I;88;92
+250260005;Algoritmalar;95;100
+250260005;Bilgisayar Bilimleri Temelleri;40;50
+250260006;Devre Analizi;80;85
+250260006;Lojik Tasarım;85;90
+250260006;Calculus I;75;80
+250260006;Physics I;70;85
+250260006;Elektromanyetik Alanlar;90;92
+250260007;Statik;85;90
+250260007;Dinamik;75;85
+250260007;Calculus I;80;88
+250260007;Physics I;82;85
+250260007;Termodinamik;70;80
+250260008;Programlama;80;85
+250260008;Calculus I;70;75
+250260008;Physics I;75;80
+250260008;Algoritmalar;85;90
+250260008;Bilgisayar Bilimleri Temelleri;80;88
+250260093;Programlama;70;75
+250260093;Calculus I;60;65
+250260093;Physics I;65;70
+250260093;Algoritmalar;70;80
+250260093;Bilgisayar Bilimleri Temelleri;75;78
+250260021;Devre Analizi;40;45
+250260021;Lojik Tasarım;50;50
+250260021;Calculus I;30;40
+250260021;Physics I;45;50
+250260021;Elektromanyetik Alanlar;40;42

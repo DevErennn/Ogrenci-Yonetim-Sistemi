@@ -1,0 +1,21 @@
+250260001;eu+/ve+/ve+/vW0=;Eren Kaya;Bilgisayar Mühendisliği;3.54
+250260002;emV5bmVwMTIz;Zeynep Demir;Makine Mühendisliği;2.8
+250260003;ahnvv73vv71d77+9;Ahmet Yılmaz;Elektrik Elektronik Mühendisliği;1.9
+250260004;bWVobWV0MTIz;Mehmet Yıldız;Bilgisayar Mühendisliği;3.6
+250260005;ayse77+977+9de+/vQ==;Ayşegül Çiçek;Bilgisayar Mühendisliği;3.7
+250260006;eljvv73vv71t;Elif Çelik;Elektrik Elektronik Mühendisliği;3.68
+250260007;ce+/vXtd77+9;Cemre Koç;Makine Mühendisliği;3.66
+250260008;77+977+9Yu+/vV3vv70=;Selin Aydın;Yazılım Mühendisliği;3.58
+250260009;ayse77+9bQ==;Ayşe Özdemir;Makine Mühendisliği;3.36
+250260010;77+9LN6bXe+/vQ==;Gizem Kurt;Yazılım Mühendisliği;3.28
+250260011;bu+/vdqTXe+/vQ==;Burak Şahina;Yazılım Mühendisliği;3.11
+250260012;emV5bmVwMTIz;Zeynep Yılmaz;Makine Mühendisliği;3.04
+250260013;ce+/vd6vXe+/vQ==;Caner Doğan;Mekatronik Mühendisliği;2.92
+250260014;77+977+977+977+9bQ==;Kaan Polat;Bilgisayar Mühendisliği;2.8
+250260093;dWNhcjQ2NDY=;Muhammet Eren UÇAR;Bilgisayar Mühendisliği;2.75
+250260015;77+977+977+977+9bQ==;Mert Kılıç;Mekatronik Mühendisliği;2.74
+250260017;ahnvv73vv71d77+9;Ahmet Demir;Bilgisayar Mühendisliği;2.62
+250260018;fe+/vWZrXe+/vQ==;Fatma Arslan;Elektrik Elektronik Mühendisliği;2.46
+250260019;77+977+9YGtd77+9;Tolga Çetin;Elektrik Elektronik Mühendisliği;2.2
+250260020;ahnvv73vv71d77+9;Ahmet KÜÇÜK;Elektrik Elektronik Mühendisliği;2.0
+250260021;bWVobWV0MTIz;Mehmet TÜRK;Elektrik Elektronik Mühendisliği;1.73

@@ -1,0 +1,13 @@
+11000000001;ahmet123;Prof. Dr. Ahmet Yılmaz;Programlama
+11000000002;ayse123;Doç. Dr. Ayşe Kaya;Calculus I
+11000000003;mehmet123;Dr. Öğr. Üyesi Mehmet Demir;Physics I
+11000000004;fatma123;Prof. Dr. Fatma Çelik;Algoritmalar
+11000000005;ali123;Arş. Gör. Ali Veli;Bilgisayar Bilimleri Temelleri
+11000000006;zeynep123;Doç. Dr. Zeynep Şahin;Statik
+11000000007;hasan123;Prof. Dr. Hasan Koç;Dinamik
+11000000008;elif123;Dr. Öğr. Üyesi Elif Arslan;Termodinamik
+11000000009;burak123;Doç. Dr. Burak Kurt;Devre Analizi
+11000000010;caner123;Prof. Dr. Caner Aydın;Lojik Tasarım
+11000000011;selin123;Dr. Öğr. Üyesi Selin Doğan;Elektromanyetik Alanlar
+11000000012;mustafa123;Öğr. Gör. Mustafa Yıldız;Matematik
+11000000013;leyla123;Prof. Dr. Leyla Şen;İngilizce
