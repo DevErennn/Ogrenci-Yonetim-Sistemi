@@ -58,8 +58,8 @@ public class Main {
                 
                 // Format: TC;Şifre;Ad;Ders
                 if (veri.length >= 4 && veri[0].trim().equals(kullaniciAdi)) {
-                    // Kullanıcıyı buldu, şimdi şifreyi (hash ile) kontrol et
-                    if (veri[1].trim().equals(OgrenciYonetici.sifrele(sifre))) {
+                    // Kullanıcıyı buldu, şimdi şifreyi kontrol et (yeni base64 veya eski plaintext)
+                    if (veri[1].trim().equals(OgrenciYonetici.sifrele(sifre)) || veri[1].trim().equals(sifre)) {
                         String ad = veri[2].trim();
                         String ders = veri[3];
                         SwingUtilities.invokeLater(() -> new OgretmenEkrani(ad, ders).setVisible(true));

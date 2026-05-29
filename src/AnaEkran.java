@@ -13,7 +13,7 @@ public class AnaEkran extends JFrame {
     private JTable tablo;
     private DefaultTableModel tabloModeli;
     private JTextField txtId, txtSifre, txtAd, txtBolum, txtOrtalama;
-    private JButton btnEkle, btnSil, btnGuncelle, btnSirala;
+    private JButton btnEkle, btnSil, btnGuncelle, btnSirala, btnAra;
     private JLabel lblToplamOgrenci, lblSinifOrtalamasi, lblEnBasarili;
 
     // 2. Sekme Bileşenleri 
@@ -52,6 +52,18 @@ public class AnaEkran extends JFrame {
         panelUst.add(btnCikis, BorderLayout.EAST);
         add(panelUst, BorderLayout.NORTH); 
         
+        // Mesaj sayısını hesapla (Gelen Kutusu kırmızı +1 için)
+        int mesajSayisi = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
+            String satir;
+            while ((satir = br.readLine()) != null) {
+                String[] veri = satir.split(";");
+                if (veri.length >= 4 && veri[1].equals("admin")) {
+                    mesajSayisi++;
+                }
+            }
+        } catch (Exception e) {}
+
         // --- SEKMELİ YAPI ---
         JTabbedPane sekmeler = new JTabbedPane();
 
@@ -64,6 +76,13 @@ public class AnaEkran extends JFrame {
         // GÜNCELLENDİ: Sekme adı değiştirildi
         JPanel panelDersYonetimi = dersYonetimPaneliniOlustur();
         sekmeler.addTab("Ders, Öğretmen ve Duyuru", panelDersYonetimi);
+        
+        sekmeler.addTab("Mesaj Gönder", adminMesajPaneliniOlustur());
+        if (mesajSayisi > 0) {
+            sekmeler.addTab("<html>Gelen Kutusu <font color='red'>(+" + mesajSayisi + ")</font></html>", adminGelenKutusuPaneliniOlustur());
+        } else {
+            sekmeler.addTab("Gelen Kutusu", adminGelenKutusuPaneliniOlustur());
+        }
         
         add(sekmeler, BorderLayout.CENTER);
         tablolariveGrafikGuncelle();
@@ -219,6 +238,76 @@ public class AnaEkran extends JFrame {
         return panel;
     }
 
+    private JPanel adminMesajPaneliniOlustur() {
+        JPanel panel = new JPanel(new GridLayout(8, 1, 10, 5));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
+
+        String[] secenekler = {"Öğrenci (ID Giriniz)", "Öğretmen (TC Giriniz)"};
+        JComboBox<String> cmbKime = new JComboBox<>(secenekler);
+        
+        JTextField txtHedef = new JTextField();
+        JTextField txtBaslik = new JTextField();
+        JTextField txtMesaj = new JTextField();
+        JButton btnGonder = new JButton("Mesajı Gönder");
+        btnGonder.setBackground(new Color(100, 149, 237));
+        btnGonder.setForeground(Color.WHITE);
+
+        panel.add(new JLabel("Alıcı Türü:"));
+        panel.add(cmbKime);
+        panel.add(new JLabel("Alıcı (Öğrenci ID / Öğretmen TC):"));
+        panel.add(txtHedef);
+        panel.add(new JLabel("Başlık:"));
+        panel.add(txtBaslik);
+        panel.add(new JLabel("Mesajınız:"));
+        panel.add(txtMesaj);
+        panel.add(btnGonder);
+
+        btnGonder.addActionListener(e -> {
+            String hedef = txtHedef.getText().trim();
+            String baslik = txtBaslik.getText().trim();
+            String mesaj = txtMesaj.getText().trim();
+
+            if (hedef.isEmpty() || mesaj.isEmpty() || baslik.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Alanlar boş olamaz!");
+                return;
+            }
+
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
+                bw.write("Admin;" + hedef + ";" + baslik + ";" + mesaj);
+                bw.newLine();
+                JOptionPane.showMessageDialog(this, "Mesaj başarıyla iletildi!");
+                txtHedef.setText(""); txtBaslik.setText(""); txtMesaj.setText("");
+            } catch (Exception ex) { }
+        });
+
+        return panel;
+    }
+
+    private JPanel adminGelenKutusuPaneliniOlustur() {
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        
+        String[] kolonlar = {"Gönderen", "Başlık", "Mesaj İçeriği"};
+        DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
+            public boolean isCellEditable(int row, int column) { return false; }
+        };
+        JTable tablo = new JTable(model);
+        tablo.setRowHeight(25);
+
+        try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
+            String satir;
+            while ((satir = br.readLine()) != null) {
+                String[] veri = satir.split(";");
+                if (veri.length >= 4 && veri[1].equals("admin")) {
+                    model.addRow(new Object[]{veri[0], veri[2], veri[3]});
+                }
+            }
+        } catch (Exception e) {}
+
+        panel.add(new JScrollPane(tablo), BorderLayout.CENTER);
+        return panel;
+    }
+
     private JPanel anaIslemlerPaneliniOlustur() {
         JPanel panel = new JPanel(new BorderLayout());
 
@@ -256,11 +345,13 @@ public class AnaEkran extends JFrame {
         btnSil = new JButton("Sil");
         btnGuncelle = new JButton("Güncelle");
         btnSirala = new JButton("Ortalamaya Göre Sırala");
+        btnAra = new JButton("Ara");
 
         panelButonlar.add(btnEkle);
         panelButonlar.add(btnSil);
         panelButonlar.add(btnGuncelle);
         panelButonlar.add(btnSirala);
+        panelButonlar.add(btnAra);
         panelAltAna.add(panelButonlar, BorderLayout.NORTH);
 
         JPanel panelGenelIstatistik = new JPanel(new GridLayout(1, 3, 10, 10));
@@ -335,6 +426,30 @@ public class AnaEkran extends JFrame {
         btnSirala.addActionListener(e -> {
             yonetici.ortalamayaGoreSirala();
             tablolariveGrafikGuncelle();
+        });
+
+        btnAra.addActionListener(e -> {
+            String aranan = JOptionPane.showInputDialog(this, "Aranacak Öğrenci ID veya Ad Soyad:", "Öğrenci Ara", JOptionPane.QUESTION_MESSAGE);
+            if (aranan == null || aranan.trim().isEmpty()) return;
+            
+            aranan = aranan.trim().toLowerCase();
+            boolean bulundu = false;
+            
+            for (int i = 0; i < tabloModeli.getRowCount(); i++) {
+                String idStr = tabloModeli.getValueAt(i, 0).toString();
+                String adStr = tabloModeli.getValueAt(i, 2).toString().toLowerCase();
+                
+                if (idStr.equals(aranan) || adStr.contains(aranan)) {
+                    tablo.setRowSelectionInterval(i, i);
+                    tablo.scrollRectToVisible(tablo.getCellRect(i, 0, true));
+                    bulundu = true;
+                    break;
+                }
+            }
+            
+            if (!bulundu) {
+                JOptionPane.showMessageDialog(this, "Öğrenci bulunamadı!", "Bulunamadı", JOptionPane.WARNING_MESSAGE);
+            }
         });
 
         tablo.getSelectionModel().addListSelectionListener(e -> {

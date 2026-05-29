@@ -1,50 +1,473 @@
-250260001;Programlama;5
-250260001;Calculus I;0
-250260001;Physics I;4
-250260001;Algoritmalar;8
-250260001;Bilgisayar Bilimleri Temelleri;1
-250260002;Statik;3
-250260002;Dinamik;0
-250260002;Calculus I;7
-250260002;Physics I;2
-250260002;Termodinamik;9
-250260003;Devre Analizi;1
-250260003;Lojik Tasarım;2
-250260003;Calculus I;0
-250260003;Physics I;1
-250260003;Elektromanyetik Alanlar;0
-250260004;Programlama;2
-250260004;Calculus I;1
-250260004;Physics I;3
-250260004;Algoritmalar;0
-250260004;Bilgisayar Bilimleri Temelleri;2
-250260005;Programlama;5
-250260005;Calculus I;6
-250260005;Physics I;1
-250260005;Algoritmalar;2
-250260005;Bilgisayar Bilimleri Temelleri;12
-250260006;Devre Analizi;0
-250260006;Lojik Tasarım;1
-250260006;Calculus I;2
-250260006;Physics I;0
-250260006;Elektromanyetik Alanlar;1
-250260007;Statik;2
-250260007;Dinamik;4
-250260007;Calculus I;1
-250260007;Physics I;3
-250260007;Termodinamik;0
-250260008;Programlama;1
-250260008;Calculus I;3
-250260008;Physics I;2
-250260008;Algoritmalar;0
-250260008;Bilgisayar Bilimleri Temelleri;4
-250260093;Programlama;3
-250260093;Calculus I;2
-250260093;Physics I;1
-250260093;Algoritmalar;4
-250260093;Bilgisayar Bilimleri Temelleri;2
-250260021;Devre Analizi;6
-250260021;Lojik Tasarım;7
-250260021;Calculus I;5
-250260021;Physics I;4
-250260021;Elektromanyetik Alanlar;6
+250260005;Algoritma ve Programlama II;8
+250260005;Elektirik Devreleri;6
+250260005;Fizik II;1
+250260005;Matematik II;3
+250260005;Dijital Dönüşümün Temelleri;6
+250260005;Nesne Tabanlı Programlama;2
+250260005;Lineer Cebir;4
+250260005;Ayrık Matematik;5
+250260005;Olasılık ve İstatistik;6
+250260005;Veri Yapıları;7
+250260005;Mikroişlemciler;8
+250260005;Gömülü Sistemler;2
+250260005;Makine Öğrenmesi;1
+250260007;Fizik II;6
+250260007;Matematik II;0
+250260007;Teknik Resim;3
+250260007;Genel Kimya;8
+250260007;Statik;8
+250260007;Dinamik;0
+250260007;Termodinamik;4
+250260007;Mukavemet;1
+250260007;Diferansiyel Denklemler;0
+250260007;Malzeme Bilimi;8
+250260007;Akışkanlar Mekaniği;4
+250260007;Makine Teorisi;7
+250260004;Algoritma ve Programlama II;4
+250260004;Elektirik Devreleri;1
+250260004;Fizik II;3
+250260004;Matematik II;4
+250260004;Dijital Dönüşümün Temelleri;8
+250260004;Nesne Tabanlı Programlama;6
+250260004;Lineer Cebir;6
+250260004;Ayrık Matematik;7
+250260004;Olasılık ve İstatistik;8
+250260004;Veri Yapıları;1
+250260004;Mikroişlemciler;8
+250260004;Gömülü Sistemler;8
+250260004;Makine Öğrenmesi;2
+250260008;Fizik II;4
+250260008;Matematik II;4
+250260008;Ayrık Matematik;8
+250260008;Olasılık ve İstatistik;5
+250260008;Algoritma ve Programlama II;2
+250260008;Veri Yapıları;2
+250260008;Nesne Tabanlı Programlama;7
+250260008;Bilgisayar Ağları;1
+250260008;Yazılım Mühendisliğine Giriş;0
+250260008;Makine Öğrenmesi;5
+250260001;Algoritma ve Programlama II;6
+250260001;Elektirik Devreleri;2
+250260001;Fizik II;4
+250260001;Matematik II;8
+250260001;Dijital Dönüşümün Temelleri;3
+250260001;Nesne Tabanlı Programlama;8
+250260001;Lineer Cebir;2
+250260001;Ayrık Matematik;0
+250260001;Olasılık ve İstatistik;2
+250260001;Veri Yapıları;2
+250260001;Mikroişlemciler;5
+250260001;Gömülü Sistemler;5
+250260001;Makine Öğrenmesi;3
+250260009;Fizik II;2
+250260009;Matematik II;1
+250260009;Teknik Resim;5
+250260009;Genel Kimya;4
+250260009;Statik;2
+250260009;Dinamik;4
+250260009;Termodinamik;5
+250260009;Mukavemet;7
+250260009;Diferansiyel Denklemler;8
+250260009;Malzeme Bilimi;7
+250260009;Akışkanlar Mekaniği;1
+250260009;Makine Teorisi;3
+250260010;Fizik II;0
+250260010;Matematik II;7
+250260010;Ayrık Matematik;4
+250260010;Olasılık ve İstatistik;7
+250260010;Algoritma ve Programlama II;7
+250260010;Veri Yapıları;2
+250260010;Nesne Tabanlı Programlama;2
+250260010;Bilgisayar Ağları;2
+250260010;Yazılım Mühendisliğine Giriş;7
+250260010;Makine Öğrenmesi;7
+250260011;Fizik II;3
+250260011;Matematik II;0
+250260011;Ayrık Matematik;6
+250260011;Olasılık ve İstatistik;8
+250260011;Algoritma ve Programlama II;8
+250260011;Veri Yapıları;5
+250260011;Nesne Tabanlı Programlama;8
+250260011;Bilgisayar Ağları;1
+250260011;Yazılım Mühendisliğine Giriş;4
+250260011;Makine Öğrenmesi;3
+250260012;Fizik II;0
+250260012;Matematik II;5
+250260012;Teknik Resim;0
+250260012;Genel Kimya;3
+250260012;Statik;3
+250260012;Dinamik;1
+250260012;Termodinamik;5
+250260012;Mukavemet;1
+250260012;Diferansiyel Denklemler;6
+250260012;Malzeme Bilimi;4
+250260012;Akışkanlar Mekaniği;0
+250260012;Makine Teorisi;0
+250260013;Fizik II;8
+250260013;Matematik II;8
+250260013;Genel Kimya;7
+250260013;Programlamaya Giriş;8
+250260013;Teknik Resim;8
+250260013;Elektronik Devreler;6
+250260013;Lojik Devreler;1
+250260013;Sinyaller ve Sistemler;5
+250260013;Elektrik Devre Temelleri;3
+250260013;Statik;1
+250260013;Mukavemet;6
+250260013;Makine Elemanları;2
+250260013;Gömülü Sistemler;6
+250260013;Robotik;1
+250260002;Fizik II;1
+250260002;Matematik II;1
+250260002;Teknik Resim;2
+250260002;Genel Kimya;3
+250260002;Statik;5
+250260002;Dinamik;7
+250260002;Termodinamik;2
+250260002;Mukavemet;8
+250260002;Diferansiyel Denklemler;5
+250260002;Malzeme Bilimi;7
+250260002;Akışkanlar Mekaniği;3
+250260002;Makine Teorisi;1
+250260014;Algoritma ve Programlama II;2
+250260014;Elektirik Devreleri;4
+250260014;Fizik II;3
+250260014;Matematik II;4
+250260014;Dijital Dönüşümün Temelleri;1
+250260014;Nesne Tabanlı Programlama;4
+250260014;Lineer Cebir;6
+250260014;Ayrık Matematik;3
+250260014;Olasılık ve İstatistik;7
+250260014;Veri Yapıları;0
+250260014;Mikroişlemciler;4
+250260014;Gömülü Sistemler;4
+250260014;Makine Öğrenmesi;4
+250260000;Algoritma ve Programlama II;6
+250260000;Elektirik Devreleri;6
+250260000;Fizik II;2
+250260000;Matematik II;8
+250260000;Dijital Dönüşümün Temelleri;1
+250260000;Nesne Tabanlı Programlama;8
+250260000;Lineer Cebir;4
+250260000;Ayrık Matematik;1
+250260000;Olasılık ve İstatistik;5
+250260000;Veri Yapıları;4
+250260000;Mikroişlemciler;2
+250260000;Gömülü Sistemler;6
+250260000;Makine Öğrenmesi;1
+250260015;Fizik II;7
+250260015;Matematik II;2
+250260015;Genel Kimya;5
+250260015;Programlamaya Giriş;0
+250260015;Teknik Resim;1
+250260015;Elektronik Devreler;2
+250260015;Lojik Devreler;0
+250260015;Sinyaller ve Sistemler;2
+250260015;Elektrik Devre Temelleri;3
+250260015;Statik;5
+250260015;Mukavemet;7
+250260015;Makine Elemanları;5
+250260015;Gömülü Sistemler;3
+250260015;Robotik;0
+250260017;Algoritma ve Programlama II;0
+250260017;Elektirik Devreleri;4
+250260017;Fizik II;3
+250260017;Matematik II;6
+250260017;Dijital Dönüşümün Temelleri;4
+250260017;Nesne Tabanlı Programlama;1
+250260017;Lineer Cebir;7
+250260017;Ayrık Matematik;4
+250260017;Olasılık ve İstatistik;3
+250260017;Veri Yapıları;1
+250260017;Mikroişlemciler;3
+250260017;Gömülü Sistemler;2
+250260017;Makine Öğrenmesi;4
+250260018;Fizik II;0
+250260018;Matematik II;2
+250260018;Devre Analizi;1
+250260018;Elektromanyetik Alan Teorisi;1
+250260018;Sinyaller ve Sistemler;5
+250260018;Mikroişlemciler;2
+250260019;Fizik II;6
+250260019;Matematik II;6
+250260019;Devre Analizi;4
+250260019;Elektromanyetik Alan Teorisi;2
+250260019;Sinyaller ve Sistemler;8
+250260019;Mikroişlemciler;7
+250260020;Fizik II;1
+250260020;Matematik II;0
+250260020;Devre Analizi;5
+250260020;Elektromanyetik Alan Teorisi;8
+250260020;Sinyaller ve Sistemler;3
+250260020;Mikroişlemciler;8
+250260003;Fizik II;8
+250260003;Matematik II;8
+250260003;Devre Analizi;0
+250260003;Elektromanyetik Alan Teorisi;1
+250260003;Sinyaller ve Sistemler;4
+250260003;Mikroişlemciler;7
+250260021;Fizik II;6
+250260021;Matematik II;1
+250260021;Devre Analizi;3
+250260021;Elektromanyetik Alan Teorisi;4
+250260021;Sinyaller ve Sistemler;5
+250260021;Mikroişlemciler;7
+250260022;Fizik II;1
+250260022;Matematik II;8
+250260022;Statik;1
+250260022;Mukavemet;8
+250260022;Akışkanlar Mekaniği;6
+250260022;Yapı Statiği;4
+250260022;Zemin Mekaniği;8
+250260023;Fizik II;1
+250260023;Matematik II;5
+250260023;Genel Kimya;6
+250260023;Organik Kimya;5
+250260023;Kimya Mühendisliği Termodinamiği;0
+250260023;Kütle ve Isı Transferi;4
+250260024;Fizik II;1
+250260024;Matematik II;1
+250260024;Genel Jeoloji;8
+250260024;Mineraloji;6
+250260024;Petrografi;6
+250260024;Yapısal Jeoloji;7
+250260025;Fizik II;2
+250260025;Matematik II;0
+250260025;Malzeme Bilimi;8
+250260025;Termodinamik;2
+250260025;Fiziksel Metalurji;6
+250260025;Mekanik Metalurji;3
+250260026;Matematik II;5
+250260026;Algoritma ve Programlama II;4
+250260026;Veri Yapıları;4
+250260026;Olasılık ve İstatistik;3
+250260026;Yapay Zekaya Giriş;3
+250260026;Makine Öğrenmesi;8
+250260027;Fizik II;3
+250260027;Matematik II;3
+250260027;Çevre Kimyası;7
+250260027;Çevre Mikrobiyolojisi;8
+250260027;Hidroloji;8
+250260027;Atıksu Arıtımı;6
+250260028;Fizik II;7
+250260028;Matematik II;5
+250260028;Genel Kimya;3
+250260028;Organik Kimya;7
+250260028;Kimya Mühendisliği Termodinamiği;3
+250260028;Kütle ve Isı Transferi;1
+250260029;Fizik II;1
+250260029;Matematik II;6
+250260029;Genel Kimya;5
+250260029;Organik Kimya;4
+250260029;Kimya Mühendisliği Termodinamiği;3
+250260029;Kütle ve Isı Transferi;3
+250260030;Fizik II;6
+250260030;Matematik II;8
+250260030;Genel Kimya;3
+250260030;Organik Kimya;2
+250260030;Kimya Mühendisliği Termodinamiği;4
+250260030;Kütle ve Isı Transferi;1
+250260031;Fizik II;8
+250260031;Matematik II;6
+250260031;Genel Kimya;3
+250260031;Organik Kimya;1
+250260031;Kimya Mühendisliği Termodinamiği;3
+250260031;Kütle ve Isı Transferi;0
+250260032;Fizik II;1
+250260032;Matematik II;8
+250260032;Teknik Resim;1
+250260032;Genel Kimya;5
+250260032;Statik;5
+250260032;Dinamik;0
+250260032;Termodinamik;5
+250260032;Mukavemet;2
+250260032;Diferansiyel Denklemler;4
+250260032;Malzeme Bilimi;0
+250260032;Akışkanlar Mekaniği;0
+250260032;Makine Teorisi;3
+250260033;Matematik II;6
+250260033;Algoritma ve Programlama II;2
+250260033;Veri Yapıları;5
+250260033;Olasılık ve İstatistik;1
+250260033;Yapay Zekaya Giriş;0
+250260033;Makine Öğrenmesi;7
+250260034;Matematik II;5
+250260034;Algoritma ve Programlama II;0
+250260034;Veri Yapıları;2
+250260034;Olasılık ve İstatistik;1
+250260034;Yapay Zekaya Giriş;6
+250260034;Makine Öğrenmesi;5
+250260035;Matematik II;5
+250260035;Algoritma ve Programlama II;8
+250260035;Veri Yapıları;3
+250260035;Olasılık ve İstatistik;1
+250260035;Yapay Zekaya Giriş;5
+250260035;Makine Öğrenmesi;7
+250260036;Matematik II;1
+250260036;Algoritma ve Programlama II;6
+250260036;Veri Yapıları;1
+250260036;Olasılık ve İstatistik;3
+250260036;Yapay Zekaya Giriş;1
+250260036;Makine Öğrenmesi;4
+250260037;Fizik II;4
+250260037;Matematik II;6
+250260037;Genel Jeoloji;2
+250260037;Mineraloji;7
+250260037;Petrografi;5
+250260037;Yapısal Jeoloji;0
+250260038;Fizik II;2
+250260038;Matematik II;2
+250260038;Genel Jeoloji;3
+250260038;Mineraloji;5
+250260038;Petrografi;4
+250260038;Yapısal Jeoloji;7
+250260039;Fizik II;1
+250260039;Matematik II;6
+250260039;Genel Jeoloji;7
+250260039;Mineraloji;5
+250260039;Petrografi;3
+250260039;Yapısal Jeoloji;4
+250260040;Fizik II;4
+250260040;Matematik II;3
+250260040;Genel Jeoloji;7
+250260040;Mineraloji;5
+250260040;Petrografi;7
+250260040;Yapısal Jeoloji;3
+250260041;Fizik II;2
+250260041;Matematik II;1
+250260041;Malzeme Bilimi;4
+250260041;Termodinamik;7
+250260041;Fiziksel Metalurji;5
+250260041;Mekanik Metalurji;6
+250260042;Fizik II;1
+250260042;Matematik II;1
+250260042;Malzeme Bilimi;4
+250260042;Termodinamik;8
+250260042;Fiziksel Metalurji;2
+250260042;Mekanik Metalurji;6
+250260043;Fizik II;6
+250260043;Matematik II;8
+250260043;Malzeme Bilimi;3
+250260043;Termodinamik;0
+250260043;Fiziksel Metalurji;2
+250260043;Mekanik Metalurji;4
+250260044;Fizik II;8
+250260044;Matematik II;5
+250260044;Malzeme Bilimi;3
+250260044;Termodinamik;2
+250260044;Fiziksel Metalurji;3
+250260044;Mekanik Metalurji;8
+250260045;Fizik II;1
+250260045;Matematik II;8
+250260045;Statik;2
+250260045;Mukavemet;6
+250260045;Akışkanlar Mekaniği;5
+250260045;Yapı Statiği;0
+250260045;Zemin Mekaniği;4
+250260046;Fizik II;3
+250260046;Matematik II;6
+250260046;Statik;4
+250260046;Mukavemet;6
+250260046;Akışkanlar Mekaniği;7
+250260046;Yapı Statiği;4
+250260046;Zemin Mekaniği;4
+250260047;Fizik II;4
+250260047;Matematik II;5
+250260047;Statik;7
+250260047;Mukavemet;7
+250260047;Akışkanlar Mekaniği;1
+250260047;Yapı Statiği;5
+250260047;Zemin Mekaniği;3
+250260048;Fizik II;2
+250260048;Matematik II;0
+250260048;Statik;6
+250260048;Mukavemet;2
+250260048;Akışkanlar Mekaniği;0
+250260048;Yapı Statiği;6
+250260048;Zemin Mekaniği;4
+250260049;Fizik II;2
+250260049;Matematik II;1
+250260049;Çevre Kimyası;6
+250260049;Çevre Mikrobiyolojisi;3
+250260049;Hidroloji;8
+250260049;Atıksu Arıtımı;2
+250260050;Fizik II;4
+250260050;Matematik II;7
+250260050;Çevre Kimyası;7
+250260050;Çevre Mikrobiyolojisi;3
+250260050;Hidroloji;4
+250260050;Atıksu Arıtımı;5
+250260051;Fizik II;5
+250260051;Matematik II;6
+250260051;Çevre Kimyası;2
+250260051;Çevre Mikrobiyolojisi;7
+250260051;Hidroloji;8
+250260051;Atıksu Arıtımı;1
+250260052;Fizik II;3
+250260052;Matematik II;8
+250260052;Çevre Kimyası;6
+250260052;Çevre Mikrobiyolojisi;7
+250260052;Hidroloji;0
+250260052;Atıksu Arıtımı;7
+250260053;Fizik II;6
+250260053;Matematik II;5
+250260053;Genel Kimya;5
+250260053;Programlamaya Giriş;0
+250260053;Teknik Resim;6
+250260053;Elektronik Devreler;6
+250260053;Lojik Devreler;6
+250260053;Sinyaller ve Sistemler;7
+250260053;Elektrik Devre Temelleri;7
+250260053;Statik;1
+250260053;Mukavemet;3
+250260053;Makine Elemanları;3
+250260053;Gömülü Sistemler;0
+250260053;Robotik;5
+250260054;Fizik II;6
+250260054;Matematik II;2
+250260054;Genel Kimya;7
+250260054;Programlamaya Giriş;7
+250260054;Teknik Resim;6
+250260054;Elektronik Devreler;1
+250260054;Lojik Devreler;7
+250260054;Sinyaller ve Sistemler;7
+250260054;Elektrik Devre Temelleri;3
+250260054;Statik;0
+250260054;Mukavemet;8
+250260054;Makine Elemanları;1
+250260054;Gömülü Sistemler;7
+250260054;Robotik;0
+250260055;Fizik II;7
+250260055;Matematik II;1
+250260055;Genel Kimya;4
+250260055;Programlamaya Giriş;6
+250260055;Teknik Resim;8
+250260055;Elektronik Devreler;7
+250260055;Lojik Devreler;2
+250260055;Sinyaller ve Sistemler;0
+250260055;Elektrik Devre Temelleri;0
+250260055;Statik;0
+250260055;Mukavemet;1
+250260055;Makine Elemanları;0
+250260055;Gömülü Sistemler;8
+250260055;Robotik;3
+250260056;Fizik II;3
+250260056;Matematik II;5
+250260056;Ayrık Matematik;4
+250260056;Olasılık ve İstatistik;6
+250260056;Algoritma ve Programlama II;2
+250260056;Veri Yapıları;2
+250260056;Nesne Tabanlı Programlama;7
+250260056;Bilgisayar Ağları;1
+250260056;Yazılım Mühendisliğine Giriş;1
+250260056;Makine Öğrenmesi;1
+250260057;Fizik II;0
+250260057;Matematik II;0
+250260057;Ayrık Matematik;2
+250260057;Olasılık ve İstatistik;8
+250260057;Algoritma ve Programlama II;7
+250260057;Veri Yapıları;5
+250260057;Nesne Tabanlı Programlama;8
+250260057;Bilgisayar Ağları;1
+250260057;Yazılım Mühendisliğine Giriş;4
+250260057;Makine Öğrenmesi;0

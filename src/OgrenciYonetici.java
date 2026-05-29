@@ -28,15 +28,19 @@ public class OgrenciYonetici {
 
                 String[] veri = satir.split(";");
                 
-                if (veri.length == 5) {
+                if (veri.length >= 5) {
                     try {
                         int id = Integer.parseInt(veri[0].trim());
                         String sifre = sifreCoz(veri[1].trim());
                         String ad = veri[2].trim();
                         String bolum = veri[3].trim();
                         double ort = Double.parseDouble(veri[4].trim());
+                        String eposta = veri.length > 5 ? veri[5].trim() : "tanimsiz";
+                        String telefon = veri.length > 6 ? veri[6].trim() : "tanimsiz";
+                        String adres = veri.length > 7 ? veri[7].trim() : "tanimsiz";
+                        String tc = veri.length > 8 ? veri[8].trim() : "tanimsiz";
 
-                        ogrenciListesi.add(new Ogrenci(id, sifre, ad, bolum, ort));
+                        ogrenciListesi.add(new Ogrenci(id, sifre, ad, bolum, ort, eposta, telefon, adres, tc));
                     } catch (Exception e) {}
                 }
             }
@@ -52,7 +56,11 @@ public class OgrenciYonetici {
                                sifrele(ogr.getSifre()) + ";" +
                                ogr.getAd() + ";" +
                                ogr.getBolum() + ";" +
-                               ogr.getOrtalama();
+                               ogr.getOrtalama() + ";" +
+                               ogr.getEposta() + ";" +
+                               ogr.getTelefon() + ";" +
+                               ogr.getAdres() + ";" +
+                               ogr.getTc();
                 bw.write(satir);
                 bw.newLine();
             }

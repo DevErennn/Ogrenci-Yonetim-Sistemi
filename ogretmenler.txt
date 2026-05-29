@@ -1,13 +1,25 @@
-11000000001;ahmet123;Prof. Dr. Ahmet Yılmaz;Programlama
-11000000002;ayse123;Doç. Dr. Ayşe Kaya;Calculus I
-11000000003;mehmet123;Dr. Öğr. Üyesi Mehmet Demir;Physics I
-11000000004;fatma123;Prof. Dr. Fatma Çelik;Algoritmalar
-11000000005;ali123;Arş. Gör. Ali Veli;Bilgisayar Bilimleri Temelleri
-11000000006;zeynep123;Doç. Dr. Zeynep Şahin;Statik
-11000000007;hasan123;Prof. Dr. Hasan Koç;Dinamik
-11000000008;elif123;Dr. Öğr. Üyesi Elif Arslan;Termodinamik
-11000000009;burak123;Doç. Dr. Burak Kurt;Devre Analizi
-11000000010;caner123;Prof. Dr. Caner Aydın;Lojik Tasarım
-11000000011;selin123;Dr. Öğr. Üyesi Selin Doğan;Elektromanyetik Alanlar
-11000000012;mustafa123;Öğr. Gör. Mustafa Yıldız;Matematik
-11000000013;leyla123;Prof. Dr. Leyla Şen;İngilizce
+11000000001;1234;Dr. Öğr. Üyesi Mustafa Yıldız;Algoritma ve Programlama II
+11000000002;1234;Prof. Dr. Kemal Arslan;Elektirik Devreleri
+11000000003;1234;Prof. Dr. Ahmet Yılmaz;Fizik II
+11000000004;1234;Prof. Dr. Elif Kaya;Matematik II
+11000000005;1234;Doç. Dr. Buse Aydın;Dijital Dönüşümün Temelleri
+11000000006;1234;Doç. Dr. Seda Yılmaz;Nesne Tabanlı Programlama
+11000000007;1234;Prof. Dr. Cemal Şahin;Lineer Cebir
+11000000008;1234;Doç. Dr. Murat Demir;Ayrık Matematik
+11000000009;1234;Dr. Öğr. Üyesi Canan Çelik;Olasılık ve İstatistik
+11000000010;1234;Prof. Dr. Hakan Aydın;Veri Yapıları
+11000000011;1234;Dr. Öğr. Üyesi Ali Can;Mikroişlemciler
+11000000012;1234;Dr. Öğr. Üyesi Deniz Öztürk;Makine Öğrenmesi
+11000000013;1234;Prof. Dr. Burak Yılmaz;Bilgisayar Ağları
+11000000014;1234;Öğr. Gör. Selim Yıldırım;Teknik Resim
+11000000015;1234;Doç. Dr. Ayşe Yılmaz;Genel Kimya
+11000000016;1234;Prof. Dr. Mehmet Demir;Statik
+11000000017;1234;Doç. Dr. Tarık Kozan;Dinamik
+11000000018;1234;Prof. Dr. Hüseyin Çetin;Termodinamik
+11000000019;1234;Doç. Dr. Fatma Aksoy;Malzeme Bilimi
+11000000020;1234;Prof. Dr. Levent Yalçın;Sinyaller ve Sistemler
+11000000021;1234;Doç. Dr. Ömer Bulut;Yapı Statiği
+11000000022;1234;Dr. Öğr. Üyesi Esra Koç;Zemin Mekaniği
+11000000023;1234;Dr. Öğr. Üyesi Nazlı Hilal;Kütle ve Isı Transferi
+11000000024;1234;Prof. Dr. Kadir Taş;Genel Jeoloji
+11000000025;1234;Doç. Dr. Merve Şen;Mineraloji

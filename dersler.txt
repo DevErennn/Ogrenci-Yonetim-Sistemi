@@ -1,0 +1,92 @@
+Bilgisayar Mühendisliği;Algoritma ve Programlama II;Dr. Öğr. Üyesi Mustafa Yıldız
+Bilgisayar Mühendisliği;Elektirik Devreleri;Prof. Dr. Kemal Arslan
+Bilgisayar Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Bilgisayar Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Bilgisayar Mühendisliği;Dijital Dönüşümün Temelleri;Doç. Dr. Buse Aydın
+Bilgisayar Mühendisliği;Nesne Tabanlı Programlama;Doç. Dr. Seda Yılmaz
+Bilgisayar Mühendisliği;Lineer Cebir;Prof. Dr. Cemal Şahin
+Bilgisayar Mühendisliği;Ayrık Matematik;Doç. Dr. Murat Demir
+Bilgisayar Mühendisliği;Olasılık ve İstatistik;Dr. Öğr. Üyesi Canan Çelik
+Bilgisayar Mühendisliği;Veri Yapıları;Prof. Dr. Hakan Aydın
+Bilgisayar Mühendisliği;Mikroişlemciler;Dr. Öğr. Üyesi Ali Can
+Bilgisayar Mühendisliği;Gömülü Sistemler;Dr. Öğr. Üyesi Ali Can
+Bilgisayar Mühendisliği;Makine Öğrenmesi;Dr. Öğr. Üyesi Deniz Öztürk
+Yazılım Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Yazılım Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Yazılım Mühendisliği;Ayrık Matematik;Doç. Dr. Murat Demir
+Yazılım Mühendisliği;Olasılık ve İstatistik;Dr. Öğr. Üyesi Canan Çelik
+Yazılım Mühendisliği;Algoritma ve Programlama II;Dr. Öğr. Üyesi Mustafa Yıldız
+Yazılım Mühendisliği;Veri Yapıları;Prof. Dr. Hakan Aydın
+Yazılım Mühendisliği;Nesne Tabanlı Programlama;Doç. Dr. Seda Yılmaz
+Yazılım Mühendisliği;Bilgisayar Ağları;Prof. Dr. Burak Yılmaz
+Yazılım Mühendisliği;Yazılım Mühendisliğine Giriş;Doç. Dr. Seda Yılmaz
+Yazılım Mühendisliği;Makine Öğrenmesi;Dr. Öğr. Üyesi Deniz Öztürk
+Makine Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Makine Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Makine Mühendisliği;Teknik Resim;Öğr. Gör. Selim Yıldırım
+Makine Mühendisliği;Genel Kimya;Doç. Dr. Ayşe Yılmaz
+Makine Mühendisliği;Statik;Prof. Dr. Mehmet Demir
+Makine Mühendisliği;Dinamik;Doç. Dr. Tarık Kozan
+Makine Mühendisliği;Termodinamik;Prof. Dr. Hüseyin Çetin
+Makine Mühendisliği;Mukavemet;Prof. Dr. Mehmet Demir
+Makine Mühendisliği;Diferansiyel Denklemler;Prof. Dr. Cemal Şahin
+Makine Mühendisliği;Malzeme Bilimi;Doç. Dr. Fatma Aksoy
+Makine Mühendisliği;Akışkanlar Mekaniği;Prof. Dr. Hüseyin Çetin
+Makine Mühendisliği;Makine Teorisi;Doç. Dr. Tarık Kozan
+Mekatronik Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Mekatronik Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Mekatronik Mühendisliği;Genel Kimya;Doç. Dr. Ayşe Yılmaz
+Mekatronik Mühendisliği;Programlamaya Giriş;Dr. Öğr. Üyesi Mustafa Yıldız
+Mekatronik Mühendisliği;Teknik Resim;Öğr. Gör. Selim Yıldırım
+Mekatronik Mühendisliği;Elektronik Devreler;Prof. Dr. Kemal Arslan
+Mekatronik Mühendisliği;Lojik Devreler;Dr. Öğr. Üyesi Ali Can
+Mekatronik Mühendisliği;Sinyaller ve Sistemler;Prof. Dr. Levent Yalçın
+Mekatronik Mühendisliği;Elektrik Devre Temelleri;Prof. Dr. Kemal Arslan
+Mekatronik Mühendisliği;Statik;Prof. Dr. Mehmet Demir
+Mekatronik Mühendisliği;Mukavemet;Prof. Dr. Mehmet Demir
+Mekatronik Mühendisliği;Makine Elemanları;Doç. Dr. Tarık Kozan
+Mekatronik Mühendisliği;Gömülü Sistemler;Dr. Öğr. Üyesi Ali Can
+Mekatronik Mühendisliği;Robotik;Prof. Dr. Levent Yalçın
+Elektrik Elektronik Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Elektrik Elektronik Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Elektrik Elektronik Mühendisliği;Devre Analizi;Prof. Dr. Kemal Arslan
+Elektrik Elektronik Mühendisliği;Elektromanyetik Alan Teorisi;Prof. Dr. Levent Yalçın
+Elektrik Elektronik Mühendisliği;Sinyaller ve Sistemler;Prof. Dr. Levent Yalçın
+Elektrik Elektronik Mühendisliği;Mikroişlemciler;Dr. Öğr. Üyesi Ali Can
+İnşaat Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+İnşaat Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+İnşaat Mühendisliği;Statik;Prof. Dr. Mehmet Demir
+İnşaat Mühendisliği;Mukavemet;Prof. Dr. Mehmet Demir
+İnşaat Mühendisliği;Akışkanlar Mekaniği;Prof. Dr. Hüseyin Çetin
+İnşaat Mühendisliği;Yapı Statiği;Doç. Dr. Ömer Bulut
+İnşaat Mühendisliği;Zemin Mekaniği;Dr. Öğr. Üyesi Esra Koç
+Kimya Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Kimya Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Kimya Mühendisliği;Genel Kimya;Doç. Dr. Ayşe Yılmaz
+Kimya Mühendisliği;Organik Kimya;Doç. Dr. Ayşe Yılmaz
+Kimya Mühendisliği;Kimya Mühendisliği Termodinamiği;Prof. Dr. Hüseyin Çetin
+Kimya Mühendisliği;Kütle ve Isı Transferi;Dr. Öğr. Üyesi Nazlı Hilal
+Jeoloji Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Jeoloji Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Jeoloji Mühendisliği;Genel Jeoloji;Prof. Dr. Kadir Taş
+Jeoloji Mühendisliği;Mineraloji;Doç. Dr. Merve Şen
+Jeoloji Mühendisliği;Petrografi;Doç. Dr. Merve Şen
+Jeoloji Mühendisliği;Yapısal Jeoloji;Prof. Dr. Kadir Taş
+Metalurji ve Malzeme Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Metalurji ve Malzeme Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Metalurji ve Malzeme Mühendisliği;Malzeme Bilimi;Doç. Dr. Fatma Aksoy
+Metalurji ve Malzeme Mühendisliği;Termodinamik;Prof. Dr. Hüseyin Çetin
+Metalurji ve Malzeme Mühendisliği;Fiziksel Metalurji;Doç. Dr. Fatma Aksoy
+Metalurji ve Malzeme Mühendisliği;Mekanik Metalurji;Prof. Dr. Mehmet Demir
+Yapay Zeka ve Veri Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Yapay Zeka ve Veri Mühendisliği;Algoritma ve Programlama II;Dr. Öğr. Üyesi Mustafa Yıldız
+Yapay Zeka ve Veri Mühendisliği;Veri Yapıları;Prof. Dr. Hakan Aydın
+Yapay Zeka ve Veri Mühendisliği;Olasılık ve İstatistik;Dr. Öğr. Üyesi Canan Çelik
+Yapay Zeka ve Veri Mühendisliği;Yapay Zekaya Giriş;Dr. Öğr. Üyesi Deniz Öztürk
+Yapay Zeka ve Veri Mühendisliği;Makine Öğrenmesi;Dr. Öğr. Üyesi Deniz Öztürk
+Çevre Mühendisliği;Fizik II;Prof. Dr. Ahmet Yılmaz
+Çevre Mühendisliği;Matematik II;Prof. Dr. Elif Kaya
+Çevre Mühendisliği;Çevre Kimyası;Doç. Dr. Ayşe Yılmaz
+Çevre Mühendisliği;Çevre Mikrobiyolojisi;Dr. Öğr. Üyesi Nazlı Hilal
+Çevre Mühendisliği;Hidroloji;Doç. Dr. Ömer Bulut
+Çevre Mühendisliği;Atıksu Arıtımı;Prof. Dr. Kadir Taş

@@ -1,1 +1,4 @@
-Prof. Dr. Ahmet Yılmaz;250260093;sa
+Prof. Dr. Ahmet Yılmaz;250260000;Bilgisiz Baslik;sa
+Prof. Dr. Ahmet Yılmaz;250260000;Bilgisiz Baslik;derse gel lo
+Admin;250260000;ders;calis lo
+250260000;admin;ders;tamam geliom

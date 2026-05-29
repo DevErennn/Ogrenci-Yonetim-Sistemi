@@ -52,15 +52,34 @@ public class OgrenciEkrani extends JFrame {
         
         add(panelUstAna, BorderLayout.NORTH);
 
+        // Mesaj sayısını hesapla (Gelen Kutusu kırmızı +1 için)
+        int mesajSayisi = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
+            String satir;
+            while ((satir = br.readLine()) != null) {
+                String[] veri = satir.split(";");
+                // Format: Gonderen;Alici;Baslik;Mesaj
+                if (veri.length >= 4 && veri[1].equals(String.valueOf(ogrenci.getId()))) {
+                    mesajSayisi++;
+                }
+            }
+        } catch (Exception e) {}
+
         // --- SEKMELER ---
         JTabbedPane sekmeler = new JTabbedPane();
+        sekmeler.addTab("Profilim", profilPaneliniOlustur());
         sekmeler.addTab("Not Listesi", notListesiPaneliniOlustur());
         sekmeler.addTab("Ders Programı", dersProgramiPaneliniOlustur());
         sekmeler.addTab("Devamsızlık Durumu", devamsizlikPaneliniOlustur());
         
         // --- YENİ EKLENEN SEKMELER ---
         sekmeler.addTab("Duyurular", duyuruPaneliniOlustur()); 
-        sekmeler.addTab("Gelen Kutusu", gelenKutusuPaneliniOlustur()); 
+        if (mesajSayisi > 0) {
+            sekmeler.addTab("<html>Gelen Kutusu <font color='red'>(+" + mesajSayisi + ")</font></html>", gelenKutusuPaneliniOlustur());
+        } else {
+            sekmeler.addTab("Gelen Kutusu", gelenKutusuPaneliniOlustur()); 
+        }
+        sekmeler.addTab("Destek", destekPaneliniOlustur());
         
         add(sekmeler, BorderLayout.CENTER);
     }
@@ -98,8 +117,11 @@ public class OgrenciEkrani extends JFrame {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         
-        String[] kolonlar = {"Gönderen Öğretmen", "Mesaj İçeriği"};
-        DefaultTableModel model = new DefaultTableModel(kolonlar, 0);
+        String[] kolonlar = {"Gönderen", "Başlık", "Mesaj İçeriği"};
+        DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) { return false; }
+        };
         JTable tablo = new JTable(model);
         tablo.setRowHeight(25); // Mesajlar daha rahat okunsun diye satır yüksekliği arttırıldı
 
@@ -107,9 +129,9 @@ public class OgrenciEkrani extends JFrame {
             String satir;
             while ((satir = br.readLine()) != null) {
                 String[] veri = satir.split(";");
-                // Format: HocaAd;AliciID;Mesaj
-                if (veri.length == 3 && veri[1].equals(String.valueOf(ogrenci.getId()))) {
-                    model.addRow(new Object[]{veri[0], veri[2]});
+                // Format: Gonderen;Alici;Baslik;Mesaj
+                if (veri.length >= 4 && veri[1].equals(String.valueOf(ogrenci.getId()))) {
+                    model.addRow(new Object[]{veri[0], veri[2], veri[3]});
                 }
             }
         } catch (Exception e) {}
@@ -120,15 +142,22 @@ public class OgrenciEkrani extends JFrame {
 
     private String[] bolumeGoreDersleriGetir() {
         String bolum = ogrenci.getBolum();
-        if (bolum.equals("Bilgisayar Mühendisliği") || bolum.equals("Yazılım Mühendisliği")) {
-            return new String[]{"Programlama", "Calculus I", "Physics I", "Algoritmalar", "Bilgisayar Bilimleri Temelleri"};
-        } else if (bolum.equals("Makine Mühendisliği") || bolum.equals("Mekatronik Mühendisliği")) {
-            return new String[]{"Statik", "Dinamik", "Calculus I", "Physics I", "Termodinamik"};
-        } else if (bolum.equals("Elektrik Elektronik Mühendisliği")) {
-            return new String[]{"Devre Analizi", "Lojik Tasarım", "Calculus I", "Physics I", "Elektromanyetik Alanlar"};
-        } else {
-            return new String[]{"Matematik", "Fizik", "İngilizce", "Tarih", "Türk Dili"};
+        java.util.List<String> derslerListesi = new java.util.ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader("dersler.txt"))) {
+            String satir;
+            while ((satir = br.readLine()) != null) {
+                String[] veri = satir.split(";");
+                if (veri.length >= 2 && veri[0].trim().equals(bolum)) {
+                    derslerListesi.add(veri[1].trim());
+                }
+            }
+        } catch (Exception e) {}
+        
+        if (derslerListesi.isEmpty()) {
+            return new String[]{"Henüz ders atanmamış"};
         }
+        
+        return derslerListesi.toArray(new String[0]);
     }
 
     private int dersinDevamsizliginiGetir(String dersAdi) {
@@ -149,7 +178,10 @@ public class OgrenciEkrani extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         String[] kolonlar = {"Ders Adı", "Vize", "Final", "Harf Notu"};
-        DefaultTableModel model = new DefaultTableModel(kolonlar, 0);
+        DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) { return false; }
+        };
         JTable tablo = new JTable(model);
 
         // --- SCANNER İLE DOSYA OKUMA KULLANIMI ---
@@ -201,7 +233,10 @@ public class OgrenciEkrani extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         String[] kolonlar = {"Gün", "Saat", "Ders Adı", "Derslik"};
-        DefaultTableModel model = new DefaultTableModel(kolonlar, 0);
+        DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) { return false; }
+        };
         JTable tablo = new JTable(model);
 
         String[] dersler = bolumeGoreDersleriGetir();
@@ -226,7 +261,10 @@ public class OgrenciEkrani extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         String[] kolonlar = {"Ders Adı", "Yapılan Devamsızlık", "Kalan Hak", "Durum"};
-        DefaultTableModel model = new DefaultTableModel(kolonlar, 0);
+        DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) { return false; }
+        };
         JTable tablo = new JTable(model);
 
         int devamsizlikSiniri = 8; 
@@ -261,6 +299,110 @@ public class OgrenciEkrani extends JFrame {
         }
 
         panel.add(new JScrollPane(tablo), BorderLayout.CENTER);
+        return panel;
+    }
+
+    // --- YENİ: PROFİL PANELİ ---
+    private JPanel profilPaneliniOlustur() {
+        JPanel panel = new JPanel(new GridLayout(10, 2, 10, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
+
+        panel.add(new JLabel("Okul Numarası:"));
+        panel.add(new JLabel(String.valueOf(ogrenci.getId())));
+
+        panel.add(new JLabel("İsim Soyisim:"));
+        panel.add(new JLabel(ogrenci.getAd()));
+
+        panel.add(new JLabel("Bölüm:"));
+        panel.add(new JLabel(ogrenci.getBolum()));
+
+        panel.add(new JLabel("Ortalama:"));
+        panel.add(new JLabel(String.valueOf(ogrenci.getOrtalama())));
+
+        panel.add(new JLabel("TC Kimlik No:"));
+        JTextField txtTc = new JTextField(ogrenci.getTc());
+        panel.add(txtTc);
+
+        panel.add(new JLabel("E-Posta:"));
+        JTextField txtEposta = new JTextField(ogrenci.getEposta());
+        panel.add(txtEposta);
+
+        panel.add(new JLabel("Telefon Numarası:"));
+        JTextField txtTel = new JTextField(ogrenci.getTelefon());
+        panel.add(txtTel);
+
+        panel.add(new JLabel("Adres:"));
+        JTextField txtAdres = new JTextField(ogrenci.getAdres());
+        panel.add(txtAdres);
+
+        panel.add(new JLabel(""));
+        JButton btnKaydet = new JButton("Bilgileri Güncelle");
+        btnKaydet.setBackground(new Color(60, 179, 113));
+        btnKaydet.setForeground(Color.WHITE);
+        panel.add(btnKaydet);
+
+        btnKaydet.addActionListener(e -> {
+            ogrenci.setTc(txtTc.getText().trim());
+            ogrenci.setEposta(txtEposta.getText().trim());
+            ogrenci.setTelefon(txtTel.getText().trim());
+            ogrenci.setAdres(txtAdres.getText().trim());
+            
+            OgrenciYonetici yonetici = new OgrenciYonetici();
+            for (Ogrenci o : yonetici.getOgrenciListesi()) {
+                if (o.getId() == ogrenci.getId()) {
+                    o.setTc(ogrenci.getTc());
+                    o.setEposta(ogrenci.getEposta());
+                    o.setTelefon(ogrenci.getTelefon());
+                    o.setAdres(ogrenci.getAdres());
+                    break;
+                }
+            }
+            yonetici.dosyayaYaz();
+            
+            JOptionPane.showMessageDialog(this, "Bilgileriniz güncellendi!");
+        });
+
+        return panel;
+    }
+
+    // --- YENİ: DESTEK PANELİ ---
+    private JPanel destekPaneliniOlustur() {
+        JPanel panel = new JPanel(new GridLayout(6, 1, 10, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
+
+        JTextField txtBaslik = new JTextField();
+        JTextField txtMesaj = new JTextField();
+        JButton btnGonder = new JButton("Destek Talebi Oluştur (Admin'e Gönder)");
+        btnGonder.setBackground(new Color(100, 149, 237));
+        btnGonder.setForeground(Color.WHITE);
+
+        panel.add(new JLabel("Konu / Başlık:"));
+        panel.add(txtBaslik);
+        panel.add(new JLabel("Mesajınız:"));
+        panel.add(txtMesaj);
+        panel.add(new JLabel("")); 
+        panel.add(btnGonder);
+
+        btnGonder.addActionListener(e -> {
+            String baslik = txtBaslik.getText().trim();
+            String mesaj = txtMesaj.getText().trim();
+
+            if (baslik.isEmpty() || mesaj.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Alanlar boş olamaz!");
+                return;
+            }
+
+            try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new java.io.FileWriter("mesajlar.txt", true))) {
+                bw.write(ogrenci.getId() + ";admin;" + baslik + ";" + mesaj);
+                bw.newLine();
+                JOptionPane.showMessageDialog(this, "Destek talebiniz admin'e iletildi!");
+                txtBaslik.setText(""); 
+                txtMesaj.setText("");
+            } catch (Exception ex) { 
+                JOptionPane.showMessageDialog(this, "Mesaj gönderilirken hata oluştu!"); 
+            }
+        });
+
         return panel;
     }
 }
