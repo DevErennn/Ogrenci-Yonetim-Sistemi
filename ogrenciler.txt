@@ -10,7 +10,7 @@
 250260013;ZG9nYW4xMjM=;Caner Doğan;Mekatronik Mühendisliği;3.16;ogrenci250260013@edu.tr;5556745250;Atatürk Mah.;10054584210
 250260002;emV5bmVwMTIz;Zeynep Demir;Makine Mühendisliği;3.01;ogrenci250260002@edu.tr;5555635150;Kültür Mah.;10060692484
 250260014;cG9sYXQxMjM=;Kaan Polat;Bilgisayar Mühendisliği;3.09;ogrenci250260014@edu.tr;5558410410;Kültür Mah.;10096835914
-250260000;dWNhcjQ2NDY=;Eren UÇAR;Bilgisayar Mühendisliği;3.07;ogrenci250260000@edu.tr;5554150140;Kahramanmaraş;10000000000
+250260000;dWNhcjQ2NDY=;Eren UÇAR;Bilgisayar Mühendisliği;3.07;ogrenci250260000@edu.tr;50000000000;Kahramanmaraş;10000000000
 250260015;a2lsaWMxMjM=;Mert Kılıç;Mekatronik Mühendisliği;3.26;ogrenci250260015@edu.tr;5556387390;Merkez Mah.;10072492676
 250260017;ZGVtaXIxMjM=;Ahmet Demir;Bilgisayar Mühendisliği;3.18;ogrenci250260017@edu.tr;5554361151;Yeni Mahalle;10089965578
 250260018;YXJzbGFuMTIz;Fatma Arslan;Elektrik Elektronik Mühendisliği;3.14;ogrenci250260018@edu.tr;5556452916;Kültür Mah.;10035109080

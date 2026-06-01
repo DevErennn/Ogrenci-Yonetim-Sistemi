@@ -108,6 +108,7 @@ public class OgrenciYonetici {
             }
         });
     }
+
     public static String sifrele(String sifre) {
         return Base64.getEncoder().encodeToString(sifre.getBytes(StandardCharsets.UTF_8));
     }
@@ -117,8 +118,8 @@ public class OgrenciYonetici {
             byte[] decoded = Base64.getDecoder().decode(sifreliMetin);
             return new String(decoded, StandardCharsets.UTF_8);
         } catch (IllegalArgumentException e) {
-            // Eski sha256 hash veya hatalı base64 ise olduğu gibi döndür
             return sifreliMetin;
         }
     }
 }
+
