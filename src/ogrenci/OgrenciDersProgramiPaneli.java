@@ -20,11 +20,11 @@ public class OgrenciDersProgramiPaneli extends JPanel {
         };
         JTable tablo = new JTable(model);
 
-        String[] dersler = bolumeGoreDersleriGetir(ogrenci.getBolum());
+        String[] dersler = bolumeVeSinifaGoreDersleriGetir(ogrenci.getBolum(), ogrenci.getSinif());
         String[] gunler = {"Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma"};
         String[] saatler = {"09:00 - 11:00", "11:00 - 13:00", "13:00 - 15:00", "15:00 - 17:00"};
 
-        Random rastgele = new Random(ogrenci.getBolum().hashCode()); 
+        Random rastgele = new Random(ogrenci.getBolum().hashCode() + ogrenci.getSinif()); 
 
         for (int i = 0; i < dersler.length; i++) {
             String gun = gunler[rastgele.nextInt(gunler.length)];
@@ -36,14 +36,27 @@ public class OgrenciDersProgramiPaneli extends JPanel {
         add(new JScrollPane(tablo), BorderLayout.CENTER);
     }
 
-    private String[] bolumeGoreDersleriGetir(String bolum) {
+    private String[] bolumeVeSinifaGoreDersleriGetir(String bolum, int sinif) {
         java.util.List<String> derslerListesi = new java.util.ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader("dersler.txt"))) {
             String satir;
             while ((satir = br.readLine()) != null) {
                 String[] veri = satir.split(";");
-                if (veri.length >= 2 && veri[0].trim().equals(bolum)) {
-                    derslerListesi.add(veri[1].trim());
+                if (veri.length >= 3) {
+                    String dBolum = veri[0].trim();
+                    String dSinifStr = veri[1].trim();
+                    String dDersAdi = veri[2].trim();
+                    
+                    if (dBolum.equalsIgnoreCase(bolum)) {
+                        try {
+                            int dSinif = Integer.parseInt(dSinifStr);
+                            if (dSinif == sinif) {
+                                derslerListesi.add(dDersAdi);
+                            }
+                        } catch (NumberFormatException e) {
+                            // ignore if format invalid
+                        }
+                    }
                 }
             }
         } catch (Exception e) {}

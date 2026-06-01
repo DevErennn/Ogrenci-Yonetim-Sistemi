@@ -1,473 +1,209 @@
-250260005;Algoritma ve Programlama II;65;73
-250260005;Elektirik Devreleri;90;80
-250260005;Fizik II;75;72
-250260005;Matematik II;78;92
-250260005;Dijital Dönüşümün Temelleri;99;85
-250260005;Nesne Tabanlı Programlama;88;90
-250260005;Lineer Cebir;93;62
-250260005;Ayrık Matematik;75;68
-250260005;Olasılık ve İstatistik;65;93
-250260005;Veri Yapıları;70;86
-250260005;Mikroişlemciler;100;85
-250260005;Gömülü Sistemler;61;88
-250260005;Makine Öğrenmesi;84;87
-250260007;Fizik II;67;100
-250260007;Matematik II;67;79
-250260007;Teknik Resim;67;100
-250260007;Genel Kimya;60;100
-250260007;Statik;75;66
-250260007;Dinamik;100;62
-250260007;Termodinamik;100;95
-250260007;Mukavemet;77;65
-250260007;Diferansiyel Denklemler;98;62
-250260007;Malzeme Bilimi;68;72
-250260007;Akışkanlar Mekaniği;68;69
-250260007;Makine Teorisi;93;87
-250260004;Algoritma ve Programlama II;86;95
-250260004;Elektirik Devreleri;68;100
-250260004;Fizik II;100;80
-250260004;Matematik II;93;92
-250260004;Dijital Dönüşümün Temelleri;79;66
-250260004;Nesne Tabanlı Programlama;67;91
-250260004;Lineer Cebir;95;78
-250260004;Ayrık Matematik;82;82
-250260004;Olasılık ve İstatistik;73;82
-250260004;Veri Yapıları;77;61
-250260004;Mikroişlemciler;78;78
-250260004;Gömülü Sistemler;62;70
-250260004;Makine Öğrenmesi;69;65
-250260008;Fizik II;71;78
-250260008;Matematik II;74;91
-250260008;Ayrık Matematik;77;74
-250260008;Olasılık ve İstatistik;72;63
-250260008;Algoritma ve Programlama II;75;91
-250260008;Veri Yapıları;91;66
-250260008;Nesne Tabanlı Programlama;92;87
-250260008;Bilgisayar Ağları;65;78
-250260008;Yazılım Mühendisliğine Giriş;84;89
-250260008;Makine Öğrenmesi;84;71
-250260001;Algoritma ve Programlama II;60;90
-250260001;Elektirik Devreleri;97;95
-250260001;Fizik II;98;62
-250260001;Matematik II;91;97
-250260001;Dijital Dönüşümün Temelleri;97;91
-250260001;Nesne Tabanlı Programlama;98;92
-250260001;Lineer Cebir;99;91
-250260001;Ayrık Matematik;86;81
-250260001;Olasılık ve İstatistik;60;94
-250260001;Veri Yapıları;77;68
-250260001;Mikroişlemciler;87;67
-250260001;Gömülü Sistemler;64;80
-250260001;Makine Öğrenmesi;65;87
-250260009;Fizik II;79;83
-250260009;Matematik II;61;60
-250260009;Teknik Resim;73;96
-250260009;Genel Kimya;73;93
-250260009;Statik;88;92
-250260009;Dinamik;80;66
-250260009;Termodinamik;70;81
-250260009;Mukavemet;67;100
-250260009;Diferansiyel Denklemler;91;63
-250260009;Malzeme Bilimi;83;68
-250260009;Akışkanlar Mekaniği;68;64
-250260009;Makine Teorisi;93;88
-250260010;Fizik II;87;79
-250260010;Matematik II;78;82
-250260010;Ayrık Matematik;91;96
-250260010;Olasılık ve İstatistik;73;67
-250260010;Algoritma ve Programlama II;65;99
-250260010;Veri Yapıları;63;81
-250260010;Nesne Tabanlı Programlama;86;87
-250260010;Bilgisayar Ağları;61;75
-250260010;Yazılım Mühendisliğine Giriş;78;66
-250260010;Makine Öğrenmesi;95;85
-250260011;Fizik II;79;96
-250260011;Matematik II;95;74
-250260011;Ayrık Matematik;96;72
-250260011;Olasılık ve İstatistik;68;81
-250260011;Algoritma ve Programlama II;75;70
-250260011;Veri Yapıları;60;63
-250260011;Nesne Tabanlı Programlama;81;90
-250260011;Bilgisayar Ağları;77;67
-250260011;Yazılım Mühendisliğine Giriş;62;90
-250260011;Makine Öğrenmesi;83;85
-250260012;Fizik II;84;94
-250260012;Matematik II;71;77
-250260012;Teknik Resim;78;63
-250260012;Genel Kimya;70;73
-250260012;Statik;62;79
-250260012;Dinamik;71;99
-250260012;Termodinamik;67;90
-250260012;Mukavemet;67;65
-250260012;Diferansiyel Denklemler;94;95
-250260012;Malzeme Bilimi;97;60
-250260012;Akışkanlar Mekaniği;93;94
-250260012;Makine Teorisi;98;84
-250260013;Fizik II;80;67
-250260013;Matematik II;80;71
-250260013;Genel Kimya;79;92
-250260013;Programlamaya Giriş;73;95
-250260013;Teknik Resim;71;65
-250260013;Elektronik Devreler;99;99
-250260013;Lojik Devreler;66;73
-250260013;Sinyaller ve Sistemler;71;85
-250260013;Elektrik Devre Temelleri;74;72
-250260013;Statik;79;81
-250260013;Mukavemet;67;87
-250260013;Makine Elemanları;69;76
-250260013;Gömülü Sistemler;88;88
-250260013;Robotik;74;80
-250260002;Fizik II;88;84
-250260002;Matematik II;98;69
-250260002;Teknik Resim;65;66
-250260002;Genel Kimya;88;61
-250260002;Statik;79;88
-250260002;Dinamik;65;68
-250260002;Termodinamik;63;61
-250260002;Mukavemet;66;75
-250260002;Diferansiyel Denklemler;88;89
-250260002;Malzeme Bilimi;88;60
-250260002;Akışkanlar Mekaniği;81;89
-250260002;Makine Teorisi;74;64
-250260014;Algoritma ve Programlama II;75;60
-250260014;Elektirik Devreleri;72;98
-250260014;Fizik II;83;65
-250260014;Matematik II;71;61
-250260014;Dijital Dönüşümün Temelleri;91;65
-250260014;Nesne Tabanlı Programlama;96;80
-250260014;Lineer Cebir;85;69
-250260014;Ayrık Matematik;97;75
-250260014;Olasılık ve İstatistik;66;72
-250260014;Veri Yapıları;98;71
-250260014;Mikroişlemciler;69;86
-250260014;Gömülü Sistemler;86;88
-250260014;Makine Öğrenmesi;73;74
-250260000;Algoritma ve Programlama II;70;80
-250260000;Elektirik Devreleri;70;75
-250260000;Fizik II;96;73
-250260000;Matematik II;60;78
-250260000;Dijital Dönüşümün Temelleri;85;81
-250260000;Nesne Tabanlı Programlama;73;73
-250260000;Lineer Cebir;75;60
-250260000;Ayrık Matematik;87;100
-250260000;Olasılık ve İstatistik;60;71
-250260000;Veri Yapıları;100;64
-250260000;Mikroişlemciler;78;89
-250260000;Gömülü Sistemler;71;67
-250260000;Makine Öğrenmesi;70;66
-250260015;Fizik II;83;76
-250260015;Matematik II;98;69
-250260015;Genel Kimya;66;74
-250260015;Programlamaya Giriş;91;95
-250260015;Teknik Resim;85;86
-250260015;Elektronik Devreler;70;85
-250260015;Lojik Devreler;94;69
-250260015;Sinyaller ve Sistemler;81;86
-250260015;Elektrik Devre Temelleri;81;73
-250260015;Statik;95;94
-250260015;Mukavemet;89;66
-250260015;Makine Elemanları;88;72
-250260015;Gömülü Sistemler;76;60
-250260015;Robotik;96;100
-250260017;Algoritma ve Programlama II;64;82
-250260017;Elektirik Devreleri;90;63
-250260017;Fizik II;86;67
-250260017;Matematik II;78;73
-250260017;Dijital Dönüşümün Temelleri;99;64
-250260017;Nesne Tabanlı Programlama;66;83
-250260017;Lineer Cebir;83;60
-250260017;Ayrık Matematik;98;80
-250260017;Olasılık ve İstatistik;91;96
-250260017;Veri Yapıları;90;73
-250260017;Mikroişlemciler;74;84
-250260017;Gömülü Sistemler;90;96
-250260017;Makine Öğrenmesi;92;66
-250260018;Fizik II;78;74
-250260018;Matematik II;78;84
-250260018;Devre Analizi;92;83
-250260018;Elektromanyetik Alan Teorisi;65;72
-250260018;Sinyaller ve Sistemler;64;69
-250260018;Mikroişlemciler;85;95
-250260019;Fizik II;96;63
-250260019;Matematik II;60;94
-250260019;Devre Analizi;82;92
-250260019;Elektromanyetik Alan Teorisi;60;69
-250260019;Sinyaller ve Sistemler;82;76
-250260019;Mikroişlemciler;83;89
-250260020;Fizik II;84;78
-250260020;Matematik II;98;100
-250260020;Devre Analizi;67;61
-250260020;Elektromanyetik Alan Teorisi;78;81
-250260020;Sinyaller ve Sistemler;95;99
-250260020;Mikroişlemciler;82;69
-250260003;Fizik II;85;77
-250260003;Matematik II;96;76
-250260003;Devre Analizi;88;82
-250260003;Elektromanyetik Alan Teorisi;68;82
-250260003;Sinyaller ve Sistemler;85;72
-250260003;Mikroişlemciler;84;62
-250260021;Fizik II;72;70
-250260021;Matematik II;93;87
-250260021;Devre Analizi;62;70
-250260021;Elektromanyetik Alan Teorisi;64;95
-250260021;Sinyaller ve Sistemler;84;64
-250260021;Mikroişlemciler;64;82
-250260022;Fizik II;77;72
-250260022;Matematik II;66;77
-250260022;Statik;79;99
-250260022;Mukavemet;81;65
-250260022;Akışkanlar Mekaniği;63;65
-250260022;Yapı Statiği;82;83
-250260022;Zemin Mekaniği;89;99
-250260023;Fizik II;65;72
-250260023;Matematik II;71;70
-250260023;Genel Kimya;74;63
-250260023;Organik Kimya;75;60
-250260023;Kimya Mühendisliği Termodinamiği;98;62
-250260023;Kütle ve Isı Transferi;64;73
-250260024;Fizik II;71;63
-250260024;Matematik II;73;96
-250260024;Genel Jeoloji;77;85
-250260024;Mineraloji;71;69
-250260024;Petrografi;66;60
-250260024;Yapısal Jeoloji;86;94
-250260025;Fizik II;79;67
-250260025;Matematik II;83;88
-250260025;Malzeme Bilimi;96;92
-250260025;Termodinamik;91;68
-250260025;Fiziksel Metalurji;80;61
-250260025;Mekanik Metalurji;87;67
-250260026;Matematik II;86;80
-250260026;Algoritma ve Programlama II;72;100
-250260026;Veri Yapıları;70;99
-250260026;Olasılık ve İstatistik;75;94
-250260026;Yapay Zekaya Giriş;97;70
-250260026;Makine Öğrenmesi;88;60
-250260027;Fizik II;99;86
-250260027;Matematik II;71;62
-250260027;Çevre Kimyası;60;99
-250260027;Çevre Mikrobiyolojisi;88;92
-250260027;Hidroloji;84;60
-250260027;Atıksu Arıtımı;93;72
-250260028;Fizik II;65;90
-250260028;Matematik II;83;97
-250260028;Genel Kimya;67;60
-250260028;Organik Kimya;90;91
-250260028;Kimya Mühendisliği Termodinamiği;99;97
-250260028;Kütle ve Isı Transferi;84;93
-250260029;Fizik II;67;96
-250260029;Matematik II;75;68
-250260029;Genel Kimya;61;80
-250260029;Organik Kimya;89;98
-250260029;Kimya Mühendisliği Termodinamiği;98;75
-250260029;Kütle ve Isı Transferi;99;97
-250260030;Fizik II;93;62
-250260030;Matematik II;81;80
-250260030;Genel Kimya;93;75
-250260030;Organik Kimya;79;88
-250260030;Kimya Mühendisliği Termodinamiği;61;90
-250260030;Kütle ve Isı Transferi;92;89
-250260031;Fizik II;61;69
-250260031;Matematik II;96;91
-250260031;Genel Kimya;66;60
-250260031;Organik Kimya;61;64
-250260031;Kimya Mühendisliği Termodinamiği;82;83
-250260031;Kütle ve Isı Transferi;94;79
-250260032;Fizik II;86;68
-250260032;Matematik II;79;94
-250260032;Teknik Resim;85;93
-250260032;Genel Kimya;69;67
-250260032;Statik;70;94
-250260032;Dinamik;99;62
-250260032;Termodinamik;64;64
-250260032;Mukavemet;85;69
-250260032;Diferansiyel Denklemler;85;60
-250260032;Malzeme Bilimi;70;81
-250260032;Akışkanlar Mekaniği;87;96
-250260032;Makine Teorisi;79;81
-250260033;Matematik II;77;81
-250260033;Algoritma ve Programlama II;99;92
-250260033;Veri Yapıları;81;78
-250260033;Olasılık ve İstatistik;86;100
-250260033;Yapay Zekaya Giriş;73;87
-250260033;Makine Öğrenmesi;62;74
-250260034;Matematik II;74;89
-250260034;Algoritma ve Programlama II;85;82
-250260034;Veri Yapıları;100;90
-250260034;Olasılık ve İstatistik;69;87
-250260034;Yapay Zekaya Giriş;65;87
-250260034;Makine Öğrenmesi;66;84
-250260035;Matematik II;66;67
-250260035;Algoritma ve Programlama II;73;73
-250260035;Veri Yapıları;90;84
-250260035;Olasılık ve İstatistik;89;93
-250260035;Yapay Zekaya Giriş;97;99
-250260035;Makine Öğrenmesi;98;83
-250260036;Matematik II;66;92
-250260036;Algoritma ve Programlama II;89;69
-250260036;Veri Yapıları;63;93
-250260036;Olasılık ve İstatistik;84;91
-250260036;Yapay Zekaya Giriş;98;77
-250260036;Makine Öğrenmesi;79;84
-250260037;Fizik II;72;96
-250260037;Matematik II;86;94
-250260037;Genel Jeoloji;84;86
-250260037;Mineraloji;89;64
-250260037;Petrografi;65;76
-250260037;Yapısal Jeoloji;92;93
-250260038;Fizik II;79;77
-250260038;Matematik II;61;72
-250260038;Genel Jeoloji;96;94
-250260038;Mineraloji;79;79
-250260038;Petrografi;94;100
-250260038;Yapısal Jeoloji;87;76
-250260039;Fizik II;72;76
-250260039;Matematik II;72;85
-250260039;Genel Jeoloji;75;85
-250260039;Mineraloji;88;69
-250260039;Petrografi;94;69
-250260039;Yapısal Jeoloji;87;80
-250260040;Fizik II;74;68
-250260040;Matematik II;70;62
-250260040;Genel Jeoloji;78;70
-250260040;Mineraloji;60;66
-250260040;Petrografi;77;91
-250260040;Yapısal Jeoloji;60;70
-250260041;Fizik II;78;79
-250260041;Matematik II;89;91
-250260041;Malzeme Bilimi;72;68
-250260041;Termodinamik;89;74
-250260041;Fiziksel Metalurji;70;68
-250260041;Mekanik Metalurji;73;90
-250260042;Fizik II;63;76
-250260042;Matematik II;82;90
-250260042;Malzeme Bilimi;82;93
-250260042;Termodinamik;67;61
-250260042;Fiziksel Metalurji;76;61
-250260042;Mekanik Metalurji;77;61
-250260043;Fizik II;64;68
-250260043;Matematik II;80;69
-250260043;Malzeme Bilimi;81;88
-250260043;Termodinamik;99;68
-250260043;Fiziksel Metalurji;91;92
-250260043;Mekanik Metalurji;78;96
-250260044;Fizik II;80;69
-250260044;Matematik II;94;70
-250260044;Malzeme Bilimi;100;69
-250260044;Termodinamik;63;87
-250260044;Fiziksel Metalurji;85;95
-250260044;Mekanik Metalurji;99;67
-250260045;Fizik II;83;64
-250260045;Matematik II;64;100
-250260045;Statik;100;81
-250260045;Mukavemet;86;65
-250260045;Akışkanlar Mekaniği;66;99
-250260045;Yapı Statiği;71;99
-250260045;Zemin Mekaniği;67;92
-250260046;Fizik II;84;68
-250260046;Matematik II;66;81
-250260046;Statik;71;95
-250260046;Mukavemet;83;95
-250260046;Akışkanlar Mekaniği;77;71
-250260046;Yapı Statiği;91;84
-250260046;Zemin Mekaniği;88;62
-250260047;Fizik II;76;91
-250260047;Matematik II;83;61
-250260047;Statik;89;93
-250260047;Mukavemet;60;94
-250260047;Akışkanlar Mekaniği;99;60
-250260047;Yapı Statiği;72;83
-250260047;Zemin Mekaniği;83;61
-250260048;Fizik II;61;74
-250260048;Matematik II;69;62
-250260048;Statik;64;83
-250260048;Mukavemet;98;78
-250260048;Akışkanlar Mekaniği;76;99
-250260048;Yapı Statiği;85;88
-250260048;Zemin Mekaniği;64;78
-250260049;Fizik II;74;76
-250260049;Matematik II;99;84
-250260049;Çevre Kimyası;90;96
-250260049;Çevre Mikrobiyolojisi;67;76
-250260049;Hidroloji;83;95
-250260049;Atıksu Arıtımı;90;83
-250260050;Fizik II;86;77
-250260050;Matematik II;84;77
-250260050;Çevre Kimyası;87;62
-250260050;Çevre Mikrobiyolojisi;95;75
-250260050;Hidroloji;80;71
-250260050;Atıksu Arıtımı;99;80
-250260051;Fizik II;61;89
-250260051;Matematik II;84;81
-250260051;Çevre Kimyası;81;65
-250260051;Çevre Mikrobiyolojisi;93;70
-250260051;Hidroloji;100;83
-250260051;Atıksu Arıtımı;96;77
-250260052;Fizik II;64;99
-250260052;Matematik II;93;98
-250260052;Çevre Kimyası;71;68
-250260052;Çevre Mikrobiyolojisi;63;78
-250260052;Hidroloji;67;60
-250260052;Atıksu Arıtımı;84;77
-250260053;Fizik II;61;72
-250260053;Matematik II;88;77
-250260053;Genel Kimya;60;72
-250260053;Programlamaya Giriş;82;98
-250260053;Teknik Resim;91;84
-250260053;Elektronik Devreler;69;87
-250260053;Lojik Devreler;90;70
-250260053;Sinyaller ve Sistemler;71;83
-250260053;Elektrik Devre Temelleri;88;85
-250260053;Statik;97;71
-250260053;Mukavemet;67;80
-250260053;Makine Elemanları;71;99
-250260053;Gömülü Sistemler;93;70
-250260053;Robotik;74;65
-250260054;Fizik II;79;61
-250260054;Matematik II;70;97
-250260054;Genel Kimya;69;100
-250260054;Programlamaya Giriş;62;63
-250260054;Teknik Resim;95;83
-250260054;Elektronik Devreler;72;85
-250260054;Lojik Devreler;71;100
-250260054;Sinyaller ve Sistemler;97;77
-250260054;Elektrik Devre Temelleri;83;76
-250260054;Statik;92;94
-250260054;Mukavemet;95;83
-250260054;Makine Elemanları;95;70
-250260054;Gömülü Sistemler;69;78
-250260054;Robotik;65;77
-250260055;Fizik II;64;67
-250260055;Matematik II;76;96
-250260055;Genel Kimya;71;85
-250260055;Programlamaya Giriş;84;91
-250260055;Teknik Resim;87;61
-250260055;Elektronik Devreler;100;100
-250260055;Lojik Devreler;89;88
-250260055;Sinyaller ve Sistemler;65;77
-250260055;Elektrik Devre Temelleri;79;82
-250260055;Statik;82;95
-250260055;Mukavemet;92;77
-250260055;Makine Elemanları;97;74
-250260055;Gömülü Sistemler;69;80
-250260055;Robotik;60;94
-250260056;Fizik II;60;77
-250260056;Matematik II;85;61
-250260056;Ayrık Matematik;82;71
-250260056;Olasılık ve İstatistik;65;97
-250260056;Algoritma ve Programlama II;100;92
-250260056;Veri Yapıları;67;96
-250260056;Nesne Tabanlı Programlama;69;76
-250260056;Bilgisayar Ağları;64;66
-250260056;Yazılım Mühendisliğine Giriş;72;84
-250260056;Makine Öğrenmesi;79;98
-250260057;Fizik II;96;96
-250260057;Matematik II;61;86
-250260057;Ayrık Matematik;100;94
-250260057;Olasılık ve İstatistik;88;95
-250260057;Algoritma ve Programlama II;85;84
-250260057;Veri Yapıları;71;74
-250260057;Nesne Tabanlı Programlama;97;83
-250260057;Bilgisayar Ağları;80;95
-250260057;Yazılım Mühendisliğine Giriş;67;76
-250260057;Makine Öğrenmesi;77;63
+250260028;Fizik II;53;82
+250260028;Matematik II;45;94
+250260028;Genel Kimya;52;86
+250260028;Bilgisayar Programlama;63;96
+250260049;Fizik II;50;85
+250260049;Matematik II;64;81
+250260049;Çevre Kimyası;92;53
+250260049;Bilgisayar Programlama;69;47
+250260029;Tesis Tasarımı;95;95
+250260029;Proses Kontrol;62;78
+250260029;Ayırma İşlemleri;93;74
+250260029;Polimer Teknolojisi;74;91
+250260035;Matematik II;89;88
+250260035;Algoritma ve Programlama II;93;54
+250260035;Yapay Zekaya Giriş;57;100
+250260035;Ayrık Matematik;66;56
+250260001;Mikroişlemciler;74;100
+250260001;İşletim Sistemleri;90;69
+250260001;Veritabanı Yönetim Sistemleri;71;69
+250260001;Yazılım Mühendisliği;46;84
+250260057;Fizik II;60;59
+250260057;Matematik II;81;47
+250260057;Algoritma ve Programlama II;87;85
+250260057;Yazılım Mühendisliğine Giriş;46;85
+250260037;Mineraloji;72;82
+250260037;Petrografi;54;48
+250260037;Stratigrafi;57;82
+250260037;Paleontoloji;67;61
+250260033;Veri Yapıları;64;53
+250260033;Olasılık ve İstatistik;99;99
+250260033;Lineer Cebir;99;79
+250260033;Veritabanı Sistemleri;95;79
+250260038;Mineraloji;72;46
+250260038;Petrografi;71;66
+250260038;Stratigrafi;58;62
+250260038;Paleontoloji;83;98
+250260020;Devre Analizi;84;93
+250260020;Devre Analizi II;62;52
+250260020;Lojik Tasarım;56;99
+250260020;Olasılık;99;58
+250260034;Matematik II;74;61
+250260034;Algoritma ve Programlama II;75;52
+250260034;Yapay Zekaya Giriş;85;54
+250260034;Ayrık Matematik;49;47
+250260036;Derin Öğrenme;47;63
+250260036;Doğal Dil İşleme;72;78
+250260036;Veri Madenciliği;49;45
+250260036;İşletim Sistemleri;68;94
+250260045;Betonarme;70;87
+250260045;Çelik Yapılar;78;75
+250260045;Karayolu Mühendisliği;77;76
+250260045;Su Kaynakları Mühendisliği;92;91
+250260030;Tesis Tasarımı;93;49
+250260030;Proses Kontrol;85;77
+250260030;Ayırma İşlemleri;50;74
+250260030;Polimer Teknolojisi;59;49
+250260055;Elektronik Devreler;90;94
+250260055;Sinyaller ve Sistemler;49;47
+250260055;Makine Elemanları;90;81
+250260055;Mikrodenetleyiciler;59;97
+250260015;Elektronik Devreler;75;72
+250260015;Sinyaller ve Sistemler;87;59
+250260015;Makine Elemanları;60;58
+250260015;Mikrodenetleyiciler;47;87
+250260005;Dijital Dönüşümün Temelleri;90;54
+250260005;Gömülü Sistemler;67;46
+250260005;Makine Öğrenmesi;67;83
+250260005;Bilgisayar Ağları Güvenliği;49;59
+250260043;Tahribatsız Muayene;54;70
+250260043;Toz Metalurjisi;64;81
+250260043;Korozyon;86;62
+250260043;Kompozit Malzemeler;87;51
+250260051;Çevre Mikrobiyolojisi;46;78
+250260051;Hidroloji;83;93
+250260051;Ekoloji;59;95
+250260051;Çevre Mühendisliği Temelleri;73;69
+250260054;Elektronik Devreler;73;62
+250260054;Sinyaller ve Sistemler;84;57
+250260054;Makine Elemanları;53;81
+250260054;Mikrodenetleyiciler;82;51
+250260012;Statik;65;68
+250260012;Dinamik;90;64
+250260012;Termodinamik;45;86
+250260012;Mukavemet;49;73
+250260012;Diferansiyel Denklemler;69;60
+250260012;Malzeme Bilimi;66;83
+250260044;Malzeme Bilimi;45;66
+250260044;Termodinamik;52;64
+250260044;Malzeme Karakterizasyonu;52;76
+250260044;Faz Diyagramları;60;70
+250260010;Fizik II;80;67
+250260010;Matematik II;57;70
+250260010;Algoritma ve Programlama II;71;57
+250260010;Yazılım Mühendisliğine Giriş;83;70
+250260004;Nesne Tabanlı Programlama;86;71
+250260004;Lineer Cebir;91;85
+250260004;Ayrık Matematik;56;72
+250260004;Olasılık ve İstatistik;87;63
+250260004;Veri Yapıları;52;58
+250260046;Betonarme;60;47
+250260046;Çelik Yapılar;70;75
+250260046;Karayolu Mühendisliği;56;83
+250260046;Su Kaynakları Mühendisliği;64;98
+250260017;Algoritma ve Programlama II;100;60
+250260017;Elektirik Devreleri;74;63
+250260017;Fizik II;89;94
+250260017;Matematik II;51;49
+250260050;Çevre Mikrobiyolojisi;69;59
+250260050;Hidroloji;66;96
+250260050;Ekoloji;86;46
+250260050;Çevre Mühendisliği Temelleri;64;94
+250260007;Statik;49;93
+250260007;Dinamik;60;89
+250260007;Termodinamik;68;47
+250260007;Mukavemet;97;89
+250260007;Diferansiyel Denklemler;82;56
+250260007;Malzeme Bilimi;95;98
+250260019;Fizik II;92;84
+250260019;Matematik II;66;81
+250260019;Bilgisayar Programlama;61;79
+250260019;Kimya;60;87
+250260053;Fizik II;100;66
+250260053;Matematik II;94;60
+250260053;Genel Kimya;51;63
+250260053;Programlamaya Giriş;65;91
+250260053;Teknik Resim;58;47
+250260053;Lojik Devreler;85;74
+250260013;Fizik II;76;45
+250260013;Matematik II;93;70
+250260013;Genel Kimya;78;95
+250260013;Programlamaya Giriş;79;78
+250260013;Teknik Resim;50;76
+250260013;Lojik Devreler;62;49
+250260039;Fizik II;75;94
+250260039;Matematik II;59;99
+250260039;Genel Jeoloji;94;91
+250260039;Kimya;48;68
+250260008;Fizik II;57;49
+250260008;Matematik II;65;55
+250260008;Algoritma ve Programlama II;50;91
+250260008;Yazılım Mühendisliğine Giriş;72;57
+250260003;Haberleşme Sistemleri;90;62
+250260003;Güç Elektroniği;55;87
+250260003;Sayısal İşaret İşleme;92;55
+250260003;Antenler ve Mikrodalga;86;72
+250260047;Statik;47;84
+250260047;Mukavemet;47;47
+250260047;Dinamik;83;69
+250260047;Malzeme Bilimi;65;63
+250260056;Makine Öğrenmesi;47;69
+250260056;Yazılım Sınama;54;59
+250260056;Yazılım Proje Yönetimi;72;65
+250260056;Veri Madenciliği;59;93
+250260009;Fizik II;99;55
+250260009;Matematik II;80;87
+250260009;Teknik Resim;83;89
+250260009;Genel Kimya;61;50
+250260018;Devre Analizi;81;82
+250260018;Devre Analizi II;63;95
+250260018;Lojik Tasarım;80;92
+250260018;Olasılık;77;54
+250260032;Akışkanlar Mekaniği;84;76
+250260032;Makine Teorisi;75;69
+250260032;Isı Transferi;53;52
+250260032;İmalat Usulleri;100;83
+250260041;Fizik II;52;71
+250260041;Matematik II;91;45
+250260041;Genel Kimya;90;83
+250260041;Bilgisayar Destekli Çizim;68;57
+250260011;Ayrık Matematik;95;51
+250260011;Olasılık ve İstatistik;98;62
+250260011;Veri Yapıları;45;67
+250260011;Nesne Tabanlı Programlama;86;94
+250260048;Betonarme;51;88
+250260048;Çelik Yapılar;94;72
+250260048;Karayolu Mühendisliği;80;77
+250260048;Su Kaynakları Mühendisliği;49;78
+250260052;İçme Suyu Arıtımı;55;51
+250260052;Hava Kirliliği;67;92
+250260052;Katı Atık Yönetimi;80;68
+250260052;Akışkanlar Mekaniği;78;86
+250260014;Algoritma ve Programlama II;46;81
+250260014;Elektirik Devreleri;61;45
+250260014;Fizik II;51;82
+250260014;Matematik II;79;80
+250260000;Algoritma ve Programlama II;63;66
+250260000;Elektirik Devreleri;90;89
+250260000;Fizik II;63;81
+250260000;Matematik II;96;83
+250260021;Elektromanyetik Alan Teorisi;76;84
+250260021;Sinyaller ve Sistemler;62;83
+250260021;Mikroişlemciler;66;69
+250260021;Kontrol Sistemleri;85;50
+250260002;Makine Elemanları II;61;56
+250260002;Bilgisayar Destekli Tasarım;81;80
+250260002;Sistem Dinamiği ve Kontrol;67;60
+250260002;Otomotiv Mühendisliği;83;62
+250260031;Tesis Tasarımı;56;98
+250260031;Proses Kontrol;52;61
+250260031;Ayırma İşlemleri;91;73
+250260031;Polimer Teknolojisi;59;90
+250260042;Malzeme Bilimi;63;81
+250260042;Termodinamik;49;98
+250260042;Malzeme Karakterizasyonu;96;61
+250260042;Faz Diyagramları;88;98
+250260040;Fizik II;47;53
+250260040;Matematik II;49;77
+250260040;Genel Jeoloji;88;100
+250260040;Kimya;73;88

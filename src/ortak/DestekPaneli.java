@@ -35,7 +35,7 @@ public class DestekPaneli extends JPanel {
             }
 
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
-                bw.write(gonderenBilgisi + ";admin;" + baslik + ";" + mesaj);
+                bw.write(gonderenBilgisi + ";admin;" + core.OgrenciYonetici.sifrele(baslik) + ";" + core.OgrenciYonetici.sifrele(mesaj));
                 bw.newLine();
                 JOptionPane.showMessageDialog(this, "Destek talebiniz admin'e iletildi!");
                 txtBaslik.setText(""); txtMesaj.setText("");

@@ -25,7 +25,7 @@ public class OgrenciGelenKutusuPaneli extends JPanel {
             while ((satir = br.readLine()) != null) {
                 String[] veri = satir.split(";");
                 if (veri.length >= 4 && veri[1].equals(String.valueOf(ogrenci.getId()))) {
-                    model.addRow(new Object[]{veri[0], veri[2], veri[3]});
+                    model.addRow(new Object[]{veri[0], core.OgrenciYonetici.sifreCoz(veri[2]), core.OgrenciYonetici.sifreCoz(veri[3])});
                 }
             }
         } catch (Exception e) {}

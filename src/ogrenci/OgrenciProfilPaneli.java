@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class OgrenciProfilPaneli extends JPanel {
     public OgrenciProfilPaneli(Ogrenci ogrenci) {
-        setLayout(new GridLayout(10, 2, 10, 10));
+        setLayout(new GridLayout(11, 2, 10, 10));
         setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
 
         add(new JLabel("Okul Numarası:"));
@@ -18,6 +18,9 @@ public class OgrenciProfilPaneli extends JPanel {
 
         add(new JLabel("Bölüm:"));
         add(new JLabel(ogrenci.getBolum()));
+
+        add(new JLabel("Sınıf:"));
+        add(new JLabel(ogrenci.getSinif() + ". Sınıf"));
 
         add(new JLabel("Ortalama:"));
         add(new JLabel(String.valueOf(ogrenci.getOrtalama())));

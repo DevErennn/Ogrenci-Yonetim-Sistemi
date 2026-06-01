@@ -11,6 +11,8 @@ public class AnaIslemlerPaneli extends JPanel {
     private JTable tablo;
     private DefaultTableModel tabloModeli;
     private JTextField txtId, txtSifre, txtAd, txtBolum, txtOrtalama;
+    private JComboBox<Integer> cmbSinif;
+    private JComboBox<String> cmbFiltreSinif;
     private JButton btnEkle, btnSil, btnGuncelle, btnSirala, btnAra;
     private JLabel lblToplamOgrenci, lblSinifOrtalamasi, lblEnBasarili;
     private DataUpdateListener updateListener;
@@ -29,6 +31,7 @@ public class AnaIslemlerPaneli extends JPanel {
         txtAd = new JTextField();
         txtBolum = new JTextField();
         txtOrtalama = new JTextField();
+        cmbSinif = new JComboBox<>(new Integer[]{1, 2, 3, 4});
 
         panelGirdi.add(new JLabel("Öğrenci ID (25026..):"));
         panelGirdi.add(txtId);
@@ -38,12 +41,14 @@ public class AnaIslemlerPaneli extends JPanel {
         panelGirdi.add(txtAd);
         panelGirdi.add(new JLabel("Bölüm:"));
         panelGirdi.add(txtBolum);
+        panelGirdi.add(new JLabel("Sınıf:"));
+        panelGirdi.add(cmbSinif);
         panelGirdi.add(new JLabel("Ortalama:"));
         panelGirdi.add(txtOrtalama);
 
         add(panelGirdi, BorderLayout.NORTH);
 
-        String[] kolonlar = {"ID", "Şifre", "Ad Soyad", "Bölüm", "Ortalama"};
+        String[] kolonlar = {"ID", "Şifre", "Ad Soyad", "Bölüm", "Sınıf", "Ortalama"};
         tabloModeli = new DefaultTableModel(kolonlar, 0);
         tablo = new JTable(tabloModeli);
         add(new JScrollPane(tablo), BorderLayout.CENTER);
@@ -62,6 +67,13 @@ public class AnaIslemlerPaneli extends JPanel {
         panelButonlar.add(btnGuncelle);
         panelButonlar.add(btnSirala);
         panelButonlar.add(btnAra);
+
+        panelButonlar.add(new JLabel("Sınıf Filtresi:"));
+        String[] filtreSecenekleri = {"Tümü", "1. Sınıf", "2. Sınıf", "3. Sınıf", "4. Sınıf"};
+        cmbFiltreSinif = new JComboBox<>(filtreSecenekleri);
+        panelButonlar.add(cmbFiltreSinif);
+        cmbFiltreSinif.addActionListener(e -> verileriGuncelle());
+
         panelAltAna.add(panelButonlar, BorderLayout.NORTH);
 
         JPanel panelGenelIstatistik = new JPanel(new GridLayout(1, 3, 10, 10));
@@ -93,13 +105,14 @@ public class AnaIslemlerPaneli extends JPanel {
                 int id = Integer.parseInt(txtId.getText());
                 String sifre = txtSifre.getText().trim();
                 double ort = Double.parseDouble(txtOrtalama.getText());
+                int sinif = (Integer) cmbSinif.getSelectedItem();
                 
                 if(sifre.isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Şifre boş olamaz!");
                     return;
                 }
 
-                yonetici.ogrenciEkle(new Ogrenci(id, sifre, txtAd.getText(), txtBolum.getText(), ort));
+                yonetici.ogrenciEkle(new Ogrenci(id, sifre, txtAd.getText(), txtBolum.getText(), sinif, ort));
                 verileriGuncelle(); 
                 alanlariTemizle();
                 if (updateListener != null) updateListener.onDataUpdated();
@@ -126,8 +139,9 @@ public class AnaIslemlerPaneli extends JPanel {
                 int id = (int) tabloModeli.getValueAt(seciliSatir, 0);
                 String sifre = txtSifre.getText().trim(); 
                 double ort = Double.parseDouble(txtOrtalama.getText());
+                int sinif = (Integer) cmbSinif.getSelectedItem();
                 
-                yonetici.ogrenciGuncelle(id, sifre, txtAd.getText(), txtBolum.getText(), ort);
+                yonetici.ogrenciGuncelle(id, sifre, txtAd.getText(), txtBolum.getText(), sinif, ort);
                 verileriGuncelle();
                 alanlariTemizle();
                 if (updateListener != null) updateListener.onDataUpdated();
@@ -172,7 +186,8 @@ public class AnaIslemlerPaneli extends JPanel {
                 txtSifre.setText(tabloModeli.getValueAt(seciliSatir, 1).toString()); 
                 txtAd.setText(tabloModeli.getValueAt(seciliSatir, 2).toString());
                 txtBolum.setText(tabloModeli.getValueAt(seciliSatir, 3).toString());
-                txtOrtalama.setText(tabloModeli.getValueAt(seciliSatir, 4).toString());
+                cmbSinif.setSelectedItem(Integer.parseInt(tabloModeli.getValueAt(seciliSatir, 4).toString()));
+                txtOrtalama.setText(tabloModeli.getValueAt(seciliSatir, 5).toString());
             }
         });
     }
@@ -185,8 +200,14 @@ public class AnaIslemlerPaneli extends JPanel {
         double enYuksekNot = -1;
         String enBasariliIsim = "-";
 
+        int seciliFiltre = cmbFiltreSinif != null ? cmbFiltreSinif.getSelectedIndex() : 0;
+
         for (Ogrenci ogr : yonetici.getOgrenciListesi()) {
-            Object[] satir = {ogr.getId(), ogr.getSifre(), ogr.getAd(), ogr.getBolum(), ogr.getOrtalama()};
+            if (seciliFiltre > 0 && ogr.getSinif() != seciliFiltre) {
+                continue;
+            }
+
+            Object[] satir = {ogr.getId(), ogr.getSifre(), ogr.getAd(), ogr.getBolum(), ogr.getSinif(), ogr.getOrtalama()};
             tabloModeli.addRow(satir);
 
             toplamOgrenci++;

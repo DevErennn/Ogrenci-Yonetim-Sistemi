@@ -43,7 +43,7 @@ public class AdminMesajPaneli extends JPanel {
             }
 
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
-                bw.write("Admin;" + hedef + ";" + baslik + ";" + mesaj);
+                bw.write("Admin;" + hedef + ";" + core.OgrenciYonetici.sifrele(baslik) + ";" + core.OgrenciYonetici.sifrele(mesaj));
                 bw.newLine();
                 JOptionPane.showMessageDialog(this, "Mesaj başarıyla iletildi!");
                 txtHedef.setText(""); txtBaslik.setText(""); txtMesaj.setText("");

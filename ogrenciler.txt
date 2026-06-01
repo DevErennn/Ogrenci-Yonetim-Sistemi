@@ -1,50 +1,50 @@
-250260005;Y2ljZWsxMjM=;Ayşegül Çiçek;Bilgisayar Mühendisliği;3.24;ogrenci250260005@edu.tr;5559164885;Atatürk Mah.;10095973622
-250260007;Y2VtcmUxMjM=;Cemre Koç;Makine Mühendisliği;3.17;ogrenci250260007@edu.tr;5556798025;Merkez Mah.;10024146998
-250260004;bWVobWV0MTIz;Mehmet Yıldız;Bilgisayar Mühendisliği;3.19;ogrenci250260004@edu.tr;5553295528;Cumhuriyet Mah.;10021206773
-250260008;YXlkaW4xMjM=;Selin Aydın;Yazılım Mühendisliği;3.15;ogrenci250260008@edu.tr;5558151443;Kültür Mah.;10094528515
-250260001;a2F5YTEyMw==;Eren Kaya;Bilgisayar Mühendisliği;3.35;ogrenci250260001@edu.tr;5558386667;Atatürk Mah.;10030732135
-250260009;b3pkZW1pcjEyMw==;Ayşe Özdemir;Makine Mühendisliği;3.14;ogrenci250260009@edu.tr;5552056375;Atatürk Mah.;10044003461
-250260010;Z2l6ZW0xMjM=;Gizem Kurt;Yazılım Mühendisliği;3.2;ogrenci250260010@edu.tr;5558950045;Atatürk Mah.;10013979317
-250260011;c2FoaW5hMTIz;Burak Şahina;Yazılım Mühendisliği;3.13;ogrenci250260011@edu.tr;5559473995;Yeni Mahalle;10044452966
-250260012;emV5bmVwMTIz;Zeynep Yılmaz;Makine Mühendisliği;3.22;ogrenci250260012@edu.tr;5558558784;Yeni Mahalle;10029072357
-250260013;ZG9nYW4xMjM=;Caner Doğan;Mekatronik Mühendisliği;3.16;ogrenci250260013@edu.tr;5556745250;Atatürk Mah.;10054584210
-250260002;emV5bmVwMTIz;Zeynep Demir;Makine Mühendisliği;3.01;ogrenci250260002@edu.tr;5555635150;Kültür Mah.;10060692484
-250260014;cG9sYXQxMjM=;Kaan Polat;Bilgisayar Mühendisliği;3.09;ogrenci250260014@edu.tr;5558410410;Kültür Mah.;10096835914
-250260000;dWNhcjQ2NDY=;Eren UÇAR;Bilgisayar Mühendisliği;3.07;ogrenci250260000@edu.tr;50000000000;Kahramanmaraş;10000000000
-250260015;a2lsaWMxMjM=;Mert Kılıç;Mekatronik Mühendisliği;3.26;ogrenci250260015@edu.tr;5556387390;Merkez Mah.;10072492676
-250260017;ZGVtaXIxMjM=;Ahmet Demir;Bilgisayar Mühendisliği;3.18;ogrenci250260017@edu.tr;5554361151;Yeni Mahalle;10089965578
-250260018;YXJzbGFuMTIz;Fatma Arslan;Elektrik Elektronik Mühendisliği;3.14;ogrenci250260018@edu.tr;5556452916;Kültür Mah.;10035109080
-250260019;Y2V0aW4xMjM=;Tolga Çetin;Elektrik Elektronik Mühendisliği;3.17;ogrenci250260019@edu.tr;5555582185;Kültür Mah.;10093922406
-250260020;a3VjdWsxMjM=;Ahmet KÜÇÜK;Elektrik Elektronik Mühendisliği;3.3;ogrenci250260020@edu.tr;5551314337;Cumhuriyet Mah.;10018039284
-250260003;eWlsbWF6MTIz;Ahmet Yılmaz;Elektrik Elektronik Mühendisliği;3.15;ogrenci250260003@edu.tr;5555702386;Cumhuriyet Mah.;10048537774
-250260021;bWVobWV0MTIz;Mehmet TÜRK;Elektrik Elektronik Mühendisliği;3.04;ogrenci250260021@edu.tr;5559117372;Merkez Mah.;10092957582
-250260028;MTIzNA==;Caner Doğan;Kimya Mühendisliği;3.41;ogrenci250260028@edu.tr;5550008225;Kampüs;10000005881
-250260029;MTIzNA==;Mustafa Yıldız;Kimya Mühendisliği;3.36;ogrenci250260029@edu.tr;5550003936;Kampüs;10000006864
-250260030;MTIzNA==;Fatma Çelik;Kimya Mühendisliği;3.27;ogrenci250260030@edu.tr;5550003499;Kampüs;10000004925
-250260031;MTIzNA==;Eren Özdemir;Kimya Mühendisliği;3.01;ogrenci250260031@edu.tr;5550002904;Kampüs;10000001652
-250260032;MTIzNA==;Cemre Kurt;Makine Mühendisliği;3.14;ogrenci250260032@edu.tr;5550008650;Kampüs;10000008052
-250260033;MTIzNA==;Cemre Çelik;Yapay Zeka ve Veri Mühendisliği;3.32;ogrenci250260033@edu.tr;5550002749;Kampüs;10000001855
-250260034;MTIzNA==;Selin Aydın;Yapay Zeka ve Veri Mühendisliği;3.3;ogrenci250260034@edu.tr;5550002530;Kampüs;10000008193
-250260035;MTIzNA==;Zeynep Yıldız;Yapay Zeka ve Veri Mühendisliği;3.36;ogrenci250260035@edu.tr;5550008529;Kampüs;10000004926
-250260036;MTIzNA==;Zeynep Kurt;Yapay Zeka ve Veri Mühendisliği;3.3;ogrenci250260036@edu.tr;5550006371;Kampüs;10000007581
-250260037;MTIzNA==;Mustafa Yıldız;Jeoloji Mühendisliği;3.34;ogrenci250260037@edu.tr;5550003625;Kampüs;10000006285
-250260038;MTIzNA==;Caner Çelik;Jeoloji Mühendisliği;3.31;ogrenci250260038@edu.tr;5550004499;Kampüs;10000001460
-250260039;MTIzNA==;Gizem Polat;Jeoloji Mühendisliği;3.16;ogrenci250260039@edu.tr;5550009322;Kampüs;10000006863
-250260040;MTIzNA==;Gizem Kurt;Jeoloji Mühendisliği;2.83;ogrenci250260040@edu.tr;5550002360;Kampüs;10000004686
-250260041;MTIzNA==;Zeynep Polat;Metalurji ve Malzeme Mühendisliği;3.14;ogrenci250260041@edu.tr;5550001059;Kampüs;10000008226
-250260042;MTIzNA==;Burak Şahin;Metalurji ve Malzeme Mühendisliği;2.96;ogrenci250260042@edu.tr;5550004857;Kampüs;10000009333
-250260043;MTIzNA==;Ayşe Koç;Metalurji ve Malzeme Mühendisliği;3.24;ogrenci250260043@edu.tr;5550002873;Kampüs;10000003825
-250260044;MTIzNA==;Selin Yılmaz;Metalurji ve Malzeme Mühendisliği;3.22;ogrenci250260044@edu.tr;5550007695;Kampüs;10000001186
-250260045;MTIzNA==;Ali Arslan;İnşaat Mühendisliği;3.28;ogrenci250260045@edu.tr;5550005886;Kampüs;10000005950
-250260046;MTIzNA==;Mustafa Çelik;İnşaat Mühendisliği;3.19;ogrenci250260046@edu.tr;5550003804;Kampüs;10000005386
-250260047;MTIzNA==;Eren Kaya;İnşaat Mühendisliği;3.15;ogrenci250260047@edu.tr;5550007482;Kampüs;10000005670
-250260048;MTIzNA==;Mehmet Kurt;İnşaat Mühendisliği;3.11;ogrenci250260048@edu.tr;5550004827;Kampüs;10000009792
-250260049;MTIzNA==;Burak Özdemir;Çevre Mühendisliği;3.38;ogrenci250260049@edu.tr;5550009158;Kampüs;10000002200
-250260050;MTIzNA==;Elif Arslan;Çevre Mühendisliği;3.18;ogrenci250260050@edu.tr;5550001816;Kampüs;10000007947
-250260051;MTIzNA==;Gizem Yılmaz;Çevre Mühendisliği;3.23;ogrenci250260051@edu.tr;5550004410;Kampüs;10000004346
-250260052;MTIzNA==;Elif Özdemir;Çevre Mühendisliği;3.1;ogrenci250260052@edu.tr;5550005558;Kampüs;10000006409
-250260053;MTIzNA==;Ali Polat;Mekatronik Mühendisliği;3.17;ogrenci250260053@edu.tr;5550009523;Kampüs;10000008436
-250260054;MTIzNA==;Cemre Çelik;Mekatronik Mühendisliği;3.23;ogrenci250260054@edu.tr;5550003739;Kampüs;10000002103
-250260055;MTIzNA==;Ali Yıldız;Mekatronik Mühendisliği;3.27;ogrenci250260055@edu.tr;5550003182;Kampüs;10000009061
-250260056;MTIzNA==;Burak Çelik;Yazılım Mühendisliği;3.15;ogrenci250260056@edu.tr;5550008225;Kampüs;10000001290
-250260057;MTIzNA==;Ayşe Polat;Yazılım Mühendisliği;3.35;ogrenci250260057@edu.tr;5550008340;Kampüs;10000004109
+250260028;MTIzNA==;Caner Doğan;Kimya Mühendisliği;3.0;ogrenci250260028@edu.tr;5550008225;Kampüs;10000005881;1
+250260049;MTIzNA==;Burak Özdemir;Çevre Mühendisliği;2.7;ogrenci250260049@edu.tr;5550009158;Kampüs;10000002200;1
+250260029;MTIzNA==;Mustafa Yıldız;Kimya Mühendisliği;3.32;ogrenci250260029@edu.tr;5550003936;Kampüs;10000006864;4
+250260035;MTIzNA==;Zeynep Yıldız;Yapay Zeka ve Veri Mühendisliği;3.01;ogrenci250260035@edu.tr;5550008529;Kampüs;10000004926;1
+250260001;a2F5YTEyMw==;Eren Kaya;Bilgisayar Mühendisliği;3.06;ogrenci250260001@edu.tr;5558386667;Atatürk Mah.;10030732135;3
+250260057;MTIzNA==;Ayşe Polat;Yazılım Mühendisliği;2.75;ogrenci250260057@edu.tr;5550008340;Kampüs;10000004109;1
+250260037;MTIzNA==;Mustafa Yıldız;Jeoloji Mühendisliği;2.64;ogrenci250260037@edu.tr;5550003625;Kampüs;10000006285;2
+250260033;MTIzNA==;Cemre Çelik;Yapay Zeka ve Veri Mühendisliği;3.29;ogrenci250260033@edu.tr;5550002749;Kampüs;10000001855;2
+250260038;MTIzNA==;Caner Çelik;Jeoloji Mühendisliği;2.77;ogrenci250260038@edu.tr;5550004499;Kampüs;10000001460;2
+250260020;a3VjdWsxMjM=;Ahmet KÜÇÜK;Elektrik Elektronik Mühendisliği;3.02;ogrenci250260020@edu.tr;5551314337;Cumhuriyet Mah.;10018039284;2
+250260034;MTIzNA==;Selin Aydın;Yapay Zeka ve Veri Mühendisliği;2.42;ogrenci250260034@edu.tr;5550002530;Kampüs;10000008193;1
+250260036;MTIzNA==;Zeynep Kurt;Yapay Zeka ve Veri Mühendisliği;2.62;ogrenci250260036@edu.tr;5550006371;Kampüs;10000007581;3
+250260045;MTIzNA==;Ali Arslan;İnşaat Mühendisliği;3.24;ogrenci250260045@edu.tr;5550005886;Kampüs;10000005950;4
+250260030;MTIzNA==;Fatma Çelik;Kimya Mühendisliği;2.64;ogrenci250260030@edu.tr;5550003499;Kampüs;10000004925;4
+250260055;MTIzNA==;Ali Yıldız;Mekatronik Mühendisliği;3.07;ogrenci250260055@edu.tr;5550003182;Kampüs;10000009061;3
+250260015;a2lsaWMxMjM=;Mert Kılıç;Mekatronik Mühendisliği;2.73;ogrenci250260015@edu.tr;5556387390;Merkez Mah.;10072492676;3
+250260005;Y2ljZWsxMjM=;Ayşegül Çiçek;Bilgisayar Mühendisliği;2.54;ogrenci250260005@edu.tr;5559164885;Atatürk Mah.;10095973622;4
+250260043;MTIzNA==;Ayşe Koç;Metalurji ve Malzeme Mühendisliği;2.75;ogrenci250260043@edu.tr;5550002873;Kampüs;10000003825;4
+250260051;MTIzNA==;Gizem Yılmaz;Çevre Mühendisliği;3.05;ogrenci250260051@edu.tr;5550004410;Kampüs;10000004346;2
+250260054;MTIzNA==;Cemre Çelik;Mekatronik Mühendisliği;2.67;ogrenci250260054@edu.tr;5550003739;Kampüs;10000002103;3
+250260012;emV5bmVwMTIz;Zeynep Yılmaz;Makine Mühendisliği;2.76;ogrenci250260012@edu.tr;5558558784;Yeni Mahalle;10029072357;2
+250260044;MTIzNA==;Selin Yılmaz;Metalurji ve Malzeme Mühendisliği;2.49;ogrenci250260044@edu.tr;5550007695;Kampüs;10000001186;2
+250260010;Z2l6ZW0xMjM=;Gizem Kurt;Yazılım Mühendisliği;2.75;ogrenci250260010@edu.tr;5558950045;Atatürk Mah.;10013979317;1
+250260004;bWVobWV0MTIz;Mehmet Yıldız;Bilgisayar Mühendisliği;2.87;ogrenci250260004@edu.tr;5553295528;Cumhuriyet Mah.;10021206773;2
+250260046;MTIzNA==;Mustafa Çelik;İnşaat Mühendisliği;2.82;ogrenci250260046@edu.tr;5550003804;Kampüs;10000005386;4
+250260017;ZGVtaXIxMjM=;Ahmet Demir;Bilgisayar Mühendisliği;2.85;ogrenci250260017@edu.tr;5554361151;Yeni Mahalle;10089965578;1
+250260050;MTIzNA==;Elif Arslan;Çevre Mühendisliği;2.91;ogrenci250260050@edu.tr;5550001816;Kampüs;10000007947;2
+250260007;Y2VtcmUxMjM=;Cemre Koç;Makine Mühendisliği;3.09;ogrenci250260007@edu.tr;5556798025;Merkez Mah.;10024146998;2
+250260019;Y2V0aW4xMjM=;Tolga Çetin;Elektrik Elektronik Mühendisliği;3.1;ogrenci250260019@edu.tr;5555582185;Kültür Mah.;10093922406;1
+250260053;MTIzNA==;Ali Polat;Mekatronik Mühendisliği;2.81;ogrenci250260053@edu.tr;5550009523;Kampüs;10000008436;1
+250260013;ZG9nYW4xMjM=;Caner Doğan;Mekatronik Mühendisliği;2.82;ogrenci250260013@edu.tr;5556745250;Atatürk Mah.;10054584210;1
+250260039;MTIzNA==;Gizem Polat;Jeoloji Mühendisliği;3.22;ogrenci250260039@edu.tr;5550009322;Kampüs;10000006863;1
+250260008;YXlkaW4xMjM=;Selin Aydın;Yazılım Mühendisliği;2.49;ogrenci250260008@edu.tr;5558151443;Kültür Mah.;10094528515;1
+250260003;eWlsbWF6MTIz;Ahmet Yılmaz;Elektrik Elektronik Mühendisliği;2.95;ogrenci250260003@edu.tr;5555702386;Cumhuriyet Mah.;10048537774;4
+250260047;MTIzNA==;Eren Kaya;İnşaat Mühendisliği;2.55;ogrenci250260047@edu.tr;5550007482;Kampüs;10000005670;2
+250260056;MTIzNA==;Burak Çelik;Yazılım Mühendisliği;2.64;ogrenci250260056@edu.tr;5550008225;Kampüs;10000001290;4
+250260009;b3pkZW1pcjEyMw==;Ayşe Özdemir;Makine Mühendisliği;2.98;ogrenci250260009@edu.tr;5552056375;Atatürk Mah.;10044003461;1
+250260018;YXJzbGFuMTIz;Fatma Arslan;Elektrik Elektronik Mühendisliği;3.14;ogrenci250260018@edu.tr;5556452916;Kültür Mah.;10035109080;2
+250260032;MTIzNA==;Cemre Kurt;Makine Mühendisliği;2.93;ogrenci250260032@edu.tr;5550008650;Kampüs;10000008052;3
+250260041;MTIzNA==;Zeynep Polat;Metalurji ve Malzeme Mühendisliği;2.74;ogrenci250260041@edu.tr;5550001059;Kampüs;10000008226;1
+250260011;c2FoaW5hMTIz;Burak Şahina;Yazılım Mühendisliği;2.94;ogrenci250260011@edu.tr;5559473995;Yeni Mahalle;10044452966;2
+250260048;MTIzNA==;Mehmet Kurt;İnşaat Mühendisliği;2.99;ogrenci250260048@edu.tr;5550004827;Kampüs;10000009792;4
+250260052;MTIzNA==;Elif Özdemir;Çevre Mühendisliği;2.9;ogrenci250260052@edu.tr;5550005558;Kampüs;10000006409;3
+250260014;cG9sYXQxMjM=;Kaan Polat;Bilgisayar Mühendisliği;2.68;ogrenci250260014@edu.tr;5558410410;Kültür Mah.;10096835914;1
+250260000;dWNhcjQ2NDY=;Eren UÇAR;Bilgisayar Mühendisliği;3.16;ogrenci250260000@edu.tr;50000000000;Kahramanmaraş;10000000000;1
+250260021;bWVobWV0MTIz;Mehmet TÜRK;Elektrik Elektronik Mühendisliği;2.87;ogrenci250260021@edu.tr;5559117372;Merkez Mah.;10092957582;3
+250260002;emV5bmVwMTIz;Zeynep Demir;Makine Mühendisliği;2.72;ogrenci250260002@edu.tr;5555635150;Kültür Mah.;10060692484;4
+250260031;MTIzNA==;Eren Özdemir;Kimya Mühendisliği;2.96;ogrenci250260031@edu.tr;5550002904;Kampüs;10000001652;4
+250260042;MTIzNA==;Burak Şahin;Metalurji ve Malzeme Mühendisliği;3.21;ogrenci250260042@edu.tr;5550004857;Kampüs;10000009333;2
+250260040;MTIzNA==;Gizem Kurt;Jeoloji Mühendisliği;2.94;ogrenci250260040@edu.tr;5550002360;Kampüs;10000004686;1

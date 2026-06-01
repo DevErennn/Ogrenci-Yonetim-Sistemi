@@ -3,6 +3,7 @@ package model;
 public class Ogrenci extends Kullanici {
     private int id;
     private String bolum;
+    private int sinif; // 1-4 arasi universitedeki mevcut yil
     private double ortalama;
     private String eposta;
     private String telefon;
@@ -10,10 +11,11 @@ public class Ogrenci extends Kullanici {
     private String tc;
 
     // Constructor (Yapıcı Metot)
-    public Ogrenci(int id, String sifre, String ad, String bolum, double ortalama, String eposta, String telefon, String adres, String tc) {
+    public Ogrenci(int id, String sifre, String ad, String bolum, int sinif, double ortalama, String eposta, String telefon, String adres, String tc) {
         super(ad, sifre);
         this.id = id;
         this.bolum = bolum;
+        this.sinif = sinif;
         this.ortalama = ortalama;
         this.eposta = eposta;
         this.telefon = telefon;
@@ -22,8 +24,13 @@ public class Ogrenci extends Kullanici {
     }
 
     // Geriye dönük uyumluluk için eski constructor (gerekirse diye)
+    public Ogrenci(int id, String sifre, String ad, String bolum, int sinif, double ortalama) {
+        this(id, sifre, ad, bolum, sinif, ortalama, "tanimsiz", "tanimsiz", "tanimsiz", "tanimsiz");
+    }
+
+    // Geriye dönük uyumluluk için eski constructor (eski cagiranlar için varsayılan sinif 1)
     public Ogrenci(int id, String sifre, String ad, String bolum, double ortalama) {
-        this(id, sifre, ad, bolum, ortalama, "tanimsiz", "tanimsiz", "tanimsiz", "tanimsiz");
+        this(id, sifre, ad, bolum, 1, ortalama, "tanimsiz", "tanimsiz", "tanimsiz", "tanimsiz");
     }
 
     @Override
@@ -33,7 +40,7 @@ public class Ogrenci extends Kullanici {
 
     @Override
     public void bilgileriGoster() {
-        System.out.println("Öğrenci: " + ad + " - Bölüm: " + bolum);
+        System.out.println("Öğrenci: " + ad + " - Bölüm: " + bolum + " - Sınıf: " + sinif);
     }
 
     // Getter ve Setter Metotları
@@ -42,6 +49,9 @@ public class Ogrenci extends Kullanici {
 
     public String getBolum() { return bolum; }
     public void setBolum(String bolum) { this.bolum = bolum; }
+
+    public int getSinif() { return sinif; }
+    public void setSinif(int sinif) { this.sinif = sinif; }
 
     public double getOrtalama() { return ortalama; }
     public void setOrtalama(double ortalama) { this.ortalama = ortalama; }

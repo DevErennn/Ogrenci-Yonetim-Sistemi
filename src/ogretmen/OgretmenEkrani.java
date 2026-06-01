@@ -43,11 +43,17 @@ public class OgretmenEkrani extends JFrame {
         add(panelUst, BorderLayout.NORTH);
 
         int mesajSayisi = hesaplaMesajSayisi();
+        OgrenciYonetici yonetici = new OgrenciYonetici();
 
         JTabbedPane sekmeler = new JTabbedPane();
-        sekmeler.addTab("Not Girişi", new NotGirisPaneli(ogretmen.getVerilenDers(), donemBelirle()));
-        sekmeler.addTab("Devamsızlık Girişi", new DevamsizlikGirisPaneli(ogretmen.getVerilenDers()));
+        sekmeler.addTab("Not Girişi", new NotGirisPaneli(ogretmen, donemBelirle()));
+        sekmeler.addTab("Devamsızlık Girişi", new DevamsizlikGirisPaneli(ogretmen));
         sekmeler.addTab("Ders Programım", dersProgramiPaneliniOlustur());
+        
+        admin.IstatistikPaneli istatistikPaneli = new admin.IstatistikPaneli(yonetici);
+        istatistikPaneli.verileriGuncelle();
+        sekmeler.addTab("Bölüm İstatistikleri", istatistikPaneli);
+        
         sekmeler.addTab("Mesaj Gönder", new OgretmenMesajPaneli(ogretmen.getAd()));
         
         if (mesajSayisi > 0) {
@@ -56,6 +62,13 @@ public class OgretmenEkrani extends JFrame {
             sekmeler.addTab("Gelen Kutusu", new OgretmenGelenKutusuPaneli(ogretmen.getTcKimlik())); 
         }
         sekmeler.addTab("Destek", new DestekPaneli(ogretmen.getAd()));
+
+        sekmeler.addChangeListener(e -> {
+            if (sekmeler.getSelectedComponent() == istatistikPaneli) {
+                yonetici.dosyadanOku();
+                istatistikPaneli.verileriGuncelle();
+            }
+        });
 
         add(sekmeler, BorderLayout.CENTER);
     }
@@ -96,8 +109,19 @@ public class OgretmenEkrani extends JFrame {
             public boolean isCellEditable(int row, int column) { return false; }
         };
         JTable tablo = new JTable(model);
-        model.addRow(new Object[]{"Pazartesi", "09:00 - 12:00", ogretmen.getVerilenDers(), "Amfi 1"});
-        model.addRow(new Object[]{"Çarşamba", "13:00 - 15:00", ogretmen.getVerilenDers(), "Amfi 3"});
+        
+        java.util.List<String> derslerListesi = ogretmen.getDerslerListesi();
+        String[] gunler = {"Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma"};
+        String[] saatler = {"09:00 - 12:00", "13:00 - 15:00", "15:00 - 17:00"};
+        
+        java.util.Random rand = new java.util.Random(ogretmen.getAd().hashCode());
+        for (String ders : derslerListesi) {
+            String gun = gunler[rand.nextInt(gunler.length)];
+            String saat = saatler[rand.nextInt(saatler.length)];
+            String derslik = "Amfi " + (1 + rand.nextInt(5));
+            model.addRow(new Object[]{gun, saat, ders, derslik});
+        }
+        
         panel.add(new JScrollPane(tablo), BorderLayout.CENTER);
         return panel;
     }

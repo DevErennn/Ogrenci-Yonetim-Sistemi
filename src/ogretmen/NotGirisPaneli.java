@@ -12,11 +12,12 @@ import java.util.ArrayList;
 public class NotGirisPaneli extends JPanel {
     private JTextField txtNotOgrenciId, txtVize, txtFinal;
     private JTextField txtOrtalamaHesap, txtHarfNotuHesap;
-    private String verilenDers;
+    private JComboBox<String> cmbDers;
+    private Ogretmen ogretmen;
     private String donem;
 
-    public NotGirisPaneli(String verilenDers, String donem) {
-        this.verilenDers = verilenDers;
+    public NotGirisPaneli(Ogretmen ogretmen, String donem) {
+        this.ogretmen = ogretmen;
         this.donem = donem;
         setLayout(new BorderLayout());
         
@@ -31,10 +32,9 @@ public class NotGirisPaneli extends JPanel {
         txtNotOgrenciId = new JTextField();
         formPaneli.add(txtNotOgrenciId);
 
-        formPaneli.add(new JLabel("Ders Adı:"));
-        JTextField txtDers = new JTextField(verilenDers);
-        txtDers.setEditable(false); 
-        formPaneli.add(txtDers);
+        formPaneli.add(new JLabel("Ders Seçin:"));
+        cmbDers = new JComboBox<>(ogretmen.getDerslerListesi().toArray(new String[0]));
+        formPaneli.add(cmbDers);
 
         formPaneli.add(new JLabel("Vize Notu:"));
         txtVize = new JTextField();
@@ -99,13 +99,14 @@ public class NotGirisPaneli extends JPanel {
                 String id = txtNotOgrenciId.getText().trim();
                 String vize = txtVize.getText().trim();
                 String fin = txtFinal.getText().trim();
+                String seciliDers = (String) cmbDers.getSelectedItem();
 
-                if (id.isEmpty() || vize.isEmpty() || fin.isEmpty()) {
+                if (id.isEmpty() || vize.isEmpty() || fin.isEmpty() || seciliDers == null) {
                     JOptionPane.showMessageDialog(this, "Alanlar boş bırakılamaz!");
                     return;
                 }
 
-                notKaydet(id, vize, fin); 
+                notKaydet(id, seciliDers, vize, fin); 
                 JOptionPane.showMessageDialog(this, "Notlar başarıyla kaydedildi!");
                 txtNotOgrenciId.setText(""); txtVize.setText(""); txtFinal.setText("");
             } catch (Exception ex) {
@@ -114,7 +115,7 @@ public class NotGirisPaneli extends JPanel {
         });
     }
 
-    private void notKaydet(String id, String vize, String fin) {
+    private void notKaydet(String id, String dersAdi, String vize, String fin) {
         File dosya = new File("notlar.txt");
         ArrayList<String> satirlar = new ArrayList<>();
         boolean kayitBulundu = false;
@@ -123,8 +124,8 @@ public class NotGirisPaneli extends JPanel {
             String satir;
             while ((satir = br.readLine()) != null) {
                 String[] veri = satir.split(";");
-                if (veri.length == 4 && veri[0].equals(id) && veri[1].equalsIgnoreCase(verilenDers)) {
-                    satirlar.add(id + ";" + verilenDers + ";" + vize + ";" + fin);
+                if (veri.length == 4 && veri[0].equals(id) && veri[1].equalsIgnoreCase(dersAdi)) {
+                    satirlar.add(id + ";" + dersAdi + ";" + vize + ";" + fin);
                     kayitBulundu = true;
                 } else {
                     satirlar.add(satir);
@@ -132,7 +133,7 @@ public class NotGirisPaneli extends JPanel {
             }
         } catch (IOException e) {}
 
-        if (!kayitBulundu) satirlar.add(id + ";" + verilenDers + ";" + vize + ";" + fin);
+        if (!kayitBulundu) satirlar.add(id + ";" + dersAdi + ";" + vize + ";" + fin);
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(dosya))) {
             for (String s : satirlar) { bw.write(s); bw.newLine(); }
