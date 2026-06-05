@@ -48,3 +48,4 @@
 250260031;MTIzNA==;Eren Özdemir;Kimya Mühendisliği;2.96;ogrenci250260031@edu.tr;5550002904;Kampüs;10000001652;4
 250260042;MTIzNA==;Burak Şahin;Metalurji ve Malzeme Mühendisliği;3.21;ogrenci250260042@edu.tr;5550004857;Kampüs;10000009333;2
 250260040;MTIzNA==;Gizem Kurt;Jeoloji Mühendisliği;2.94;ogrenci250260040@edu.tr;5550002360;Kampüs;10000004686;1
+250260165;c2VyaGF0MzE=;Serhat Ertunç;Makine Mühendisliği;3.3;tanimsiz;tanimsiz;tanimsiz;tanimsiz;1
