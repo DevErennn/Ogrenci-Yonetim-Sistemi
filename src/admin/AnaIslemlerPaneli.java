@@ -20,7 +20,7 @@ public class AnaIslemlerPaneli extends JPanel {
     public AnaIslemlerPaneli(OgrenciYonetici yonetici, DataUpdateListener updateListener) {
         this.yonetici = yonetici;
         this.updateListener = updateListener;
-        
+
         setLayout(new BorderLayout());
 
         JPanel panelGirdi = new JPanel(new GridLayout(3, 4, 10, 10));
@@ -92,7 +92,7 @@ public class AnaIslemlerPaneli extends JPanel {
         panelGenelIstatistik.add(lblToplamOgrenci);
         panelGenelIstatistik.add(lblSinifOrtalamasi);
         panelGenelIstatistik.add(lblEnBasarili);
-        
+
         panelAltAna.add(panelGenelIstatistik, BorderLayout.SOUTH);
         add(panelAltAna, BorderLayout.SOUTH);
 
@@ -106,7 +106,7 @@ public class AnaIslemlerPaneli extends JPanel {
                 String sifre = txtSifre.getText().trim();
                 double ort = Double.parseDouble(txtOrtalama.getText());
                 int sinif = (Integer) cmbSinif.getSelectedItem();
-                
+
                 if(sifre.isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Şifre boş olamaz!");
                     return;
@@ -140,7 +140,7 @@ public class AnaIslemlerPaneli extends JPanel {
                 String sifre = txtSifre.getText().trim(); 
                 double ort = Double.parseDouble(txtOrtalama.getText());
                 int sinif = (Integer) cmbSinif.getSelectedItem();
-                
+
                 yonetici.ogrenciGuncelle(id, sifre, txtAd.getText(), txtBolum.getText(), sinif, ort);
                 verileriGuncelle();
                 alanlariTemizle();
@@ -158,14 +158,14 @@ public class AnaIslemlerPaneli extends JPanel {
         btnAra.addActionListener(e -> {
             String aranan = JOptionPane.showInputDialog(this, "Aranacak Öğrenci ID veya Ad Soyad:", "Öğrenci Ara", JOptionPane.QUESTION_MESSAGE);
             if (aranan == null || aranan.trim().isEmpty()) return;
-            
+
             aranan = aranan.trim().toLowerCase();
             boolean bulundu = false;
-            
+
             for (int i = 0; i < tabloModeli.getRowCount(); i++) {
                 String idStr = tabloModeli.getValueAt(i, 0).toString();
                 String adStr = tabloModeli.getValueAt(i, 2).toString().toLowerCase();
-                
+
                 if (idStr.equals(aranan) || adStr.contains(aranan)) {
                     tablo.setRowSelectionInterval(i, i);
                     tablo.scrollRectToVisible(tablo.getCellRect(i, 0, true));
@@ -173,7 +173,7 @@ public class AnaIslemlerPaneli extends JPanel {
                     break;
                 }
             }
-            
+
             if (!bulundu) {
                 JOptionPane.showMessageDialog(this, "Öğrenci bulunamadı!", "Bulunamadı", JOptionPane.WARNING_MESSAGE);
             }
@@ -194,7 +194,7 @@ public class AnaIslemlerPaneli extends JPanel {
 
     public void verileriGuncelle() {
         tabloModeli.setRowCount(0); 
-        
+
         int toplamOgrenci = 0;
         double toplamNot = 0;
         double enYuksekNot = -1;

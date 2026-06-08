@@ -48,7 +48,7 @@ public class Main {
         btnGiris.setBackground(new Color(70, 130, 180));
         btnGiris.setForeground(Color.WHITE);
         btnGiris.setFont(new Font("Arial", Font.BOLD, 14));
-        
+
         pnlOrta.add(new JLabel("")); 
         pnlOrta.add(btnGiris);
 
@@ -76,7 +76,7 @@ public class Main {
             else if (tip.equals("Öğretim Elemanı")) {
                 boolean girisBasarili = false;
                 Ogretmen girisYapanOgretmen = null;
-                
+
                 try (BufferedReader br = new BufferedReader(new FileReader("ogretmenler.txt"))) {
                     String satir;
                     while ((satir = br.readLine()) != null) {
@@ -85,7 +85,7 @@ public class Main {
                             String dTc = veri[0];
                             String dSifreBase64 = veri[1];
                             String dSifreCozulmus = OgrenciYonetici.sifreCoz(dSifreBase64); 
-                            
+
                             if (dTc.equals(kadi) && dSifreCozulmus.equals(sifre)) {
                                 girisBasarili = true;
                                 girisYapanOgretmen = new Ogretmen(veri[0], dSifreCozulmus, veri[2], veri[3]);
@@ -103,12 +103,12 @@ public class Main {
                     JOptionPane.showMessageDialog(girisEkrani, "Öğretmen TC veya Şifre Hatalı!");
                 }
             }
-            else { // Öğrenci
+            else {
                 try {
                     int id = Integer.parseInt(kadi);
                     boolean girisBasarili = false;
                     Ogrenci ogrGonder = null;
-                    
+
                     for (Ogrenci o : yonetici.getOgrenciListesi()) {
                         if (o.getId() == id && o.getSifre().equals(sifre)) {
                             girisBasarili = true;
@@ -116,7 +116,7 @@ public class Main {
                             break;
                         }
                     }
-                    
+
                     if (girisBasarili && ogrGonder != null) {
                         girisEkrani.dispose();
                         Ogrenci finalOgr = ogrGonder; 

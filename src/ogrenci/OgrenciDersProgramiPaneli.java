@@ -46,7 +46,7 @@ public class OgrenciDersProgramiPaneli extends JPanel {
                     String dBolum = veri[0].trim();
                     String dSinifStr = veri[1].trim();
                     String dDersAdi = veri[2].trim();
-                    
+
                     if (dBolum.equalsIgnoreCase(bolum)) {
                         try {
                             int dSinif = Integer.parseInt(dSinifStr);
@@ -54,17 +54,17 @@ public class OgrenciDersProgramiPaneli extends JPanel {
                                 derslerListesi.add(dDersAdi);
                             }
                         } catch (NumberFormatException e) {
-                            // ignore if format invalid
+
                         }
                     }
                 }
             }
         } catch (Exception e) {}
-        
+
         if (derslerListesi.isEmpty()) {
             return new String[]{"Henüz ders atanmamış"};
         }
-        
+
         return derslerListesi.toArray(new String[0]);
     }
 }

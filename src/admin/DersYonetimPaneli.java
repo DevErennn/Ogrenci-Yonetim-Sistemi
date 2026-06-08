@@ -13,10 +13,9 @@ public class DersYonetimPaneli extends JPanel {
         setLayout(new GridLayout(1, 3, 20, 20));
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // --- 1. SÜTUN: ÖĞRENCİYE DERS ATA ---
         JPanel panelOgrenciDers = new JPanel(new GridLayout(6, 1, 10, 10));
         panelOgrenciDers.setBorder(BorderFactory.createTitledBorder("Öğrenciye Ders Ata"));
-        
+
         JTextField txtOgrId = new JTextField();
         JTextField txtDersAdi = new JTextField();
         JButton btnOgrDersEkle = new JButton("Öğrenciye Ders Kaydı Aç");
@@ -37,7 +36,7 @@ public class DersYonetimPaneli extends JPanel {
                 JOptionPane.showMessageDialog(this, "Alanlar boş olamaz!");
                 return;
             }
-            
+
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("notlar.txt", true))) {
                 bw.write(id + ";" + ders + ";0;0");
                 bw.newLine();
@@ -48,10 +47,9 @@ public class DersYonetimPaneli extends JPanel {
             }
         });
 
-        // --- 2. SÜTUN: ÖĞRETMEN EKLE ---
         JPanel panelOgretmenDers = new JPanel(new GridLayout(10, 1, 5, 5));
         panelOgretmenDers.setBorder(BorderFactory.createTitledBorder("Sisteme Yeni Öğretmen & Ders Ekle"));
-        
+
         JTextField txtHocaKadi = new JTextField();
         JTextField txtHocaSifre = new JTextField("1234");
         JTextField txtHocaAd = new JTextField();
@@ -76,12 +74,12 @@ public class DersYonetimPaneli extends JPanel {
             String sifre = OgrenciYonetici.sifrele(txtHocaSifre.getText().trim());
             String ad = txtHocaAd.getText().trim();
             String ders = txtHocaDers.getText().trim();
-            
+
             if(kadi.isEmpty() || sifre.isEmpty() || ad.isEmpty() || ders.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Alanlar boş olamaz!");
                 return;
             }
-            
+
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("ogretmenler.txt", true))) {
                 bw.write(kadi + ";" + sifre + ";" + ad + ";" + ders);
                 bw.newLine();
@@ -92,10 +90,9 @@ public class DersYonetimPaneli extends JPanel {
             }
         });
 
-        // --- 3. SÜTUN (YENİ): DUYURU YAYINLA ---
         JPanel panelDuyuru = new JPanel(new GridLayout(6, 1, 10, 10));
         panelDuyuru.setBorder(BorderFactory.createTitledBorder("Sistem Duyurusu Yayınla"));
-        
+
         String[] kategoriler = {"Genel", "Bilgisayar Mühendisliği", "Yazılım Mühendisliği", "Makine Mühendisliği", "Elektrik Elektronik Mühendisliği", "Mekatronik Mühendisliği"};
         JComboBox<String> comboKategori = new JComboBox<>(kategoriler);
         JTextField txtDuyuruMetni = new JTextField();

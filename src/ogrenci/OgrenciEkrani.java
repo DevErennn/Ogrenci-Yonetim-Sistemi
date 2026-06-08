@@ -19,7 +19,6 @@ public class OgrenciEkrani extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // --- Üst Panel ve Çıkış Butonu ---
         JPanel panelUstAna = new JPanel(new BorderLayout());
         panelUstAna.setBackground(new Color(240, 248, 255));
         panelUstAna.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -29,7 +28,7 @@ public class OgrenciEkrani extends JFrame {
 
         JLabel lblHosgeldin = new JLabel("Sayın " + ogrenci.getAd() + " (" + ogrenci.getId() + ")", SwingConstants.CENTER);
         lblHosgeldin.setFont(new Font("Arial", Font.BOLD, 18));
-        
+
         JLabel lblDurum = new JLabel("Bölüm: " + ogrenci.getBolum() + "   |   Genel Ortalama: " + ogrenci.getOrtalama(), SwingConstants.CENTER);
         lblDurum.setFont(new Font("Arial", Font.PLAIN, 14));
 
@@ -48,7 +47,7 @@ public class OgrenciEkrani extends JFrame {
 
         panelUstAna.add(panelBilgi, BorderLayout.CENTER);
         panelUstAna.add(btnCikis, BorderLayout.EAST);
-        
+
         add(panelUstAna, BorderLayout.NORTH);
 
         int mesajSayisi = 0;
@@ -62,7 +61,6 @@ public class OgrenciEkrani extends JFrame {
             }
         } catch (Exception e) {}
 
-        // --- SEKMELER ---
         JTabbedPane sekmeler = new JTabbedPane();
         sekmeler.addTab("Profilim", new OgrenciProfilPaneli(ogrenci));
         sekmeler.addTab("Not Listesi", new OgrenciNotPaneli(ogrenci));
@@ -75,7 +73,7 @@ public class OgrenciEkrani extends JFrame {
             sekmeler.addTab("Gelen Kutusu", new OgrenciGelenKutusuPaneli(ogrenci)); 
         }
         sekmeler.addTab("Destek", new DestekPaneli(String.valueOf(ogrenci.getId())));
-        
+
         add(sekmeler, BorderLayout.CENTER);
     }
 }

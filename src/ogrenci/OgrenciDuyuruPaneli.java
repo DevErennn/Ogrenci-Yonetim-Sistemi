@@ -9,7 +9,7 @@ public class OgrenciDuyuruPaneli extends JPanel {
     public OgrenciDuyuruPaneli(Ogrenci ogrenci) {
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        
+
         DefaultListModel<String> model = new DefaultListModel<>();
         JList<String> liste = new JList<>(model);
         liste.setFont(new Font("Arial", Font.PLAIN, 14));
@@ -25,7 +25,7 @@ public class OgrenciDuyuruPaneli extends JPanel {
                 }
             }
         } catch (Exception e) {}
-        
+
         add(new JScrollPane(liste), BorderLayout.CENTER);
     }
 }

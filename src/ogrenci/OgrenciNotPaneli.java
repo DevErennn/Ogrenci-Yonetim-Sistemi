@@ -25,14 +25,14 @@ public class OgrenciNotPaneli extends JPanel {
             while (scanner.hasNextLine()) {
                 String satir = scanner.nextLine();
                 String[] veri = satir.split(";");
-                
+
                 if (veri.length == 4 && Integer.parseInt(veri[0]) == ogrenci.getId()) {
                     String dersAdi = veri[1];
                     int vizeNotu = Integer.parseInt(veri[2]);
                     int finalNotu = Integer.parseInt(veri[3]);
-                    
+
                     int yapilanDevamsizlik = dersinDevamsizliginiGetir(ogrenci, dersAdi); 
-                    
+
                     double dersOrtalamasi = (vizeNotu * 0.4) + (finalNotu * 0.6);
                     String harfNotu;
 

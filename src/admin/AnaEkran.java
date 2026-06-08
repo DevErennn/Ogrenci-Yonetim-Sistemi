@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class AnaEkran extends JFrame {
     private OgrenciYonetici yonetici;
-    
+
     private AnaIslemlerPaneli anaIslemlerPaneli;
     private IstatistikPaneli istatistikPaneli;
 
@@ -23,8 +23,7 @@ public class AnaEkran extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
-        
-        // --- ÜST PANEL ---
+
         JPanel panelUst = new JPanel(new BorderLayout());
         panelUst.setBackground(new Color(240, 248, 255));
         panelUst.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -45,8 +44,7 @@ public class AnaEkran extends JFrame {
         panelUst.add(lblAdmin, BorderLayout.CENTER);
         panelUst.add(btnCikis, BorderLayout.EAST);
         add(panelUst, BorderLayout.NORTH); 
-        
-        // Mesaj sayısını hesapla
+
         int mesajSayisi = 0;
         try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
             String satir;
@@ -58,12 +56,10 @@ public class AnaEkran extends JFrame {
             }
         } catch (Exception e) {}
 
-        // --- SEKMELİ YAPI ---
         JTabbedPane sekmeler = new JTabbedPane();
 
-        // Paneller arası iletişim için callback tanımlanıyor
         istatistikPaneli = new IstatistikPaneli(yonetici);
-        
+
         DataUpdateListener guncellemeDinleyici = new DataUpdateListener() {
             @Override
             public void onDataUpdated() {
@@ -77,20 +73,18 @@ public class AnaEkran extends JFrame {
         sekmeler.addTab("Bölüm İstatistikleri ve Grafik", istatistikPaneli);
         sekmeler.addTab("Ders, Öğretmen ve Duyuru", new DersYonetimPaneli());
         sekmeler.addTab("Mesaj Gönder", new AdminMesajPaneli());
-        
+
         if (mesajSayisi > 0) {
             sekmeler.addTab("<html>Gelen Kutusu <font color='red'>(+" + mesajSayisi + ")</font></html>", new AdminGelenKutusuPaneli());
         } else {
             sekmeler.addTab("Gelen Kutusu", new AdminGelenKutusuPaneli());
         }
-        
+
         add(sekmeler, BorderLayout.CENTER);
 
-        // İlk açılışta verileri doldur
         anaIslemlerPaneli.verileriGuncelle();
         istatistikPaneli.verileriGuncelle();
 
-        // --- DİJİTAL SAAT ---
         JPanel panelAlt = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         JLabel lblSaat = new JLabel();
         lblSaat.setFont(new Font("Arial", Font.BOLD, 14));

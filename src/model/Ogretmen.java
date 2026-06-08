@@ -22,7 +22,7 @@ public class Ogretmen extends Kullanici {
 
     public String getTcKimlik() { return tcKimlik; }
     public void setTcKimlik(String tcKimlik) { this.tcKimlik = tcKimlik; }
-    
+
     public String getVerilenDers() { return verilenDers; }
     public void setVerilenDers(String verilenDers) { this.verilenDers = verilenDers; }
 
@@ -40,7 +40,7 @@ public class Ogretmen extends Kullanici {
                 }
             }
         } catch (Exception e) {}
-        
+
         if (derslerListesi.isEmpty() && verilenDers != null && !verilenDers.isEmpty()) {
             String[] parts = verilenDers.split("[,;]");
             for (String p : parts) {

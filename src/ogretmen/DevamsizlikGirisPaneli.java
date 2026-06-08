@@ -33,7 +33,7 @@ public class DevamsizlikGirisPaneli extends JPanel {
         JButton btnDevamsizlikKaydet = new JButton("Devamsızlık Kaydet");
         btnDevamsizlikKaydet.setBackground(new Color(220, 20, 60)); 
         btnDevamsizlikKaydet.setForeground(Color.WHITE);
-        
+
         JPanel altPanel = new JPanel();
         altPanel.add(btnDevamsizlikKaydet);
         add(formPaneli, BorderLayout.CENTER);

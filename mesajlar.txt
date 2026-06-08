@@ -1,4 +1,6 @@
-Prof. Dr. Ahmet Yılmaz;250260000;Bilgisiz Baslik;sa
-Prof. Dr. Ahmet Yılmaz;250260000;Bilgisiz Baslik;derse gel lo
-Admin;250260000;ders;calis lo
-250260000;admin;ders;tamam geliom
+Admin;250260000;ZGVuZW0=;ZGVuZW1lIG1lc2FqxLE=
+Dr. Öğr. Üyesi Mustafa Yıldız;250260000;ZGVuZW1lIG1lc2FqxLE=;ZGVuZW1lIGRtZXM=
+Dr. Öğr. Üyesi Mustafa Yıldız;admin;ZGVuZW1lIGRlc3Rlaw==;ZGVzdGVr
+Admin;250260000;ZGVuZW1l;ZGVuZW1l
+Admin;250260000;RGVycw==;ZGVyc2xlcmluIMOnYWvEscWfxLF5b3IgZGXEn2nFn3RpcmVjZcSfaXo=
+250260000;admin;aGF0YQ==;xZ91IGvEsXPEsW0gw6dhbMSxxZ9txLF5b3I=

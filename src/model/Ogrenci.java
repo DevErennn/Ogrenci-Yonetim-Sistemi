@@ -3,14 +3,13 @@ package model;
 public class Ogrenci extends Kullanici {
     private int id;
     private String bolum;
-    private int sinif; // 1-4 arasi universitedeki mevcut yil
+    private int sinif;
     private double ortalama;
     private String eposta;
     private String telefon;
     private String adres;
     private String tc;
 
-    // Constructor (Yapıcı Metot)
     public Ogrenci(int id, String sifre, String ad, String bolum, int sinif, double ortalama, String eposta, String telefon, String adres, String tc) {
         super(ad, sifre);
         this.id = id;
@@ -23,12 +22,11 @@ public class Ogrenci extends Kullanici {
         this.tc = tc;
     }
 
-    // Geriye dönük uyumluluk için eski constructor (gerekirse diye)
     public Ogrenci(int id, String sifre, String ad, String bolum, int sinif, double ortalama) {
         this(id, sifre, ad, bolum, sinif, ortalama, "tanimsiz", "tanimsiz", "tanimsiz", "tanimsiz");
     }
 
-    // Geriye dönük uyumluluk için eski constructor (eski cagiranlar için varsayılan sinif 1)
+    //default degerler
     public Ogrenci(int id, String sifre, String ad, String bolum, double ortalama) {
         this(id, sifre, ad, bolum, 1, ortalama, "tanimsiz", "tanimsiz", "tanimsiz", "tanimsiz");
     }
@@ -43,7 +41,6 @@ public class Ogrenci extends Kullanici {
         System.out.println("Öğrenci: " + ad + " - Bölüm: " + bolum + " - Sınıf: " + sinif);
     }
 
-    // Getter ve Setter Metotları
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -55,16 +52,16 @@ public class Ogrenci extends Kullanici {
 
     public double getOrtalama() { return ortalama; }
     public void setOrtalama(double ortalama) { this.ortalama = ortalama; }
-    
+
     public String getEposta() { return eposta; }
     public void setEposta(String eposta) { this.eposta = eposta; }
-    
+
     public String getTelefon() { return telefon; }
     public void setTelefon(String telefon) { this.telefon = telefon; }
-    
+
     public String getAdres() { return adres; }
     public void setAdres(String adres) { this.adres = adres; }
-    
+
     public String getTc() { return tc; }
     public void setTc(String tc) { this.tc = tc; }
 }

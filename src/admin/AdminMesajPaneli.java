@@ -14,7 +14,7 @@ public class AdminMesajPaneli extends JPanel {
 
         String[] secenekler = {"Öğrenci (ID Giriniz)", "Öğretmen (TC Giriniz)"};
         JComboBox<String> cmbKime = new JComboBox<>(secenekler);
-        
+
         JTextField txtHedef = new JTextField();
         JTextField txtBaslik = new JTextField();
         JTextField txtMesaj = new JTextField();

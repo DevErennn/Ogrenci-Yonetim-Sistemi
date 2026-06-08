@@ -52,7 +52,7 @@ public class OgrenciProfilPaneli extends JPanel {
             ogrenci.setEposta(txtEposta.getText().trim());
             ogrenci.setTelefon(txtTel.getText().trim());
             ogrenci.setAdres(txtAdres.getText().trim());
-            
+
             OgrenciYonetici yonetici = new OgrenciYonetici();
             for (Ogrenci o : yonetici.getOgrenciListesi()) {
                 if (o.getId() == ogrenci.getId()) {
@@ -64,7 +64,7 @@ public class OgrenciProfilPaneli extends JPanel {
                 }
             }
             yonetici.dosyayaYaz();
-            
+
             JOptionPane.showMessageDialog(this, "Bilgileriniz güncellendi!");
         });
     }

@@ -20,7 +20,7 @@ public class NotGirisPaneli extends JPanel {
         this.ogretmen = ogretmen;
         this.donem = donem;
         setLayout(new BorderLayout());
-        
+
         JPanel formPaneli = new JPanel(new GridLayout(7, 2, 10, 10));
         formPaneli.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
@@ -66,7 +66,7 @@ public class NotGirisPaneli extends JPanel {
                     if (v < 0 || v > 100 || f < 0 || f > 100) return;
                     double ort = (v * 0.4) + (f * 0.6);
                     txtOrtalamaHesap.setText(String.format("%.2f", ort));
-                    
+
                     String harf = "FF";
                     if (ort >= 85) harf = "AA";
                     else if (ort >= 75) harf = "BA";
@@ -88,7 +88,7 @@ public class NotGirisPaneli extends JPanel {
         JButton btnNotKaydet = new JButton("Notları Kaydet");
         btnNotKaydet.setBackground(new Color(60, 179, 113));
         btnNotKaydet.setForeground(Color.WHITE);
-        
+
         JPanel altPanel = new JPanel();
         altPanel.add(btnNotKaydet);
         add(formPaneli, BorderLayout.CENTER);

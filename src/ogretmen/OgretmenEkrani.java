@@ -32,7 +32,7 @@ public class OgretmenEkrani extends JFrame {
         btnCikis.setBackground(new Color(220, 20, 60));
         btnCikis.setForeground(Color.WHITE);
         btnCikis.setFocusPainted(false);
-        
+
         btnCikis.addActionListener(e -> {
             dispose();
             app.Main.main(new String[]{});
@@ -49,13 +49,13 @@ public class OgretmenEkrani extends JFrame {
         sekmeler.addTab("Not Girişi", new NotGirisPaneli(ogretmen, donemBelirle()));
         sekmeler.addTab("Devamsızlık Girişi", new DevamsizlikGirisPaneli(ogretmen));
         sekmeler.addTab("Ders Programım", dersProgramiPaneliniOlustur());
-        
+
         admin.IstatistikPaneli istatistikPaneli = new admin.IstatistikPaneli(yonetici);
         istatistikPaneli.verileriGuncelle();
         sekmeler.addTab("Bölüm İstatistikleri", istatistikPaneli);
-        
+
         sekmeler.addTab("Mesaj Gönder", new OgretmenMesajPaneli(ogretmen.getAd()));
-        
+
         if (mesajSayisi > 0) {
             sekmeler.addTab("<html>Gelen Kutusu <font color='red'>(+" + mesajSayisi + ")</font></html>", new OgretmenGelenKutusuPaneli(ogretmen.getTcKimlik()));
         } else {
@@ -91,7 +91,7 @@ public class OgretmenEkrani extends JFrame {
         LocalDate tarih = LocalDate.now();
         int ay = tarih.getMonthValue();
         int yil = tarih.getYear();
-        
+
         if (ay >= 9 || ay == 1) {
             int egitimYili = ay >= 9 ? yil : (yil - 1);
             return egitimYili + "-" + (egitimYili + 1) + " Güz Dönemi";
@@ -109,11 +109,11 @@ public class OgretmenEkrani extends JFrame {
             public boolean isCellEditable(int row, int column) { return false; }
         };
         JTable tablo = new JTable(model);
-        
+
         java.util.List<String> derslerListesi = ogretmen.getDerslerListesi();
         String[] gunler = {"Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma"};
         String[] saatler = {"09:00 - 12:00", "13:00 - 15:00", "15:00 - 17:00"};
-        
+
         java.util.Random rand = new java.util.Random(ogretmen.getAd().hashCode());
         for (String ders : derslerListesi) {
             String gun = gunler[rand.nextInt(gunler.length)];
@@ -121,7 +121,7 @@ public class OgretmenEkrani extends JFrame {
             String derslik = "Amfi " + (1 + rand.nextInt(5));
             model.addRow(new Object[]{gun, saat, ders, derslik});
         }
-        
+
         panel.add(new JScrollPane(tablo), BorderLayout.CENTER);
         return panel;
     }

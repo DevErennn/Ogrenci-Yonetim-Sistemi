@@ -25,11 +25,11 @@ public class OgrenciDevamsizlikPaneli extends JPanel {
             String satir;
             while ((satir = br.readLine()) != null) {
                 String[] veri = satir.split(";");
-                
+
                 if (veri.length == 3 && Integer.parseInt(veri[0]) == ogrenci.getId()) {
                     String dersAdi = veri[1];
                     int yapilanDevamsizlik = Integer.parseInt(veri[2]); 
-                    
+
                     int kalanHak = devamsizlikSiniri - yapilanDevamsizlik;
                     if (kalanHak < 0) kalanHak = 0; 
 

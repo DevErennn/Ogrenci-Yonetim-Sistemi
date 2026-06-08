@@ -15,7 +15,7 @@ public class OgretmenGelenKutusuPaneli extends JPanel {
         this.tcKimlik = tcKimlik;
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        
+
         String[] kolonlar = {"Gönderen", "Başlık", "Mesaj İçeriği"};
         DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
             public boolean isCellEditable(int row, int column) { return false; }

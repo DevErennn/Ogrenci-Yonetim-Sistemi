@@ -11,7 +11,7 @@ public class OgrenciGelenKutusuPaneli extends JPanel {
     public OgrenciGelenKutusuPaneli(Ogrenci ogrenci) {
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        
+
         String[] kolonlar = {"Gönderen", "Başlık", "Mesaj İçeriği"};
         DefaultTableModel model = new DefaultTableModel(kolonlar, 0) {
             @Override

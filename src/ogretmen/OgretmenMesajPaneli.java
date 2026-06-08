@@ -18,7 +18,7 @@ public class OgretmenMesajPaneli extends JPanel {
 
         String[] secenekler = {"Öğrenci (ID Giriniz)", "Öğretmen (TC Giriniz)", "Bölüme Duyuru (Bölüm Adı Seçiniz)"};
         JComboBox<String> cmbKime = new JComboBox<>(secenekler);
-        
+
         JTextField txtHedef = new JTextField();
         JTextField txtBaslik = new JTextField();
         JTextField txtMesaj = new JTextField();
@@ -56,7 +56,7 @@ public class OgretmenMesajPaneli extends JPanel {
             }
 
             if (cmbKime.getSelectedIndex() == 2) {
-                // Duyuru olarak kaydet
+
                 try (RandomAccessFile raf = new RandomAccessFile("duyurular.dat", "rw")) {
                     raf.seek(raf.length());
                     raf.writeUTF(hedef + ";" + baslik + " - " + mesaj);
@@ -64,7 +64,7 @@ public class OgretmenMesajPaneli extends JPanel {
                     txtHedef.setText(""); txtBaslik.setText(""); txtMesaj.setText("");
                 } catch (Exception ex) { }
             } else {
-                // Mesaj olarak kaydet
+
                 try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
                     bw.write(ogretmenAdi + ";" + hedef + ";" + core.OgrenciYonetici.sifrele(baslik) + ";" + core.OgrenciYonetici.sifrele(mesaj));
                     bw.newLine();
