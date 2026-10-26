@@ -179,7 +179,6 @@ Sistemi test etmek için hazır kullanıcı hesapları:
 | **Admin** | `admin` | `admin123` | Sistem yöneticisi tam yetkili panel |
 | **Öğretim Elemanı** | `11000000001` | `1234` | Dr. Öğr. Üyesi Mustafa Yıldız |
 | **Öğretim Elemanı** | `11000000002` | `1234` | Prof. Dr. Kemal Arslan |
-| **Öğrenci** | `250260000` | `ucar4646` | Eren UÇAR (Bilgisayar Mühendisliği) |
 | **Öğrenci** | `250260028` | `1234` | Caner Doğan (Kimya Mühendisliği) |
 | **Öğrenci** | `250260001` | `kaya123` | Eren Kaya (Bilgisayar Mühendisliği) |
 
