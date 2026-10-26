@@ -132,6 +132,7 @@ Ogrenci-Yonetim-Sistemi/
 │       └── DestekPaneli.java
 ├── ogrenci_sistemi.db               # İlk çalıştırmada otomatik oluşturulur
 ├── uml-diyagrami.png                # Proje UML Sınıf Diyagramı
+├── *.txt / *.dat                    # SQLite için ilk çalıştırma tohum (seed) verileri
 ├── screenshots/                     # Uygulama ekran görüntüleri
 │   ├── giris-ekrani.png
 │   ├── admin-paneli.png
