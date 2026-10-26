@@ -92,6 +92,7 @@ public class DatabaseHelper {
 
             // Txt dosyalarından SQLite'a otomatik veri aktarımı (Migration)
             verileriTxtDosyalarindanAktar(conn);
+            varsayilanVerileriEkleEgerBos(conn);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -279,6 +280,117 @@ public class DatabaseHelper {
                 }
             }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void varsayilanVerileriEkleEgerBos(Connection conn) {
+        try {
+            // Tablolar hala boşsa (txt dosyaları bulunamadıysa/silindiyse), README'deki demo hesapları ekle
+            if (tabloBosMu(conn, "ogretmenler")) {
+                String sql = "INSERT OR REPLACE INTO ogretmenler (tc_kimlik, sifre, ad, verilen_ders) VALUES (?, ?, ?, ?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setString(1, "11000000001");
+                    pstmt.setString(2, "1234");
+                    pstmt.setString(3, "Dr. Öğr. Üyesi Mustafa Yıldız");
+                    pstmt.setString(4, "Kimya Mühendisliği");
+                    pstmt.executeUpdate();
+
+                    pstmt.setString(1, "11000000002");
+                    pstmt.setString(2, "1234");
+                    pstmt.setString(3, "Prof. Dr. Kemal Arslan");
+                    pstmt.setString(4, "Bilgisayar Mühendisliği");
+                    pstmt.executeUpdate();
+                }
+            }
+
+            if (tabloBosMu(conn, "ogrenciler")) {
+                String sql = "INSERT OR REPLACE INTO ogrenciler (id, sifre, ad, bolum, ortalama, eposta, telefon, adres, tc, sinif) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setInt(1, 250260028);
+                    pstmt.setString(2, "1234");
+                    pstmt.setString(3, "Caner Doğan");
+                    pstmt.setString(4, "Kimya Mühendisliği");
+                    pstmt.setDouble(5, 3.45);
+                    pstmt.setString(6, "caner.dogan@edu.tr");
+                    pstmt.setString(7, "5551112233");
+                    pstmt.setString(8, "Kampüs");
+                    pstmt.setString(9, "25026002801");
+                    pstmt.setInt(10, 3);
+                    pstmt.executeUpdate();
+
+                    pstmt.setInt(1, 250260001);
+                    pstmt.setString(2, "kaya123");
+                    pstmt.setString(3, "Eren Kaya");
+                    pstmt.setString(4, "Bilgisayar Mühendisliği");
+                    pstmt.setDouble(5, 3.65);
+                    pstmt.setString(6, "eren.kaya@edu.tr");
+                    pstmt.setString(7, "5552223344");
+                    pstmt.setString(8, "Kampüs");
+                    pstmt.setString(9, "25026000102");
+                    pstmt.setInt(10, 2);
+                    pstmt.executeUpdate();
+                }
+            }
+
+            if (tabloBosMu(conn, "dersler")) {
+                String sql = "INSERT INTO dersler (bolum, sinif, ders_adi, ogretmen_adi) VALUES (?, ?, ?, ?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setString(1, "Bilgisayar Mühendisliği");
+                    pstmt.setInt(2, 2);
+                    pstmt.setString(3, "Nesne Yönelimli Programlama");
+                    pstmt.setString(4, "Prof. Dr. Kemal Arslan");
+                    pstmt.executeUpdate();
+
+                    pstmt.setString(1, "Kimya Mühendisliği");
+                    pstmt.setInt(2, 3);
+                    pstmt.setString(3, "Termodinamik");
+                    pstmt.setString(4, "Dr. Öğr. Üyesi Mustafa Yıldız");
+                    pstmt.executeUpdate();
+                }
+            }
+
+            if (tabloBosMu(conn, "notlar")) {
+                String sql = "INSERT OR REPLACE INTO notlar (ogrenci_id, ders_adi, vize, final) VALUES (?, ?, ?, ?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setInt(1, 250260001);
+                    pstmt.setString(2, "Nesne Yönelimli Programlama");
+                    pstmt.setInt(3, 85);
+                    pstmt.setInt(4, 90);
+                    pstmt.executeUpdate();
+
+                    pstmt.setInt(1, 250260028);
+                    pstmt.setString(2, "Termodinamik");
+                    pstmt.setInt(3, 75);
+                    pstmt.setInt(4, 80);
+                    pstmt.executeUpdate();
+                }
+            }
+
+            if (tabloBosMu(conn, "devamsizlik")) {
+                String sql = "INSERT OR REPLACE INTO devamsizlik (ogrenci_id, ders_adi, saat) VALUES (?, ?, ?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setInt(1, 250260001);
+                    pstmt.setString(2, "Nesne Yönelimli Programlama");
+                    pstmt.setInt(3, 2);
+                    pstmt.executeUpdate();
+
+                    pstmt.setInt(1, 250260028);
+                    pstmt.setString(2, "Termodinamik");
+                    pstmt.setInt(3, 4);
+                    pstmt.executeUpdate();
+                }
+            }
+
+            if (tabloBosMu(conn, "duyurular")) {
+                String sql = "INSERT INTO duyurular (hedef, icerik) VALUES (?, ?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                    pstmt.setString(1, "Genel");
+                    pstmt.setString(2, "2026-2027 Bahar dönemi ders kayıtları başlamıştır.");
+                    pstmt.executeUpdate();
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

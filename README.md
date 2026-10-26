@@ -107,7 +107,7 @@ Ogrenci-Yonetim-Sistemi/
 │   │   ├── OgrenciYonetici.java
 │   │   ├── DataUpdateListener.java
 │   │   └── OgrenciBulunamadiException.java
-│   ├── database/                   # SQLite Bağlantı ve DAO katmanı
+│   ├── database/                   # SQLite veritabanı bağlantı ve sorgu katmanı
 │   │   └── DatabaseHelper.java
 │   ├── model/                      # Varlık sınıfları (OOP)
 │   │   ├── Kullanici.java
@@ -130,10 +130,33 @@ Ogrenci-Yonetim-Sistemi/
 │   │   └── OgretmenGelenKutusuPaneli.java
 │   └── ortak/                      # Ortak paneller
 │       └── DestekPaneli.java
-├── ogrenci_sistemi.db               # SQLite veritabanı dosyası
-├── UML DİAGRAMI.png                # Proje UML Sınıf Diyagramı
+├── ogrenci_sistemi.db               # İlk çalıştırmada otomatik oluşturulur
+├── uml-diyagrami.png                # Proje UML Sınıf Diyagramı
+├── screenshots/                     # Uygulama ekran görüntüleri
+│   ├── giris-ekrani.png
+│   ├── admin-paneli.png
+│   └── grafik-paneli.png
 └── README.md                       # Proje Dokümantasyonu
 ```
+
+---
+
+## 📸 Ekran Görüntüleri
+
+| Giriş Ekranı | Yönetici (Admin) Paneli |
+|:---:|:---:|
+| ![Giriş Ekranı](screenshots/giris-ekrani.png) | ![Admin Paneli](screenshots/admin-paneli.png) |
+
+<br>
+
+<p align="center">
+  <b>Bölüm İstatistikleri ve Dağılım Grafiği (AWT Graphics2D)</b><br>
+  <img src="screenshots/grafik-paneli.png" alt="Grafik Paneli" width="850"/>
+</p>
+
+### 📐 UML Sınıf Diyagramı
+
+![UML](uml-diyagrami.png)
 
 ---
 
@@ -181,6 +204,9 @@ Sistemi test etmek için hazır kullanıcı hesapları:
 | **Öğretim Elemanı** | `11000000002` | `1234` | Prof. Dr. Kemal Arslan |
 | **Öğrenci** | `250260028` | `1234` | Caner Doğan (Kimya Mühendisliği) |
 | **Öğrenci** | `250260001` | `kaya123` | Eren Kaya (Bilgisayar Mühendisliği) |
+
+> [!NOTE]
+> **Not:** Yukarıdaki kullanıcı bilgileri ve veritabanı kayıtları tamamen demo amaçlı sahte verilerdir.
 
 ---
 
