@@ -1,6 +1,7 @@
 package core;
 
 import model.*;
+import database.DatabaseHelper;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,39 +15,37 @@ public class OgrenciYonetici {
     private final String dosyaAdi = "ogrenciler.txt";
 
     public OgrenciYonetici() {
+        DatabaseHelper.initDatabase();
         ogrenciListesi = new ArrayList<>();
         dosyadanOku();
     }
 
     public void dosyadanOku() {
         ogrenciListesi.clear();
-        File dosya = new File(dosyaAdi);
-        if (!dosya.exists()) return;
+        ArrayList<Ogrenci> dbListesi = DatabaseHelper.tumOgrencileriGetir();
+        if (!dbListesi.isEmpty()) {
+            ogrenciListesi.addAll(dbListesi);
+        } else {
+            // Veritabanı boşsa txt'den aktarmayı dene
+            File dosya = new File(dosyaAdi);
+            if (!dosya.exists()) return;
 
-        boolean kurulumGerekli = false;
-        ArrayList<String[]> okunanSatirlar = new ArrayList<>();
+            ArrayList<String[]> okunanSatirlar = new ArrayList<>();
+            try (BufferedReader br = new BufferedReader(new FileReader(dosya))) {
+                String satir;
+                while ((satir = br.readLine()) != null) {
+                    satir = satir.replace("\uFEFF", "").trim(); 
+                    if (satir.isEmpty()) continue;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(dosya))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                satir = satir.replace("\uFEFF", "").trim(); 
-                if (satir.isEmpty()) continue;
-
-                String[] veri = satir.split(";");
-                if (veri.length >= 5) {
-                    okunanSatirlar.add(veri);
-                    if (veri.length < 10) {
-                        kurulumGerekli = true;
+                    String[] veri = satir.split(";");
+                    if (veri.length >= 5) {
+                        okunanSatirlar.add(veri);
                     }
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        if (kurulumGerekli) {
-            veriTabaniniSifirlaVeRastgeleYarat(okunanSatirlar);
-        } else {
             for (String[] veri : okunanSatirlar) {
                 try {
                     int id = Integer.parseInt(veri[0].trim());
@@ -60,131 +59,18 @@ public class OgrenciYonetici {
                     String tc = veri.length > 8 ? veri[8].trim() : "tanimsiz";
                     int sinif = veri.length > 9 ? Integer.parseInt(veri[9].trim()) : 1;
 
-                    ogrenciListesi.add(new Ogrenci(id, sifre, ad, bolum, sinif, ort, eposta, telefon, adres, tc));
-                } catch (Exception e) {}
+                    Ogrenci o = new Ogrenci(id, sifre, ad, bolum, sinif, ort, eposta, telefon, adres, tc);
+                    ogrenciListesi.add(o);
+                    DatabaseHelper.ogrenciEkle(o);
+                } catch (Exception ignored) {}
             }
-        }
-    }
-
-    private void veriTabaniniSifirlaVeRastgeleYarat(ArrayList<String[]> okunanSatirlar) {
-        java.util.Random rand = new java.util.Random();
-
-        for (String[] veri : okunanSatirlar) {
-            try {
-                int id = Integer.parseInt(veri[0].trim());
-                String sifre = sifreCoz(veri[1].trim());
-                String ad = veri[2].trim();
-                String bolum = veri[3].trim();
-
-                int sinif = 1 + rand.nextInt(4);
-
-                String eposta = veri.length > 5 ? veri[5].trim() : "tanimsiz";
-                String telefon = veri.length > 6 ? veri[6].trim() : "tanimsiz";
-                String adres = veri.length > 7 ? veri[7].trim() : "tanimsiz";
-                String tc = veri.length > 8 ? veri[8].trim() : "tanimsiz";
-
-                ogrenciListesi.add(new Ogrenci(id, sifre, ad, bolum, sinif, 0.0, eposta, telefon, adres, tc));
-            } catch (Exception e) {}
-        }
-
-        java.util.List<String[]> dersler = new java.util.ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("dersler.txt"))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                satir = satir.trim();
-                if (satir.isEmpty()) continue;
-                String[] parts = satir.split(";");
-                if (parts.length >= 3) {
-                    dersler.add(parts);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        java.util.List<String> yeniNotlar = new java.util.ArrayList<>();
-        java.util.List<String> yeniDevamsizliklar = new java.util.ArrayList<>();
-
-        for (Ogrenci ogr : ogrenciListesi) {
-            java.util.List<Double> ogrNotlar = new java.util.ArrayList<>();
-
-            for (String[] ders : dersler) {
-                String dBolum = ders[0].trim();
-                int dSinif = 1;
-                try {
-                    dSinif = Integer.parseInt(ders[1].trim());
-                } catch (Exception e) {}
-                String dAd = ders[2].trim();
-
-                if (dBolum.equalsIgnoreCase(ogr.getBolum()) && dSinif == ogr.getSinif()) {
-                    int vize = 45 + rand.nextInt(56);
-                    int fin = 45 + rand.nextInt(56);
-                    int devamsizlik = rand.nextInt(9);
-
-                    yeniNotlar.add(ogr.getId() + ";" + dAd + ";" + vize + ";" + fin);
-                    yeniDevamsizliklar.add(ogr.getId() + ";" + dAd + ";" + devamsizlik);
-
-                    double dersOrt = (vize * 0.4) + (fin * 0.6);
-                    ogrNotlar.add(dersOrt);
-                }
-            }
-
-            double gpa = 0.0;
-            if (!ogrNotlar.isEmpty()) {
-                double toplamOrt = 0;
-                for (double n : ogrNotlar) {
-                    toplamOrt += n;
-                }
-                double avg100 = toplamOrt / ogrNotlar.size();
-                gpa = (avg100 / 100.0) * 4.0;
-
-                gpa = Math.round(gpa * 100.0) / 100.0;
-            } else {
-                gpa = 2.0 + (rand.nextDouble() * 2.0);
-                gpa = Math.round(gpa * 100.0) / 100.0;
-            }
-            ogr.setOrtalama(gpa);
-        }
-
-        dosyayaYaz();
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("notlar.txt"))) {
-            for (String n : yeniNotlar) {
-                bw.write(n);
-                bw.newLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("devamsizlik.txt"))) {
-            for (String d : yeniDevamsizliklar) {
-                bw.write(d);
-                bw.newLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
     public void dosyayaYaz() {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(dosyaAdi))) {
-            for (Ogrenci ogr : ogrenciListesi) {
-                String satir = ogr.getId() + ";" +
-                               sifrele(ogr.getSifre()) + ";" +
-                               ogr.getAd() + ";" +
-                               ogr.getBolum() + ";" +
-                               ogr.getOrtalama() + ";" +
-                               ogr.getEposta() + ";" +
-                               ogr.getTelefon() + ";" +
-                               ogr.getAdres() + ";" +
-                               ogr.getTc() + ";" +
-                               ogr.getSinif();
-                bw.write(satir);
-                bw.newLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        // Veritabanı ile senkronize et
+        for (Ogrenci ogr : ogrenciListesi) {
+            DatabaseHelper.ogrenciEkle(ogr);
         }
     }
 
@@ -194,12 +80,12 @@ public class OgrenciYonetici {
 
     public void ogrenciEkle(Ogrenci ogr) {
         ogrenciListesi.add(ogr);
-        dosyayaYaz();
+        DatabaseHelper.ogrenciEkle(ogr);
     }
 
     public void ogrenciSil(int id) {
         ogrenciListesi.removeIf(ogr -> ogr.getId() == id);
-        dosyayaYaz();
+        DatabaseHelper.ogrenciSil(id);
     }
 
     public void ogrenciGuncelle(int id, String yeniSifre, String yeniAd, String yeniBolum, double yeniOrt) {
@@ -209,10 +95,10 @@ public class OgrenciYonetici {
                 ogr.setAd(yeniAd);
                 ogr.setBolum(yeniBolum);
                 ogr.setOrtalama(yeniOrt);
+                DatabaseHelper.ogrenciGuncelle(id, yeniSifre, yeniAd, yeniBolum, ogr.getSinif(), yeniOrt);
                 break;
             }
         }
-        dosyayaYaz();
     }
 
     public void ogrenciGuncelle(int id, String yeniSifre, String yeniAd, String yeniBolum, int yeniSinif, double yeniOrt) {
@@ -223,10 +109,10 @@ public class OgrenciYonetici {
                 ogr.setBolum(yeniBolum);
                 ogr.setSinif(yeniSinif);
                 ogr.setOrtalama(yeniOrt);
+                DatabaseHelper.ogrenciGuncelle(id, yeniSifre, yeniAd, yeniBolum, yeniSinif, yeniOrt);
                 break;
             }
         }
-        dosyayaYaz();
     }
 
     public void ortalamayaGoreSirala() {

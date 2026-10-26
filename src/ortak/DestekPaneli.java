@@ -1,11 +1,8 @@
 package ortak;
 
-import core.*;
-import model.*;
+import database.DatabaseHelper;
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 
 public class DestekPaneli extends JPanel {
     public DestekPaneli(String gonderenBilgisi) {
@@ -34,12 +31,14 @@ public class DestekPaneli extends JPanel {
                 return;
             }
 
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
-                bw.write(gonderenBilgisi + ";admin;" + core.OgrenciYonetici.sifrele(baslik) + ";" + core.OgrenciYonetici.sifrele(mesaj));
-                bw.newLine();
+            try {
+                DatabaseHelper.mesajGonder(gonderenBilgisi, "admin", baslik, mesaj);
                 JOptionPane.showMessageDialog(this, "Destek talebiniz admin'e iletildi!");
-                txtBaslik.setText(""); txtMesaj.setText("");
-            } catch (Exception ex) { }
+                txtBaslik.setText(""); 
+                txtMesaj.setText("");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage());
+            }
         });
     }
 }

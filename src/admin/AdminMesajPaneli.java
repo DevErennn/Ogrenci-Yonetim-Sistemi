@@ -1,11 +1,8 @@
 package admin;
 
-import model.*;
-import core.*;
+import database.DatabaseHelper;
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 
 public class AdminMesajPaneli extends JPanel {
     public AdminMesajPaneli() {
@@ -42,12 +39,15 @@ public class AdminMesajPaneli extends JPanel {
                 return;
             }
 
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
-                bw.write("Admin;" + hedef + ";" + core.OgrenciYonetici.sifrele(baslik) + ";" + core.OgrenciYonetici.sifrele(mesaj));
-                bw.newLine();
+            try {
+                DatabaseHelper.mesajGonder("Admin", hedef, baslik, mesaj);
                 JOptionPane.showMessageDialog(this, "Mesaj başarıyla iletildi!");
-                txtHedef.setText(""); txtBaslik.setText(""); txtMesaj.setText("");
-            } catch (Exception ex) { }
+                txtHedef.setText(""); 
+                txtBaslik.setText(""); 
+                txtMesaj.setText("");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Mesaj gönderilirken hata oluştu: " + ex.getMessage());
+            }
         });
     }
 }

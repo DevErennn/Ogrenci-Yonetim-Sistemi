@@ -74,17 +74,7 @@ public class OgretmenEkrani extends JFrame {
     }
 
     private int hesaplaMesajSayisi() {
-        int sayi = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                String[] veri = satir.split(";");
-                if (veri.length >= 4 && veri[1].equals(ogretmen.getTcKimlik())) {
-                    sayi++;
-                }
-            }
-        } catch (Exception e) {}
-        return sayi;
+        return database.DatabaseHelper.getGelenMesajSayisi(ogretmen.getTcKimlik());
     }
 
     private String donemBelirle() {

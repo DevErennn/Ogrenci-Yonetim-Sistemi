@@ -1,9 +1,10 @@
 package ogrenci;
 
+import database.DatabaseHelper;
 import model.Ogrenci;
 import javax.swing.*;
 import java.awt.*;
-import java.io.RandomAccessFile;
+import java.util.List;
 
 public class OgrenciDuyuruPaneli extends JPanel {
     public OgrenciDuyuruPaneli(Ogrenci ogrenci) {
@@ -14,17 +15,14 @@ public class OgrenciDuyuruPaneli extends JPanel {
         JList<String> liste = new JList<>(model);
         liste.setFont(new Font("Arial", Font.PLAIN, 14));
 
-        try (RandomAccessFile raf = new RandomAccessFile("duyurular.dat", "r")) {
-            while (raf.getFilePointer() < raf.length()) {
-                String satir = raf.readUTF();
-                String[] veri = satir.split(";");
-                if (veri.length == 2) {
-                    if (veri[0].equals("Genel") || veri[0].equals(ogrenci.getBolum())) {
-                        model.addElement("[" + veri[0] + "] " + veri[1]);
-                    }
-                }
+        List<String> duyurular = DatabaseHelper.ogrenciDuyurulariGetir(ogrenci.getBolum());
+        if (duyurular.isEmpty()) {
+            model.addElement("Henüz yayınlanmış bir duyuru bulunmamaktadır.");
+        } else {
+            for (String d : duyurular) {
+                model.addElement(d);
             }
-        } catch (Exception e) {}
+        }
 
         add(new JScrollPane(liste), BorderLayout.CENTER);
     }

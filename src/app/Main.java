@@ -2,19 +2,18 @@ package app;
 
 import admin.*;
 import core.*;
+import database.DatabaseHelper;
 import model.*;
 import ogrenci.*;
 import ogretmen.*;
-import ortak.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
 
 public class Main {
     public static void main(String[] args) {
-        OgrenciYonetici yonetici = new OgrenciYonetici();
+        // SQLite veritabanını ve tablolarını hazırla, varsa txt'den verileri aktar
+        DatabaseHelper.initDatabase();
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -65,7 +64,7 @@ public class Main {
                 return;
             }
 
-            if (tip.equals("Admin")) {
+            if ("Admin".equals(tip)) {
                 if (kadi.equals("admin") && sifre.equals("admin123")) {
                     girisEkrani.dispose();
                     SwingUtilities.invokeLater(() -> new AnaEkran().setVisible(true));
@@ -73,29 +72,10 @@ public class Main {
                     JOptionPane.showMessageDialog(girisEkrani, "Hatalı Admin Girişi!");
                 }
             } 
-            else if (tip.equals("Öğretim Elemanı")) {
-                boolean girisBasarili = false;
-                Ogretmen girisYapanOgretmen = null;
+            else if ("Öğretim Elemanı".equals(tip)) {
+                Ogretmen girisYapanOgretmen = DatabaseHelper.ogretmenGirisKontrol(kadi, sifre);
 
-                try (BufferedReader br = new BufferedReader(new FileReader("ogretmenler.txt"))) {
-                    String satir;
-                    while ((satir = br.readLine()) != null) {
-                        String[] veri = satir.split(";");
-                        if (veri.length >= 4) {
-                            String dTc = veri[0];
-                            String dSifreBase64 = veri[1];
-                            String dSifreCozulmus = OgrenciYonetici.sifreCoz(dSifreBase64); 
-
-                            if (dTc.equals(kadi) && dSifreCozulmus.equals(sifre)) {
-                                girisBasarili = true;
-                                girisYapanOgretmen = new Ogretmen(veri[0], dSifreCozulmus, veri[2], veri[3]);
-                                break;
-                            }
-                        }
-                    }
-                } catch (Exception ex) {}
-
-                if (girisBasarili && girisYapanOgretmen != null) {
+                if (girisYapanOgretmen != null) {
                     girisEkrani.dispose();
                     Ogretmen finalOgr = girisYapanOgretmen;
                     SwingUtilities.invokeLater(() -> new OgretmenEkrani(finalOgr).setVisible(true));
@@ -106,25 +86,16 @@ public class Main {
             else {
                 try {
                     int id = Integer.parseInt(kadi);
-                    boolean girisBasarili = false;
-                    Ogrenci ogrGonder = null;
+                    Ogrenci ogrGonder = DatabaseHelper.ogrenciGirisKontrol(id, sifre);
 
-                    for (Ogrenci o : yonetici.getOgrenciListesi()) {
-                        if (o.getId() == id && o.getSifre().equals(sifre)) {
-                            girisBasarili = true;
-                            ogrGonder = o;
-                            break;
-                        }
-                    }
-
-                    if (girisBasarili && ogrGonder != null) {
+                    if (ogrGonder != null) {
                         girisEkrani.dispose();
                         Ogrenci finalOgr = ogrGonder; 
                         SwingUtilities.invokeLater(() -> new OgrenciEkrani(finalOgr).setVisible(true));
                     } else {
                         JOptionPane.showMessageDialog(girisEkrani, "Öğrenci ID veya Şifre Hatalı!");
                     }
-                } catch (Exception ex) {
+                } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(girisEkrani, "Öğrenci ID sayı olmalıdır!");
                 }
             }

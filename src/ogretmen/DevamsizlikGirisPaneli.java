@@ -1,11 +1,9 @@
 package ogretmen;
 
-import core.*;
+import database.DatabaseHelper;
 import model.*;
 import javax.swing.*;
 import java.awt.*;
-import java.io.*;
-import java.util.ArrayList;
 
 public class DevamsizlikGirisPaneli extends JPanel {
     private JTextField txtDevamsizlikOgrenciId, txtDevamsizlikSaat;
@@ -41,46 +39,27 @@ public class DevamsizlikGirisPaneli extends JPanel {
 
         btnDevamsizlikKaydet.addActionListener(e -> {
             try {
-                String id = txtDevamsizlikOgrenciId.getText().trim();
-                String devamsizlik = txtDevamsizlikSaat.getText().trim();
+                String idStr = txtDevamsizlikOgrenciId.getText().trim();
+                String devamsizlikStr = txtDevamsizlikSaat.getText().trim();
                 String seciliDers = (String) cmbDers.getSelectedItem();
 
-                if (id.isEmpty() || devamsizlik.isEmpty() || seciliDers == null) {
+                if (idStr.isEmpty() || devamsizlikStr.isEmpty() || seciliDers == null) {
                     JOptionPane.showMessageDialog(this, "Alanlar boş bırakılamaz!");
                     return;
                 }
 
-                devamsizlikKaydet(id, seciliDers, devamsizlik);
+                int ogrId = Integer.parseInt(idStr);
+                int saat = Integer.parseInt(devamsizlikStr);
+
+                DatabaseHelper.devamsizlikKaydet(ogrId, seciliDers, saat);
                 JOptionPane.showMessageDialog(this, "Devamsızlık başarıyla kaydedildi!");
-                txtDevamsizlikOgrenciId.setText(""); txtDevamsizlikSaat.setText("");
+                txtDevamsizlikOgrenciId.setText(""); 
+                txtDevamsizlikSaat.setText("");
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(this, "Öğrenci ID ve Devamsızlık saati sayı olmalıdır!");
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage());
             }
         });
-    }
-
-    private void devamsizlikKaydet(String id, String dersAdi, String saat) {
-        File dosya = new File("devamsizlik.txt");
-        ArrayList<String> satirlar = new ArrayList<>();
-        boolean kayitBulundu = false;
-
-        try (BufferedReader br = new BufferedReader(new FileReader(dosya))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                String[] veri = satir.split(";");
-                if (veri.length == 3 && veri[0].equals(id) && veri[1].equalsIgnoreCase(dersAdi)) {
-                    satirlar.add(id + ";" + dersAdi + ";" + saat);
-                    kayitBulundu = true;
-                } else {
-                    satirlar.add(satir);
-                }
-            }
-        } catch (IOException e) {}
-
-        if (!kayitBulundu) satirlar.add(id + ";" + dersAdi + ";" + saat);
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(dosya))) {
-            for (String s : satirlar) { bw.write(s); bw.newLine(); }
-        } catch (IOException e) {}
     }
 }

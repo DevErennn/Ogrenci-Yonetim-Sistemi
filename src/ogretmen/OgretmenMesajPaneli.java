@@ -1,12 +1,8 @@
 package ogretmen;
 
-import core.*;
-import model.*;
+import database.DatabaseHelper;
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.RandomAccessFile;
 
 public class OgretmenMesajPaneli extends JPanel {
     private String ogretmenAdi;
@@ -45,7 +41,6 @@ public class OgretmenMesajPaneli extends JPanel {
         });
 
         btnGonder.addActionListener(e -> {
-            String tur = (String) cmbKime.getSelectedItem();
             String hedef = txtHedef.getText().trim();
             String baslik = txtBaslik.getText().trim();
             String mesaj = txtMesaj.getText().trim();
@@ -55,22 +50,19 @@ public class OgretmenMesajPaneli extends JPanel {
                 return;
             }
 
-            if (cmbKime.getSelectedIndex() == 2) {
-
-                try (RandomAccessFile raf = new RandomAccessFile("duyurular.dat", "rw")) {
-                    raf.seek(raf.length());
-                    raf.writeUTF(hedef + ";" + baslik + " - " + mesaj);
+            try {
+                if (cmbKime.getSelectedIndex() == 2) {
+                    DatabaseHelper.duyuruEkle(hedef, baslik + " - " + mesaj);
                     JOptionPane.showMessageDialog(this, "Duyuru başarıyla yayınlandı!");
-                    txtHedef.setText(""); txtBaslik.setText(""); txtMesaj.setText("");
-                } catch (Exception ex) { }
-            } else {
-
-                try (BufferedWriter bw = new BufferedWriter(new FileWriter("mesajlar.txt", true))) {
-                    bw.write(ogretmenAdi + ";" + hedef + ";" + core.OgrenciYonetici.sifrele(baslik) + ";" + core.OgrenciYonetici.sifrele(mesaj));
-                    bw.newLine();
+                } else {
+                    DatabaseHelper.mesajGonder(ogretmenAdi, hedef, baslik, mesaj);
                     JOptionPane.showMessageDialog(this, "Mesaj başarıyla iletildi!");
-                    txtHedef.setText(""); txtBaslik.setText(""); txtMesaj.setText("");
-                } catch (Exception ex) { }
+                }
+                txtHedef.setText(""); 
+                txtBaslik.setText(""); 
+                txtMesaj.setText("");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage());
             }
         });
     }

@@ -50,16 +50,7 @@ public class OgrenciEkrani extends JFrame {
 
         add(panelUstAna, BorderLayout.NORTH);
 
-        int mesajSayisi = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                String[] veri = satir.split(";");
-                if (veri.length >= 4 && veri[1].equals(String.valueOf(ogrenci.getId()))) {
-                    mesajSayisi++;
-                }
-            }
-        } catch (Exception e) {}
+        int mesajSayisi = database.DatabaseHelper.getGelenMesajSayisi(String.valueOf(ogrenci.getId()));
 
         JTabbedPane sekmeler = new JTabbedPane();
         sekmeler.addTab("Profilim", new OgrenciProfilPaneli(ogrenci));

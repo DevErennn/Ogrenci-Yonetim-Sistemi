@@ -1,12 +1,8 @@
 package admin;
 
-import model.*;
-import core.*;
+import database.DatabaseHelper;
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.RandomAccessFile;
 
 public class DersYonetimPaneli extends JPanel {
     public DersYonetimPaneli() {
@@ -32,18 +28,21 @@ public class DersYonetimPaneli extends JPanel {
         btnOgrDersEkle.addActionListener(e -> {
             String id = txtOgrId.getText().trim();
             String ders = txtDersAdi.getText().trim();
-            if(id.isEmpty() || ders.isEmpty()) {
+            if (id.isEmpty() || ders.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Alanlar boş olamaz!");
                 return;
             }
 
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("notlar.txt", true))) {
-                bw.write(id + ";" + ders + ";0;0");
-                bw.newLine();
+            try {
+                int ogrId = Integer.parseInt(id);
+                DatabaseHelper.ogrenciyeDersAta(ogrId, ders);
                 JOptionPane.showMessageDialog(this, "Ders öğrenciye başarıyla atandı!");
-                txtOgrId.setText(""); txtDersAdi.setText("");
+                txtOgrId.setText(""); 
+                txtDersAdi.setText("");
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(this, "Öğrenci ID sayı olmalıdır!");
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Dosyaya yazılamadı!");
+                JOptionPane.showMessageDialog(this, "Ders atanırken hata: " + ex.getMessage());
             }
         });
 
@@ -71,29 +70,31 @@ public class DersYonetimPaneli extends JPanel {
 
         btnHocaEkle.addActionListener(e -> {
             String kadi = txtHocaKadi.getText().trim();
-            String sifre = OgrenciYonetici.sifrele(txtHocaSifre.getText().trim());
+            String sifre = txtHocaSifre.getText().trim();
             String ad = txtHocaAd.getText().trim();
             String ders = txtHocaDers.getText().trim();
 
-            if(kadi.isEmpty() || sifre.isEmpty() || ad.isEmpty() || ders.isEmpty()) {
+            if (kadi.isEmpty() || sifre.isEmpty() || ad.isEmpty() || ders.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Alanlar boş olamaz!");
                 return;
             }
 
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("ogretmenler.txt", true))) {
-                bw.write(kadi + ";" + sifre + ";" + ad + ";" + ders);
-                bw.newLine();
+            try {
+                DatabaseHelper.ogretmenEkle(kadi, sifre, ad, ders);
+                DatabaseHelper.dersEkle("Genel", 1, ders, ad);
                 JOptionPane.showMessageDialog(this, "Öğretmen ve Ders sisteme başarıyla eklendi!");
-                txtHocaKadi.setText(""); txtHocaAd.setText(""); txtHocaDers.setText("");
+                txtHocaKadi.setText(""); 
+                txtHocaAd.setText(""); 
+                txtHocaDers.setText("");
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Dosyaya yazılamadı!");
+                JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage());
             }
         });
 
         JPanel panelDuyuru = new JPanel(new GridLayout(6, 1, 10, 10));
         panelDuyuru.setBorder(BorderFactory.createTitledBorder("Sistem Duyurusu Yayınla"));
 
-        String[] kategoriler = {"Genel", "Bilgisayar Mühendisliği", "Yazılım Mühendisliği", "Makine Mühendisliği", "Elektrik Elektronik Mühendisliği", "Mekatronik Mühendisliği"};
+        String[] kategoriler = {"Genel", "Bilgisayar Mühendisliği", "Yazılım Mühendisliği", "Makine Mühendisliği", "Elektrik Elektronik Mühendisliği", "Mekatronik Mühendisliği", "Kimya Mühendisliği", "İnşaat Mühendisliği", "Jeoloji Mühendisliği", "Metalurji ve Malzeme Mühendisliği", "Çevre Mühendisliği", "Yapay Zeka ve Veri Mühendisliği"};
         JComboBox<String> comboKategori = new JComboBox<>(kategoriler);
         JTextField txtDuyuruMetni = new JTextField();
         JButton btnDuyuruYayinla = new JButton("Duyuruyu Yayınla");
@@ -109,18 +110,16 @@ public class DersYonetimPaneli extends JPanel {
 
         btnDuyuruYayinla.addActionListener(e -> {
             String metin = txtDuyuruMetni.getText().trim();
-            if(metin.isEmpty()) {
+            if (metin.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Duyuru metni boş olamaz!");
                 return;
             }
-            try (RandomAccessFile raf = new RandomAccessFile("duyurular.dat", "rw")) {
-                raf.seek(raf.length()); 
-                String satir = comboKategori.getSelectedItem().toString() + ";" + metin;
-                raf.writeUTF(satir);
+            try {
+                DatabaseHelper.duyuruEkle(comboKategori.getSelectedItem().toString(), metin);
                 JOptionPane.showMessageDialog(this, "Duyuru öğrencilere başarıyla iletildi!");
                 txtDuyuruMetni.setText("");
             } catch (Exception ex) { 
-                JOptionPane.showMessageDialog(this, "Hata oluştu!"); 
+                JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage()); 
             }
         });
 

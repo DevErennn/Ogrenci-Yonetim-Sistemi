@@ -1,13 +1,11 @@
 package ogretmen;
 
-import core.*;
+import database.DatabaseHelper;
 import model.*;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.io.*;
-import java.util.ArrayList;
 
 public class NotGirisPaneli extends JPanel {
     private JTextField txtNotOgrenciId, txtVize, txtFinal;
@@ -96,47 +94,30 @@ public class NotGirisPaneli extends JPanel {
 
         btnNotKaydet.addActionListener(e -> {
             try {
-                String id = txtNotOgrenciId.getText().trim();
-                String vize = txtVize.getText().trim();
-                String fin = txtFinal.getText().trim();
+                String idStr = txtNotOgrenciId.getText().trim();
+                String vizeStr = txtVize.getText().trim();
+                String finStr = txtFinal.getText().trim();
                 String seciliDers = (String) cmbDers.getSelectedItem();
 
-                if (id.isEmpty() || vize.isEmpty() || fin.isEmpty() || seciliDers == null) {
+                if (idStr.isEmpty() || vizeStr.isEmpty() || finStr.isEmpty() || seciliDers == null) {
                     JOptionPane.showMessageDialog(this, "Alanlar boş bırakılamaz!");
                     return;
                 }
 
-                notKaydet(id, seciliDers, vize, fin); 
-                JOptionPane.showMessageDialog(this, "Notlar başarıyla kaydedildi!");
-                txtNotOgrenciId.setText(""); txtVize.setText(""); txtFinal.setText("");
+                int ogrId = Integer.parseInt(idStr);
+                int vizeVal = Integer.parseInt(vizeStr);
+                int finalVal = Integer.parseInt(finStr);
+
+                DatabaseHelper.notKaydet(ogrId, seciliDers, vizeVal, finalVal); 
+                JOptionPane.showMessageDialog(this, "Notlar ve Öğrenci Ortalaması başarıyla kaydedildi!");
+                txtNotOgrenciId.setText(""); 
+                txtVize.setText(""); 
+                txtFinal.setText("");
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(this, "Lütfen notları ve ID'yi sayısal değer olarak giriniz!");
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage());
             }
         });
-    }
-
-    private void notKaydet(String id, String dersAdi, String vize, String fin) {
-        File dosya = new File("notlar.txt");
-        ArrayList<String> satirlar = new ArrayList<>();
-        boolean kayitBulundu = false;
-
-        try (BufferedReader br = new BufferedReader(new FileReader(dosya))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                String[] veri = satir.split(";");
-                if (veri.length == 4 && veri[0].equals(id) && veri[1].equalsIgnoreCase(dersAdi)) {
-                    satirlar.add(id + ";" + dersAdi + ";" + vize + ";" + fin);
-                    kayitBulundu = true;
-                } else {
-                    satirlar.add(satir);
-                }
-            }
-        } catch (IOException e) {}
-
-        if (!kayitBulundu) satirlar.add(id + ";" + dersAdi + ";" + vize + ";" + fin);
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(dosya))) {
-            for (String s : satirlar) { bw.write(s); bw.newLine(); }
-        } catch (IOException e) {}
     }
 }

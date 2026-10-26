@@ -1,7 +1,7 @@
 package ogrenci;
 
+import database.DatabaseHelper;
 import model.Ogrenci;
-import core.OgrenciYonetici;
 import javax.swing.*;
 import java.awt.*;
 
@@ -53,19 +53,18 @@ public class OgrenciProfilPaneli extends JPanel {
             ogrenci.setTelefon(txtTel.getText().trim());
             ogrenci.setAdres(txtAdres.getText().trim());
 
-            OgrenciYonetici yonetici = new OgrenciYonetici();
-            for (Ogrenci o : yonetici.getOgrenciListesi()) {
-                if (o.getId() == ogrenci.getId()) {
-                    o.setTc(ogrenci.getTc());
-                    o.setEposta(ogrenci.getEposta());
-                    o.setTelefon(ogrenci.getTelefon());
-                    o.setAdres(ogrenci.getAdres());
-                    break;
-                }
+            try {
+                DatabaseHelper.ogrenciProfilGuncelle(
+                        ogrenci.getId(),
+                        ogrenci.getEposta(),
+                        ogrenci.getTelefon(),
+                        ogrenci.getAdres(),
+                        ogrenci.getTc()
+                );
+                JOptionPane.showMessageDialog(this, "Bilgileriniz başarıyla güncellendi!");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Hata oluştu: " + ex.getMessage());
             }
-            yonetici.dosyayaYaz();
-
-            JOptionPane.showMessageDialog(this, "Bilgileriniz güncellendi!");
         });
     }
 }

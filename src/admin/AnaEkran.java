@@ -45,16 +45,7 @@ public class AnaEkran extends JFrame {
         panelUst.add(btnCikis, BorderLayout.EAST);
         add(panelUst, BorderLayout.NORTH); 
 
-        int mesajSayisi = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader("mesajlar.txt"))) {
-            String satir;
-            while ((satir = br.readLine()) != null) {
-                String[] veri = satir.split(";");
-                if (veri.length >= 4 && veri[1].equals("admin")) {
-                    mesajSayisi++;
-                }
-            }
-        } catch (Exception e) {}
+        int mesajSayisi = database.DatabaseHelper.getGelenMesajSayisi("admin");
 
         JTabbedPane sekmeler = new JTabbedPane();
 
